@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="hero_wrapper">
         <div class="wrapper_content">
-          <h1>Le service traiteur de <span class="black">my terroir</span></h1>
+            <h1>Le service traiteur de <span class="black">my terroir</span></h1>
           <hr />
           <p>
             Cassez les <strong>codes</strong>, choisissez un
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="hero_img">
-        <img src="~assets/img/png/img_traiteur.jpg" alt="brasero" />
+        <img src="~assets/img/png/img_traiteur.jpg" alt="" />
       </div>
     </section>
   </div>
@@ -40,6 +40,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 strong {
   font-family: bodyBold, sans-serif;
 }
@@ -51,16 +53,15 @@ strong {
 
 .hero_wrapper {
   background-color: var(--beige);
-  background-image: url('~assets/img/png/texture.png');
+  background-image: url('~assets/img/png/texture_mt.png');
   background-repeat: repeat;
-  background-size: 70%;
+  background-size: 45%;
   width: 100%;
-  clip-path: polygon(0 0%, 200% 0, 100% 65%, 0% 100%);
   z-index: 1;
 }
 
 .wrapper_content {
-  padding: 40% 15px;
+  padding: 30% 15px 10px 15px;
 }
 
 .wrapper_content h1 {
@@ -70,12 +71,17 @@ strong {
 }
 
 .wrapper_content hr {
-  border: none;
-  width: 50px;
+  border: none; 
+  width: 50px; 
   background-color: var(--black);
   height: 4px;
   border-radius: 5px;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 20px 0; 
+}
+
+.img_sociaux p {
+  margin-top: 0px!important;
+  font-family: bodyBold;
 }
 
 .wrapper_content p {
@@ -87,8 +93,8 @@ strong {
 
 .wrapper_content button {
   margin-top: 20px;
-  background-color: var(--orange);
-  padding: 10px 48px;
+  background-color: var(--black);
+  padding: 10px 28px;
   color: var(--white);
   font-size: 16px;
   font-family: bodyBold;
@@ -98,14 +104,16 @@ strong {
 
 .wrapper_content .sociaux {
   margin-top: 80px;
-  display: flex;
-  flex-flow: column;
+  display: flex; 
+  flex-flow: column; 
 }
 
 .wrapper_content .sociaux .img_sociaux img {
   width: 30px;
   margin-right: 10px;
 }
+
+
 
 .black {
   color: var(--black);
@@ -115,7 +123,7 @@ strong {
   width: 150%;
   height: 300px;
   object-fit: cover;
-  margin-top: -270px;
+  margin-top: 00px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -128,7 +136,7 @@ strong {
   }
 
   .hero_wrapper {
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
     width: 70%;
   }
 
@@ -138,16 +146,15 @@ strong {
 
   .hero_img img {
     height: 100vh;
-    width: 140%;
+    width: 200%;
     margin-top: 0;
     object-fit: cover;
-    margin-left: -230px;
+    margin-left: -350px;
   }
 
   .wrapper_content h1 {
     font-size: 48px;
     line-height: 68px;
-    width: 600px;
   }
 
   .wrapper_content p {
@@ -161,28 +168,29 @@ strong {
   }
 
   .sociaux {
-    position: absolute;
+    position: absolute; 
     bottom: 20px;
     display: flex;
     flex-flow: row;
   }
 
   .img_sociaux {
-    display: flex;
+    display: flex; 
   }
 
   .img_sociaux p {
     font-size: 12px;
-    font-family: bodyBold, sans-serif;
+    font-family: bodyBold, sans-serif; 
   }
 
   .wrapper_content .sociaux .img_sociaux img {
-    width: 40px;
-    margin-right: 20px;
-  }
+  width: 40px;
+  margin-right: 20px;
+}
 }
 
 @media screen and (min-width: 1440px) {
+  
   .wrapper_content h1 {
     font-size: 52px;
     line-height: 74px;
@@ -190,8 +198,9 @@ strong {
 
   .wrapper_content p {
     font-size: 18px;
-    width: 550px;
+    width: 600px;
     line-height: 36px;
   }
+
 }
 </style>

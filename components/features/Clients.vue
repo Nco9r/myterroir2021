@@ -30,8 +30,8 @@ export default {}
 .title_section h2 {
   color: var(--black);
   text-align: center; 
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .title_section p {
@@ -63,11 +63,6 @@ hr {
 .grid_logo img {
     width: 80px;
     filter: grayscale(1)
-}
-
-
-.follow {
-
 }
 
 @media screen and (min-width: 1024px) {

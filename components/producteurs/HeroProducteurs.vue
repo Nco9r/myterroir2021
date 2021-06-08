@@ -3,15 +3,13 @@
     <section class="hero">
       <div class="hero_wrapper">
         <div class="wrapper_content">
-          <h1>Le service traiteur de <span class="black">my terroir</span></h1>
+          <h1>Les producteurs de <span class="black">My Terroir</span></h1>
           <hr />
           <p>
-            Cassez les <strong>codes</strong>, choisissez un
-            <strong>traiteur</strong> sur <strong>Bordeaux</strong> pas comme
-            les autres qui vous propose une sélection de
-            <strong>produits</strong> de <strong>qualité</strong> dénichée chez
-            des <strong>producteurs</strong> artisanaux en France, Espagne et en
-            Italie
+            Nous travaillons <strong>uniquement</strong> avec les meilleurs agriculteurs ! Nous
+            cherchons à nous associer à des <strong>éleveurs</strong> qui travaillent avec la
+            <strong>nature</strong>, dans le respect du <strong>bien être</strong> de <strong>l’animal</strong> et de
+            <strong>l'environnement</strong>.
           </p>
           <button>
             Boutique
@@ -27,7 +25,7 @@
         </div>
       </div>
       <div class="hero_img">
-        <img src="~assets/img/png/producteur.jpg" alt="brasero" />
+        <img src="~assets/img/png/img_traiteur.jpg" alt="" />
       </div>
     </section>
   </div>
@@ -51,16 +49,15 @@ strong {
 
 .hero_wrapper {
   background-color: var(--beige);
-  background-image: url('~assets/img/png/texture.png');
+  background-image: url('~assets/img/png/texture_mt.png');
   background-repeat: repeat;
-  background-size: 70%;
+  background-size: 45%;
   width: 100%;
-  clip-path: polygon(0 0%, 200% 0, 100% 65%, 0% 100%);
   z-index: 1;
 }
 
 .wrapper_content {
-  padding: 40% 15px;
+  padding: 30% 15px 10px 15px;
 }
 
 .wrapper_content h1 {
@@ -78,6 +75,11 @@ strong {
   margin: 10px 0 20px 0;
 }
 
+.img_sociaux p {
+  margin-top: 0px !important;
+  font-family: bodyBold;
+}
+
 .wrapper_content p {
   color: var(--white);
   font-size: 16px;
@@ -87,8 +89,8 @@ strong {
 
 .wrapper_content button {
   margin-top: 20px;
-  background-color: var(--orange);
-  padding: 10px 48px;
+  background-color: var(--black);
+  padding: 10px 28px;
   color: var(--white);
   font-size: 16px;
   font-family: bodyBold;
@@ -115,7 +117,7 @@ strong {
   width: 150%;
   height: 300px;
   object-fit: cover;
-  margin-top: -270px;
+  margin-top: 00px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -128,7 +130,7 @@ strong {
   }
 
   .hero_wrapper {
-    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
     width: 70%;
   }
 
@@ -138,16 +140,15 @@ strong {
 
   .hero_img img {
     height: 100vh;
-    width: 140%;
+    width: 200%;
     margin-top: 0;
     object-fit: cover;
-    margin-left: -230px;
+    margin-left: -350px;
   }
 
   .wrapper_content h1 {
     font-size: 48px;
     line-height: 68px;
-    width: 600px;
   }
 
   .wrapper_content p {
@@ -190,7 +191,7 @@ strong {
 
   .wrapper_content p {
     font-size: 18px;
-    width: 550px;
+    width: 600px;
     line-height: 36px;
   }
 }

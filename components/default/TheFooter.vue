@@ -20,10 +20,10 @@
             <p>Plan du site</p>
           </div>
           <div class="content_item">
-            <p>Traiteur</p>
-            <p>Producteurs</p>
-            <p>Blog</p>
-            <p>Boutique</p>
+            <nuxt-link to="/traiteur"><p>Traiteur</p></nuxt-link>
+            <nuxt-link to="/producteurs"><p>Producteurs</p></nuxt-link>
+            <nuxt-link to="/blog"><p>Blog</p></nuxt-link>
+            <nuxt-link to="/boutique"><p>Boutique</p></nuxt-link>
           </div>
         </div>
         <div class="item">
@@ -43,7 +43,8 @@
           <div class="content_item">
             <p>Mentions légales</p>
             <p>Politique de confidentialité</p>
-            <p>Conditions générales de ventes</p>
+            <nuxt-link to="/conditions-generales-ventes"><p>Conditions générales de ventes</p></nuxt-link>
+
           </div>
         </div>
       </div>
@@ -70,6 +71,11 @@ export default {}
 </script>
 
 <style scoped>
+
+a {
+    text-decoration: none; 
+    color: var(--white);
+}
 .footer {
   background-color: var(--black);
   padding: 20px 15px; 
@@ -110,7 +116,7 @@ export default {}
 }
 
 .item {
-    width: 170px;
+    width: 160px;
     margin-bottom: 50px;
 }
 

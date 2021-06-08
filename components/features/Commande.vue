@@ -46,8 +46,9 @@ section {
 
 .commande_title h2 {
   color: var(--black);
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 20px;
 }
 
 .commande_title p {
@@ -80,7 +81,7 @@ hr {
   display: flex;
   flex-flow: column;
   margin-top: 40px;
-  background-image: url('~assets/img/png/texture.png');
+  background-image: url('~assets/img/png/texture_mt.png');
   background-repeat: repeat;
   background-size: 80%;
   border-radius: 4px;

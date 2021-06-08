@@ -22,13 +22,13 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
+  css: ['vue-slick-carousel/dist/vue-slick-carousel.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+ plugins: [{ src: './plugins/vue-slick-carousel.js' }],
+
   /*
   ** Nuxt.js dev-modules
   */

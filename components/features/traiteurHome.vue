@@ -45,8 +45,8 @@ strong {
 
 .about_content h2 {
   color: var(--black);
-  font-size: 28px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .about_content hr {
@@ -61,9 +61,10 @@ strong {
 
 .about_content p {
   color: var(--black);
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 20px;
-  line-height: 30px;
+  line-height: 26px;
+  margin-bottom: 10px;
 }
 
 .about_content button {

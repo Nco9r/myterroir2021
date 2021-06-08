@@ -21,7 +21,7 @@ export default {}
 <style>
 .Newsletter {
   background-color: var(--orange);
-  background-image: url('~assets/img/png/texture.png');
+  background-image: url('~assets/img/png/texture_mt.png');
   background-size: 70%;
   background-repeat: repeat;
   text-align: center;
@@ -46,7 +46,7 @@ export default {}
 .cta_newsletter input {
   border: none;
   background-color: var(--white);
-  padding: 14px 25px;
+  padding: 14px 18px;
   font-family: bodyBold, sans-serif;
   outline: none;
   border-radius: 0;
@@ -60,7 +60,7 @@ export default {}
 .cta_newsletter button {
   border: none;
   background-color: var(--black);
-  padding: 14px 25px;
+  padding: 14px 18px;
   box-shadow: 5px 5px rgba(5, 5, 5, 0.274);
   color: var(--white);
   outline: none;
