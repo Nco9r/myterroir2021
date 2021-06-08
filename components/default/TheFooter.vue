@@ -31,8 +31,8 @@
             <p>Contact</p>
           </div>
           <div class="content_item">
-            <p>+33.(0)7.54.82.76.76</p>
-            <p>contact@my-terroir.fr</p>
+            <a href="tel:+33754827676"><p>+33 (0)7 54 82 76 76</p></a>
+            <a href="mailto:contact@my-terroir.fr?subject=Demande de contact site web."><p>contact@my-terroir.fr</p></a>
             <p>482 rue du Courdonney <br> 33140 Cadaujac</p>
           </div>
         </div>

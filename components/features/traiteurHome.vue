@@ -14,9 +14,10 @@
         s’accorderont au mieux avec votre <strong>événement</strong>. Nous pouvons nous occuper
         des <strong>services</strong> complémentaires comme la vaisselle ou le mobilier.
       </p>
-      <button>
-        Prestations
-      </button>
+      <nuxt-link to="/traiteur"><button>
+        Nos prestations
+      </button></nuxt-link>
+      
     </div>
     <div class="about_img">
       <img src="~assets/img/svg/feuille.svg" alt="verdure" />

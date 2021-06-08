@@ -36,7 +36,7 @@
         </div>
         <div class="header_right">
           <div class="items_menu_mobile">
-            <div class="cart">
+            <div class="cart" @click="cart =!cart">
               <img src="~assets/img/svg/cart.svg" alt="" />
             </div>
             <span></span>
@@ -47,7 +47,7 @@
           </div>
         </div>
         <transition name="open" appear>
-          <div class="menu_mobile" v-if="openMenu">
+          <div class="menu_mobile" v-if="openMenu" @click="cart = false">
             <div class="top_bar_menu">
               <div class="logo_menu">
                 <img src="~assets/img/svg/logo_mt.svg" alt="" />
@@ -90,16 +90,25 @@
         </transition>
       </div>
     </header>
+    <Cart v-if="cart"/>
   </div>
 </template>
 
+
+
 <script>
+
+import Cart from '../boutique/cart'
 export default {
   name: 'TheHeader',
+  components: {
+    Cart,
+  },
   data() {
     return {
       openMenu: false,
-      scrollPosition: null
+      scrollPosition: null,
+      cart: false
     }
   },
   mounted() {
@@ -127,8 +136,8 @@ header {
 }
 
 .top_bar_color {
-  background-color: var(--gray);
-  box-shadow: 1px 1px 5px #cfcfcf;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray);
 }
 
 .top_bar_flex {
@@ -335,6 +344,7 @@ hr {
   height: 26px;
   border: none;
   background-color: var(--black);
+  
 }
 
 .items_menu_mobile p {
@@ -416,7 +426,7 @@ hr {
   }
 
   .logo img {
-    width: 90px;
+    width: 80px;
   }
 
   .items_menu_desktop {

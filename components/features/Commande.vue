@@ -22,7 +22,9 @@
           <p>Retirez ou faites vous livrer la commande</p>
         </div>
       </div>
+      <nuxt-link to="/boutique">
       <button>Boutique</button>
+      </nuxt-link>
     </div>
   </section>
 </template>
@@ -32,6 +34,10 @@ export default {}
 </script>
 
 <style scoped>
+
+a {
+  text-decoration: none; 
+}
 section {
   background-color: var(--gray);
   width: 100%;

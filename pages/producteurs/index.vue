@@ -235,6 +235,7 @@ export default {
 <style scoped>
 .producteurs {
   padding: 20px 15px;
+  position: relative;
 }
 
 .producteurs p {
@@ -244,15 +245,18 @@ export default {
 }
 
 .categories {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: scroll;
+  position: sticky;
+  top: 20px;
+  background-color: var(--white);
 }
 
 .box_categories {
   display: flex;
   flex-flow: row nowrap;
   overflow: scroll;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 20px;
+  
 }
 
 .item_categorie {
@@ -262,8 +266,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  border-radius: 5px;
-  border: 1px solid rgba(19, 19, 19, 0.075);
+  border: 1px solid var(--gray);
   cursor: pointer;
 }
 
@@ -287,10 +290,11 @@ export default {
 }
 
 .card {
-  margin-top: 30px;
-  background-color: var(--gray);
-  width: 100%;
-  border-radius: 5px;
+
+  background-color: var(--white);
+  width: 330px;
+  margin: 30px auto;
+  border: 1px solid var(--gray);
   padding-bottom: 15px;
 }
 
@@ -300,26 +304,26 @@ export default {
 
 .localisation {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  left: 10px;
 }
 
 .localisation p {
   background-color: var(--black);
   padding: 10px 10px;
+  font-size: 11px;
   color: var(--orange);
-  border-radius: 10px;
   font-family: bodyBold, sans-serif;
 }
 
 .localisation p img {
-  width: 17px;
-  height: 23px;
+  width: 9px;
+  height: 13px;
+  margin-right: 10px;
 }
 
 .img img {
   width: 100%;
-  border-radius: 5px 5px 0 0;
   height: 200px;
   object-fit: cover;
 }
@@ -353,14 +357,14 @@ hr {
   border: none;
   background-color: rgb(235, 235, 235);
   height: 1px;
-  width: 320px;
+  width: 300px;
   margin-bottom: 20px;
 }
 
 .cta_card {
   display: flex;
-  padding: 0 15px 15px 15px;
-  justify-content: flex-end;
+  padding: 0 15px 0px 15px;
+  justify-content: flex-start;
 }
 
 .cta_card a {
@@ -372,11 +376,10 @@ hr {
 
 @media screen and (min-width: 1024px) {
   .producteurs {
-    width: 1300px;
+    width: 1350px;
     display: flex;
     margin-left: 90px;
     flex-flow: column;
-    justify-content: space-around;
     margin-bottom: 100px;
   }
   .item_categorie {
@@ -392,6 +395,7 @@ hr {
     display: flex;
     flex-flow: row wrap;
     margin-top: 50px;
+    justify-content: flex-start!important;
   }
 }
 </style>
