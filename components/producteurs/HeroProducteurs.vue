@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="hero_wrapper">
         <div class="wrapper_content">
-          <h1>Les producteurs de <span class="black">My Terroir</span></h1>
+          <h1>DES FAMILLES PASSIONNÉeS DE <span class="black">LEUR TERROIR </span></h1>
           <hr />
           <p>
             Nous travaillons <strong>uniquement</strong> avec les meilleurs agriculteurs ! Nous
@@ -24,8 +24,21 @@
           </div>
         </div>
       </div>
+
       <div class="hero_img">
-        <img src="~assets/img/png/img_traiteur.jpg" alt="" />
+        <div class="arrow">
+            <div class="arrowPrev" @click="Prev">
+            <img src="~assets/img/svg/arrowmt.svg" alt="">
+          </div>
+          <div class="arrowNext" @click="Next">
+            <img src="~assets/img/svg/arrowmt.svg" alt="">
+          </div>
+        </div>
+    <VueSlickCarousel v-bind="slickOptions" ref="carousel" class="carousel">
+        <img src="~assets/img/png/photorosco.jpg" alt="" />
+        <img src="~assets/img/png/photoproducteurs_1.jpg" alt="" />
+        <img src="~assets/img/png/photoproducteurs_2.jpg" alt="" />
+    </VueSlickCarousel>
       </div>
     </section>
   </div>
@@ -33,11 +46,39 @@
 
 <script>
 export default {
-  name: 'HeroHome'
+  name: 'HeroHome', 
+  data() {
+    return {
+      slickOptions: {
+        dots: false,
+        arrows: false,
+        dotsClass: 'slick-dots custom-dot-class',
+        edgeFriction: 0,
+        infinite: true,
+        speed: 700,
+        draggable: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        cssEase: 'cubic-bezier(.945,0,0,1)',
+      },
+    }
+  },
+  methods: {
+    Prev() {
+      this.$refs.carousel.prev()
+    },
+    Next() {
+      this.$refs.carousel.next()
+    }
+  }
 }
 </script>
 
 <style scoped>
+.slick-dots {
+  display: none; 
+}
+
 strong {
   font-family: bodyBold, sans-serif;
 }
@@ -67,16 +108,16 @@ strong {
 }
 
 .wrapper_content hr {
-  border: none;
-  width: 50px;
+  border: none; 
+  width: 50px; 
   background-color: var(--black);
   height: 4px;
   border-radius: 5px;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 20px 0; 
 }
 
 .img_sociaux p {
-  margin-top: 0px !important;
+  margin-top: 0px!important;
   font-family: bodyBold;
 }
 
@@ -100,8 +141,8 @@ strong {
 
 .wrapper_content .sociaux {
   margin-top: 80px;
-  display: flex;
-  flex-flow: column;
+  display: flex; 
+  flex-flow: column; 
 }
 
 .wrapper_content .sociaux .img_sociaux img {
@@ -109,8 +150,39 @@ strong {
   margin-right: 10px;
 }
 
+
+
 .black {
   color: var(--black);
+}
+
+.hero_img {
+  position: relative;
+}
+
+.arrowPrev {
+  position: absolute; 
+  top: 40%;
+  z-index: 1;
+  left: 10px;
+}
+
+.arrowPrev img {
+  width: 30px!important;
+  height: 30px!important;
+  transform: rotate(180deg);
+}
+
+.arrowNext {
+  position: absolute; 
+  top: 40%;
+  z-index: 1;
+  right: 10px;
+}
+
+.arrowNext img {
+  width: 30px!important;
+  height: 30px!important;
 }
 
 .hero_img img {
@@ -138,12 +210,47 @@ strong {
     padding: 20% 100px;
   }
 
+  .hero_img {
+    display: flex;
+    width: 70%;
+    position: relative;
+    left: 0;
+    display: block;
+    margin-left: -200px;
+  }
+
+  .arrowPrev {
+  position: absolute; 
+  top: 93%;
+  z-index: 1;
+  left: 700px;
+}
+
+.arrowPrev img {
+  width: 40px!important;
+  height: 40px!important;
+  transform: rotate(180deg);
+}
+
+.arrowNext {
+  position: absolute; 
+  top: 93%;
+  z-index: 1;
+  right: 200px;
+}
+
+.arrowNext img {
+  width: 40px!important;
+  height: 40px!important;
+}
+
   .hero_img img {
     height: 100vh;
-    width: 200%;
+    width: 100%;
     margin-top: 0;
     object-fit: cover;
-    margin-left: -350px;
+    display: block;
+
   }
 
   .wrapper_content h1 {
@@ -162,28 +269,29 @@ strong {
   }
 
   .sociaux {
-    position: absolute;
+    position: absolute; 
     bottom: 20px;
     display: flex;
     flex-flow: row;
   }
 
   .img_sociaux {
-    display: flex;
+    display: flex; 
   }
 
   .img_sociaux p {
     font-size: 12px;
-    font-family: bodyBold, sans-serif;
+    font-family: bodyBold, sans-serif; 
   }
 
   .wrapper_content .sociaux .img_sociaux img {
-    width: 40px;
-    margin-right: 20px;
-  }
+  width: 40px;
+  margin-right: 20px;
+}
 }
 
 @media screen and (min-width: 1440px) {
+  
   .wrapper_content h1 {
     font-size: 52px;
     line-height: 74px;
@@ -194,5 +302,6 @@ strong {
     width: 600px;
     line-height: 36px;
   }
+
 }
 </style>

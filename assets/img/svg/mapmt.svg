@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="97.365" height="138.474" viewBox="0 0 97.365 138.474">
+  <g id="map" transform="translate(-76)">
+    <g id="Groupe_561" data-name="Groupe 561" transform="translate(76)">
+      <g id="Groupe_560" data-name="Groupe 560">
+        <path id="Tracé_2684" data-name="Tracé 2684" d="M124.682,0A48.691,48.691,0,0,0,83.267,74.282l38.644,62.275a4.057,4.057,0,0,0,3.447,1.918h.032a4.056,4.056,0,0,0,3.448-1.972L166.5,73.624A48.693,48.693,0,0,0,124.682,0Zm34.853,69.458L125.3,126.624,90.163,70.007a40.6,40.6,0,1,1,69.372-.548Z" transform="translate(-76)" fill="#e4521b"/>
+      </g>
+    </g>
+    <g id="Groupe_563" data-name="Groupe 563" transform="translate(100.341 24.341)">
+      <g id="Groupe_562" data-name="Groupe 562">
+        <path id="Tracé_2685" data-name="Tracé 2685" d="M190.341,90a24.341,24.341,0,1,0,24.341,24.341A24.369,24.369,0,0,0,190.341,90Zm0,40.623A16.282,16.282,0,1,1,206.6,114.341,16.294,16.294,0,0,1,190.341,130.623Z" transform="translate(-166 -90)" fill="#e4521b"/>
+      </g>
+    </g>
+  </g>
+</svg>

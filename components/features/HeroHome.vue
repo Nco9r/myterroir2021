@@ -40,7 +40,9 @@
         </div>
     <VueSlickCarousel v-bind="slickOptions" ref="carousel" class="carousel">
         <img src="~assets/img/png/brasero.jpg" alt="" />
-        <img src="~assets/img/png/img_traiteur.jpg" alt="" />
+        <img src="~assets/img/png/home_1.jpg" alt="" />
+        <img src="~assets/img/png/home_2.jpg" alt="" />
+        <img src="~assets/img/png/home_3.jpg" alt="" />
     </VueSlickCarousel>
       </div>
     </section>

@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="hero_wrapper">
         <div class="wrapper_content">
-            <h1>Le service traiteur de <span class="black">my terroir</span></h1>
+          <h1>Le service traiteur de <span class="black">my terroir</span></h1>
           <hr />
           <p>
             Cassez les <strong>codes</strong>, choisissez un
@@ -26,8 +26,21 @@
           </div>
         </div>
       </div>
+
       <div class="hero_img">
+        <div class="arrow">
+            <div class="arrowPrev" @click="Prev">
+            <img src="~assets/img/svg/arrowmt.svg" alt="">
+          </div>
+          <div class="arrowNext" @click="Next">
+            <img src="~assets/img/svg/arrowmt.svg" alt="">
+          </div>
+        </div>
+    <VueSlickCarousel v-bind="slickOptions" ref="carousel" class="carousel">
         <img src="~assets/img/png/img_traiteur.jpg" alt="" />
+        <img src="~assets/img/png/traiteur_1.jpg" alt="" />
+        <img src="~assets/img/png/traiteur_2.jpg" alt="" />
+    </VueSlickCarousel>
       </div>
     </section>
   </div>
@@ -35,12 +48,38 @@
 
 <script>
 export default {
-  name: 'HeroHome'
+  name: 'HeroHome', 
+  data() {
+    return {
+      slickOptions: {
+        dots: false,
+        arrows: false,
+        dotsClass: 'slick-dots custom-dot-class',
+        edgeFriction: 0,
+        infinite: true,
+        speed: 700,
+        draggable: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        cssEase: 'cubic-bezier(.945,0,0,1)',
+      },
+    }
+  },
+  methods: {
+    Prev() {
+      this.$refs.carousel.prev()
+    },
+    Next() {
+      this.$refs.carousel.next()
+    }
+  }
 }
 </script>
 
 <style scoped>
-
+.slick-dots {
+  display: none; 
+}
 
 strong {
   font-family: bodyBold, sans-serif;
@@ -119,6 +158,35 @@ strong {
   color: var(--black);
 }
 
+.hero_img {
+  position: relative;
+}
+
+.arrowPrev {
+  position: absolute; 
+  top: 40%;
+  z-index: 1;
+  left: 10px;
+}
+
+.arrowPrev img {
+  width: 30px!important;
+  height: 30px!important;
+  transform: rotate(180deg);
+}
+
+.arrowNext {
+  position: absolute; 
+  top: 40%;
+  z-index: 1;
+  right: 10px;
+}
+
+.arrowNext img {
+  width: 30px!important;
+  height: 30px!important;
+}
+
 .hero_img img {
   width: 150%;
   height: 300px;
@@ -144,12 +212,47 @@ strong {
     padding: 20% 100px;
   }
 
+  .hero_img {
+    display: flex;
+    width: 70%;
+    position: relative;
+    left: 0;
+    display: block;
+    margin-left: -200px;
+  }
+
+  .arrowPrev {
+  position: absolute; 
+  top: 93%;
+  z-index: 1;
+  left: 700px;
+}
+
+.arrowPrev img {
+  width: 40px!important;
+  height: 40px!important;
+  transform: rotate(180deg);
+}
+
+.arrowNext {
+  position: absolute; 
+  top: 93%;
+  z-index: 1;
+  right: 200px;
+}
+
+.arrowNext img {
+  width: 40px!important;
+  height: 40px!important;
+}
+
   .hero_img img {
     height: 100vh;
-    width: 200%;
+    width: 100%;
     margin-top: 0;
     object-fit: cover;
-    margin-left: -350px;
+    display: block;
+
   }
 
   .wrapper_content h1 {
