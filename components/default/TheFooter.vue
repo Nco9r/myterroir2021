@@ -1,5 +1,6 @@
 <template>
   <footer class="footer">
+    <div class="block_footer">
     <div class="content_footer">
       <div class="logo_footer">
         <img src="~assets/img/svg/logo_mt.svg" alt="" />
@@ -33,7 +34,7 @@
           <div class="content_item">
             <a href="tel:+33754827676"><p>+33 (0)7 54 82 76 76</p></a>
             <a href="mailto:contact@my-terroir.fr?subject=Demande de contact site web."><p>contact@my-terroir.fr</p></a>
-            <p>482 rue du Courdonney <br> 33140 Cadaujac</p>
+            <a href="https://ul.waze.com/ul?place=Ei00ODIgUnVlIGR1IENvdXJkb3VuZXksIDMzMTQwIENhZGF1amFjLCBGcmFuY2UiURJPCjQKMgljQ41WnSFVDREmH0OhPx9VCRoeCxDuwe6hARoUChIJ7WD-BTghVQ0R0IivkRplBhwMEOIDKhQKEglz1V5xeCFVDRGm2dFzEAWfJg&ll=44.73625560%2C-0.53585240&navigate=yes&utm_campaign=waze_website&utm_source=waze_website&utm_medium=lm_share_location"><p>482 rue du Courdonney <br> 33140 Cadaujac</p></a>
           </div>
         </div>
          <div class="item">
@@ -62,6 +63,7 @@
             <p>©2021 - My Terroir</p>
             <p>Charte graphique Noémie PULIDO. Développement Nicolas ROUX.</p>
         </div>
+    </div>
     </div>
   </footer>
 </template>
@@ -171,6 +173,12 @@ a {
 
     .footer {
         padding: 50px 100px 0px 100px;
+
+    }
+
+    .block_footer {
+      width: 1200px; 
+      margin: auto; 
     }
     .content_footer {
         display: flex; 

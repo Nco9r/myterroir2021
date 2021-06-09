@@ -190,6 +190,8 @@ export default {
   width: 100%;
   margin-top: 30px;
   padding-bottom: 20px;
+  box-shadow: 0 0 10px rgba(194, 194, 194, 0.2);
+  
 }
 
 .card .img {
@@ -262,6 +264,10 @@ hr {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .prestations_traiteur {
+        max-width: 1350px;
+    }
     .title {
         display: flex; 
         flex-flow: row; 
@@ -271,7 +277,7 @@ hr {
     }
 
     .title_traiteur {
-        width: 700px;
+        width: 500px;
     }
 
     .content_title {

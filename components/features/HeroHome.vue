@@ -191,7 +191,7 @@ strong {
 }
 
 .hero_img img {
-  width: 150%;
+  width: 100%;
   height: 300px;
   object-fit: cover;
   margin-top: 00px;

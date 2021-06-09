@@ -14,7 +14,7 @@
             Italie.
           </p>
           <button>
-            Boutique
+            Obtenir mon devis
           </button>
           <div class="sociaux">
             <div class="img_sociaux">
@@ -263,7 +263,7 @@ strong {
   .wrapper_content p {
     font-size: 14px;
     line-height: 28px;
-    width: 460px;
+    width: 400px;
   }
 
   .wrapper_content button {

@@ -73,5 +73,13 @@ export default {}
     margin-top: 40px;
 }
 
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+  .Newsletter {
+  background-color: var(--orange);
+  background-image: url('~assets/img/png/texture_mt.png');
+  background-size: 30%;
+  background-repeat: repeat;
+  text-align: center;
+}
+}
 </style>

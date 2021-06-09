@@ -43,7 +43,7 @@
             <p @click="openMenu = !openMenu">Menu</p>
           </div>
           <div class="cta_header">
-            <button>Contact</button>
+            <button>Obtenir mon devis</button>
           </div>
         </div>
         <transition name="open" appear>
@@ -137,7 +137,7 @@ header {
 
 .top_bar_color {
   background-color: var(--white);
-  border-bottom: 1px solid var(--gray);
+  box-shadow: 0 0 15px rgba(138, 138, 138, 0.2);
 }
 
 .top_bar_flex {
@@ -207,6 +207,7 @@ header {
   margin-bottom: 20px;
 }
 
+
 .items_menu_mobile_fixed a {
   font-size: 20px;
   text-decoration: none;
@@ -267,6 +268,7 @@ hr {
   font-size: 16px;
   font-family: bodyBold;
   border: none;
+  cursor: pointer;
   box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
 }
 
@@ -460,6 +462,7 @@ hr {
     font-size: 14px;
     font-family: bodyBold;
     border: none;
+    cursor: pointer;
     box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
   }
 

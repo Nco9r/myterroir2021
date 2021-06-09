@@ -296,6 +296,7 @@ export default {
   margin: 30px auto;
   border: 1px solid var(--gray);
   padding-bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .img {

@@ -157,6 +157,8 @@ hr {
 
   .commande_title h2{
     width: 600px;
+    font-size: 32px; 
+    line-height: 46px; 
   }
 
   .commande_title p {
