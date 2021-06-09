@@ -3,7 +3,7 @@
     <HeroProducteurs />
     <section class="producteurs">
       <p>Catégories</p>
-      <div class="categories">
+      <div class="categories" id="categorie">
         <div class="box_categories">
           <div
             class="item_categorie"
@@ -290,13 +290,12 @@ export default {
 }
 
 .card {
-
   background-color: var(--white);
   width: 330px;
-  margin: 30px auto;
+  margin: 30px auto; 
   border: 1px solid var(--gray);
   padding-bottom: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(184, 184, 184, 0.2);
 }
 
 .img {
@@ -377,7 +376,6 @@ hr {
 
 @media screen and (min-width: 1024px) {
   .producteurs {
-    width: 1350px;
     display: flex;
     margin-left: 90px;
     flex-flow: column;
@@ -389,14 +387,15 @@ hr {
 
   .card {
     width: 400px;
-    margin-right: 40px;
+
+    margin: 0 40px 0 0; 
   }
 
   .cards_producteurs_viande {
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-start;
     margin-top: 50px;
-    justify-content: flex-start!important;
   }
 }
 </style>

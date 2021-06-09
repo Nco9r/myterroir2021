@@ -45,7 +45,7 @@
             </p>
           </div>
           <div class="cta_fiche">
-            <nuxt-link to="/producteurs">Revenir aux producteurs</nuxt-link>
+            <nuxt-link to="/producteurs/#categorie">Revenir aux producteurs</nuxt-link>
           </div>
         </div>
       </div>

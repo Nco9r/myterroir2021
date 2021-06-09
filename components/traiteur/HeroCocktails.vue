@@ -3,16 +3,22 @@
     <section class="hero">
       <div class="hero_wrapper">
         <div class="wrapper_content">
-          <h1>DES FAMILLES PASSIONNÉeS DE <span class="black">LEUR TERROIR </span></h1>
+          <h1>
+            Cocktails et buffets.
+          </h1>
           <hr />
           <p>
-            Nous travaillons <strong>uniquement</strong> avec les meilleurs agriculteurs ! Nous
-            cherchons à nous associer à des <strong>éleveurs</strong> qui travaillent avec la
-            <strong>nature</strong>, dans le respect du <strong>bien être</strong> de <strong>l’animal</strong> et de
-            <strong>l'environnement</strong>.
+            Des <strong>prestations</strong> en toute simplicité qui
+            <strong>épateront</strong> tous vos invités par la
+            <strong>qualité</strong> des <strong>produits</strong> utilisés et
+            <strong>l’ambiance</strong> chaleureuse qui en ressort. Buffet
+            Cocktail livré et prêt à servir pour tous vos cock- tails et
+            apéritifs. Budget à partir de 8€ par personne Prestation sans
+            service. Nécessaire de service inclus. Livraison sur site incluse
+            dans la limite de 20km.
           </p>
           <button>
-            Boutique
+            Obtenir mon devis
           </button>
           <div class="sociaux">
             <div class="img_sociaux">
@@ -27,18 +33,19 @@
 
       <div class="hero_img">
         <div class="arrow">
-            <div class="arrowPrev" @click="Prev">
-            <img src="~assets/img/svg/arrowmt.svg" alt="">
+          <div class="arrowPrev" @click="Prev">
+            <img src="~assets/img/svg/arrowmt.svg" alt="" />
           </div>
           <div class="arrowNext" @click="Next">
-            <img src="~assets/img/svg/arrowmt.svg" alt="">
+            <img src="~assets/img/svg/arrowmt.svg" alt="" />
           </div>
         </div>
-    <VueSlickCarousel v-bind="slickOptions" ref="carousel" class="carousel">
-        <img src="~assets/img/png/photorosco.jpg" alt="" />
-        <img src="~assets/img/png/photoproducteurs_1.jpg" alt="" />
-        <img src="~assets/img/png/photoproducteurs_2.jpg" alt="" />
-    </VueSlickCarousel>
+        <VueSlickCarousel v-bind="slickOptions" ref="carousel" class="carousel">
+          <img src="~assets/img/png/traiteur.jpg" alt="" />
+          <img src="~assets/img/png/traiteur_1.jpg" alt="" />
+          <img src="~assets/img/png/traiteur_2.jpg" alt="" />
+          <img src="~assets/img/png/home_3.jpg" alt="" />
+        </VueSlickCarousel>
       </div>
     </section>
   </div>
@@ -46,7 +53,7 @@
 
 <script>
 export default {
-  name: 'HeroHome', 
+  name: 'HeroHome',
   data() {
     return {
       slickOptions: {
@@ -59,8 +66,8 @@ export default {
         draggable: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        cssEase: 'cubic-bezier(.945,0,0,1)',
-      },
+        cssEase: 'cubic-bezier(.945,0,0,1)'
+      }
     }
   },
   methods: {
@@ -76,7 +83,7 @@ export default {
 
 <style scoped>
 .slick-dots {
-  display: none; 
+  display: none;
 }
 
 strong {
@@ -108,16 +115,16 @@ strong {
 }
 
 .wrapper_content hr {
-  border: none; 
-  width: 50px; 
+  border: none;
+  width: 50px;
   background-color: var(--black);
   height: 4px;
   border-radius: 5px;
-  margin: 10px 0 20px 0; 
+  margin: 10px 0 20px 0;
 }
 
 .img_sociaux p {
-  margin-top: 0px!important;
+  margin-top: 0px !important;
   font-family: bodyBold;
 }
 
@@ -141,16 +148,14 @@ strong {
 
 .wrapper_content .sociaux {
   margin-top: 80px;
-  display: flex; 
-  flex-flow: column; 
+  display: flex;
+  flex-flow: column;
 }
 
 .wrapper_content .sociaux .img_sociaux img {
   width: 30px;
   margin-right: 10px;
 }
-
-
 
 .black {
   color: var(--black);
@@ -161,32 +166,32 @@ strong {
 }
 
 .arrowPrev {
-  position: absolute; 
+  position: absolute;
   top: 40%;
   z-index: 1;
   left: 10px;
 }
 
 .arrowPrev img {
-  width: 30px!important;
-  height: 30px!important;
+  width: 30px !important;
+  height: 30px !important;
   transform: rotate(180deg);
 }
 
 .arrowNext {
-  position: absolute; 
+  position: absolute;
   top: 40%;
   z-index: 1;
   right: 10px;
 }
 
 .arrowNext img {
-  width: 30px!important;
-  height: 30px!important;
+  width: 30px !important;
+  height: 30px !important;
 }
 
 .hero_img img {
-  width: 150%;
+  width: 100%;
   height: 300px;
   object-fit: cover;
   margin-top: 00px;
@@ -220,29 +225,29 @@ strong {
   }
 
   .arrowPrev {
-  position: absolute; 
-  top: 93%;
-  z-index: 1;
-  left: 700px;
-}
+    position: absolute;
+    top: 93%;
+    z-index: 1;
+    left: 700px;
+  }
 
-.arrowPrev img {
-  width: 40px!important;
-  height: 40px!important;
-  transform: rotate(180deg);
-}
+  .arrowPrev img {
+    width: 40px !important;
+    height: 40px !important;
+    transform: rotate(180deg);
+  }
 
-.arrowNext {
-  position: absolute; 
-  top: 93%;
-  z-index: 1;
-  right: 200px;
-}
+  .arrowNext {
+    position: absolute;
+    top: 93%;
+    z-index: 1;
+    right: 200px;
+  }
 
-.arrowNext img {
-  width: 40px!important;
-  height: 40px!important;
-}
+  .arrowNext img {
+    width: 40px !important;
+    height: 40px !important;
+  }
 
   .hero_img img {
     height: 100vh;
@@ -250,12 +255,11 @@ strong {
     margin-top: 0;
     object-fit: cover;
     display: block;
-
   }
 
   .wrapper_content h1 {
     font-size: 48px;
-    line-height: 64px;
+    line-height: 68px;
   }
 
   .wrapper_content p {
@@ -269,29 +273,28 @@ strong {
   }
 
   .sociaux {
-    position: absolute; 
+    position: absolute;
     bottom: 20px;
     display: flex;
     flex-flow: row;
   }
 
   .img_sociaux {
-    display: flex; 
+    display: flex;
   }
 
   .img_sociaux p {
     font-size: 12px;
-    font-family: bodyBold, sans-serif; 
+    font-family: bodyBold, sans-serif;
   }
 
   .wrapper_content .sociaux .img_sociaux img {
-  width: 40px;
-  margin-right: 20px;
-}
+    width: 40px;
+    margin-right: 20px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  
   .wrapper_content h1 {
     font-size: 48px;
     line-height: 64px;
@@ -302,6 +305,5 @@ strong {
     width: 600px;
     line-height: 36px;
   }
-
 }
 </style>

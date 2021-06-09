@@ -2,120 +2,126 @@
   <div>
     <HeroTraiteur />
     <section class="prestations_traiteur">
-      <div class="title">
-        <div class="title_traiteur">
-          <img src="~assets/img/svg/feuille.svg" alt="" />
-          <h2>Nos prestations</h2>
+      <div class="block_traiteur">
+        <div class="title">
+          <div class="title_traiteur">
+            <img src="~assets/img/svg/feuille.svg" alt="" />
+            <h2>Nos prestations</h2>
+          </div>
+          <div class="content_title">
+            <p>Événements</p>
+            <p>
+              Vous organisez votre <strong>mariage</strong>, un <strong>anniversaire</strong> ou simplement des
+              <strong>retrouvailles</strong> entre copains. Choisissez avec nous les <strong>produits</strong> qui
+              s’accorderont au mieux avec votre <strong>événement</strong>. Nous pouvons nous
+              occuper des <strong>services</strong> complémentaires comme la vaisselle ou le
+              mobilier.
+            </p>
+          </div>
         </div>
-        <div class="content_title">
-          <p>Événements</p>
-          <p>
-            Vous organisez votre mariage, un anniversaire ou simplement des
-            retrouvailles entre copains. Choisissez avec nous les produits qui
-            s’accorderont au mieux avec votre événement. Nous pouvons nous
-            occuper des services complémentaires comme la vaisselle ou le
-            mobilier.
-          </p>
-        </div>
-      </div>
-      <div class="cards">
-        <div class="bloc_cards">
-          <div class="card">
-            <div class="img">
-              <img src="~assets/img/png/traiteur.jpg" alt="" />
-              <div class="price">
+        <div class="cards">
+          <div class="bloc_cards">
+            <div class="card">
+              <div class="img">
+                <img src="~assets/img/png/traiteur.jpg" alt="" />
+                <div class="price">
+                  <p>
+                    à partir de <br />
+                    8€/pers
+                  </p>
+                </div>
+              </div>
+              <div class="title_name">
+                <span></span>
+                <h3>Cocktails et buffets</h3>
+              </div>
+              <div class="content_card">
                 <p>
-                  à partir de <br />
-                  8€/pers
+                  Des prestations en toute simplicité qui épateront tous vos
+                  invités par la qualité des produits utilisés et l’ambiance
+                  chaleureuse qui en ressort.
                 </p>
               </div>
-            </div>
-            <div class="title_name">
-              <span></span>
-              <h3>Cocktails et buffets</h3>
-            </div>
-            <div class="content_card">
-              <p>
-                Des prestations en toute simplicité qui épateront tous vos
-                invités par la qualité des produits utilisés et l’ambiance
-                chaleureuse qui en ressort.
-              </p>
-            </div>
-            <hr />
-            <div class="cta_card">
-              <p>Lire la suite</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img">
-              <img src="~assets/img/png/brasero.jpg" alt="" />
-              <div class="price">
-                <p>
-                  à partir de <br />
-                  25€/pers
-                </p>
+              <hr />
+              <div class="cta_card">
+                <nuxt-link to="/traiteur/cocktails-buffets"><p>Lire la suite</p></nuxt-link>
               </div>
             </div>
-            <div class="title_name">
-              <span></span>
-              <h3>Brasero OFYR</h3>
-            </div>
-            <div class="content_card">
-              <p>
-                My Terroir s’associe au célèbre brasero-plancha OFYR. La cuisson
-                de légumes, poissons, cuisinés en cocotte, brochettes, tout est
-                possible !
-              </p>
-            </div>
-            <hr />
-            <div class="cta_card">
-              <p>Lire la suite</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img">
-              <img src="~assets/img/png/brasero.jpg" alt="" />
-              <div class="price">
+            <div class="card">
+              <div class="img">
+                <img src="~assets/img/png/brasero.jpg" alt="" />
+                <div class="price">
+                  <p>
+                    à partir de <br />
+                    25€/pers
+                  </p>
+                </div>
+              </div>
+              <div class="title_name">
+                <span></span>
+                <h3>Brasero OFYR</h3>
+              </div>
+              <div class="content_card">
                 <p>
-                  Sur devis
+                  My Terroir s’associe au célèbre brasero-plancha OFYR. La
+                  cuisson de légumes, poissons, cuisinés en cocotte, brochettes,
+                  tout est possible !
                 </p>
               </div>
-            </div>
-            <div class="title_name">
-              <span></span>
-              <h3>Repas et grillades</h3>
-            </div>
-            <div class="content_card">
-              <p>
-                Une prestation haut de gamme que vous n’êtes pas prêt d’oublier. Nous présentons les viandes fraîches à table avant cuisson.
-              </p>
-            </div>
-            <hr />
-            <div class="cta_card">
-              <p>Lire la suite</p>
-            </div>
-          </div>
-           <div class="card">
-            <div class="img">
-              <img src="~assets/img/png/mariage.jpeg" alt="" />
-              <div class="price">
-                <p>
-                  Sur devis
-                </p>
+              <hr />
+              <div class="cta_card">
+               <nuxt-link to="/traiteur/cocktails-buffets"><p>Lire la suite</p></nuxt-link>
               </div>
             </div>
-            <div class="title_name">
-              <span></span>
-              <h3>Mariage</h3>
+            <div class="card">
+              <div class="img">
+                <img src="~assets/img/png/brasero.jpg" alt="" />
+                <div class="price">
+                  <p>
+                    Sur devis
+                  </p>
+                </div>
+              </div>
+              <div class="title_name">
+                <span></span>
+                <h3>Repas et grillades</h3>
+              </div>
+              <div class="content_card">
+                <p>
+                  Une prestation haut de gamme que vous n’êtes pas prêt
+                  d’oublier. Nous présentons les viandes fraîches à table avant
+                  cuisson.
+                </p>
+              </div>
+              <hr />
+              <div class="cta_card">
+               <nuxt-link to="/traiteur/cocktails-buffets"><p>Lire la suite</p></nuxt-link>
+              </div>
             </div>
-            <div class="content_card">
-              <p>
-                Une prestation haut de gamme que vous n’êtes pas prêt d’oublier. Nous présentons les viandes fraîches à table avant cuisson.
-              </p>
-            </div>
-            <hr />
-            <div class="cta_card">
-              <p>Lire la suite</p>
+            <div class="card">
+              <div class="img">
+                <img src="~assets/img/png/mariage.jpeg" alt="" />
+                <div class="price">
+                  <p>
+                    Sur devis
+                  </p>
+                </div>
+              </div>
+              <div class="title_name">
+                <span></span>
+                <h3>Mariage</h3>
+              </div>
+              <div class="content_card">
+                <p>
+                  Une prestation haut de gamme que vous n’êtes pas prêt
+                  d’oublier. Nous présentons les viandes fraîches à table avant
+                  cuisson.
+                </p>
+              </div>
+              <hr />
+              <div class="cta_card">
+             <nuxt-link to="/traiteur/cocktails-buffets"><p>Lire la suite</p></nuxt-link>
+              </div>
             </div>
           </div>
         </div>
@@ -191,7 +197,6 @@ export default {
   margin-top: 30px;
   padding-bottom: 20px;
   box-shadow: 0 0 10px rgba(194, 194, 194, 0.2);
-  
 }
 
 .card .img {
@@ -243,6 +248,10 @@ export default {
 
 .content_card p {
   padding: 0 20px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   font-size: 14px;
   line-height: 26px;
   color: var(--black);
@@ -250,50 +259,51 @@ export default {
 
 hr {
   width: 85%;
-  opacity: 0.4;
+  opacity: 0.1;
   margin: 20px 20px;
 }
 
-.cta_card {
+.cta_card a{
+    text-decoration: none;
   color: var(--orange);
   padding: 0 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   font-size: 14px;
   font-family: bodyBold, sans-serif;
 }
 
 @media screen and (min-width: 1024px) {
+  .block_traiteur {
+    width: 1250px;
+    margin: auto;
+  }
+  .title {
+    display: flex;
+    flex-flow: row;
+    margin-top: 50px;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
 
-    .prestations_traiteur {
-        max-width: 1350px;
-    }
-    .title {
-        display: flex; 
-        flex-flow: row; 
-        margin-top: 50px;
-        justify-content: space-between;
-        padding: 0 50px;
-    }
+  .title_traiteur {
+    width: 500px;
+  }
 
-    .title_traiteur {
-        width: 500px;
-    }
+  .content_title {
+    width: 550px;
+  }
 
-    .content_title {
-        width: 570px;
-    }
-
-    .card {
-        width: 600px;
-        margin-right: 30px;
-    }
-    .bloc_cards {
-        display: flex; 
-        flex-flow: row nowrap; 
-        overflow-x: scroll;
-    }
-
-    
-}   
+  .card {
+    width: 500px;
+    margin-right: 30px;
+  }
+  .bloc_cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; 
+    overflow-x: scroll;
+    margin-bottom: 100px;
+  }
+}
 </style>

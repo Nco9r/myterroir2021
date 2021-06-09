@@ -255,7 +255,7 @@ strong {
 
   .wrapper_content h1 {
     font-size: 48px;
-    line-height: 68px;
+    line-height: 64px;
   }
 
   .wrapper_content p {
@@ -293,8 +293,8 @@ strong {
 @media screen and (min-width: 1440px) {
   
   .wrapper_content h1 {
-    font-size: 52px;
-    line-height: 74px;
+    font-size: 48px;
+    line-height: 64px;
   }
 
   .wrapper_content p {

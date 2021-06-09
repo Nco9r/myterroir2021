@@ -23,6 +23,7 @@ html {
   font-family: body, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 62,5%;
+  word-spacing: -1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

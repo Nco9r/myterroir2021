@@ -9,7 +9,7 @@
       <button>Soumettre</button>
     </div>
     <div class="illus">
-        <img src="~assets/img/png/illus.png" alt="">
+      <img src="~assets/img/png/illus.png" alt="" />
     </div>
   </section>
 </template>
@@ -69,17 +69,27 @@ export default {}
 }
 
 .illus {
-    margin-left: -100px;
-    margin-top: 40px;
+  margin-left: -100px;
+  margin-top: 40px;
 }
 
 @media screen and (min-width: 1024px) {
   .Newsletter {
-  background-color: var(--orange);
-  background-image: url('~assets/img/png/texture_mt.png');
-  background-size: 30%;
-  background-repeat: repeat;
-  text-align: center;
-}
+    background-color: var(--orange);
+    background-image: url('~assets/img/png/texture_mt.png');
+    background-size: 30%;
+    background-repeat: repeat;
+    text-align: center;
+  }
+
+  .cta_newsletter input {
+    width: 300px;
+  }
+
+  .content_newsletter h3 {
+    color: var(--white);
+    font-size: 42px;
+    line-height: 56px;
+  }
 }
 </style>

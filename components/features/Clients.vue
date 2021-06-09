@@ -69,6 +69,8 @@ hr {
 
     .clients {
         padding: 100px 100px;
+        width: 1250px;
+        margin: auto;
     }
 
     .title_section h2 {

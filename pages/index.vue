@@ -36,4 +36,15 @@ export default {
 
 <style>
 
+/* @media screen and (min-width: 1024px) {
+    .container {
+      width: 1250px; 
+      margin: auto; 
+    }
+}
+
+.container {
+
+} */
+
 </style>
