@@ -43,7 +43,7 @@
             <p @click="openMenu = !openMenu">Menu</p>
           </div>
           <div class="cta_header">
-            <button>Obtenir mon devis</button>
+            <nuxt-link to="/contact"><button>Obtenir mon devis</button></nuxt-link>
           </div>
         </div>
         <transition name="open" appear>

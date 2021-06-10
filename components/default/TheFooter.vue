@@ -95,7 +95,7 @@ a {
 
 .logo_footer p{
     width: 230px;
-    opacity: 0.6;
+    color: rgb(153, 153, 153);
     line-height: 26px;
     font-size: 14px;
     margin: 20px 0;
@@ -104,10 +104,9 @@ a {
 .hr_items {
     width: 100%; 
     border: none; 
-    background-color: var(--white);
+    background-color: rgb(192, 192, 192);
     height: 1px;
     border-radius: 4px; 
-    opacity: 0.4;
 }
 
 .items_footer {
@@ -141,10 +140,9 @@ a {
 .hr_copyright {
     width: 100%; 
     border: none; 
-    background-color: var(--white);
+    background-color: rgb(192, 192, 192);
     height: 1px;
     border-radius: 4px; 
-    opacity: 0.4;
 }
 
 .picto {
