@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header :class="{ top_bar_color: scrollPosition > 100 }">
+    <header class="top_bar_color">
       <div class="block_header">
         <div class="header_left">
           <div class="logo">
@@ -446,7 +446,7 @@ hr {
     font-size: 14px;
     font-family: bodyBold;
     text-decoration: none;
-    color: var(--white);
+    color: var(--black);
     transition: all 0.3s;
     mix-blend-mode: multiply;
   }

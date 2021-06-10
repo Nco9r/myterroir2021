@@ -93,7 +93,7 @@ strong {
     display: flex;
     flex-flow: row;
     margin: auto;
-    padding: 30px 80px;
+    padding: 30px 80px 100px 80px;
     justify-content: space-between;
     align-items: flex-end;
 

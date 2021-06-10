@@ -16,9 +16,9 @@
           </button>
           <div class="sociaux">
             <div class="img_sociaux">
-              <img src="~assets/img/svg/instagram.svg" alt="" />
-              <img src="~assets/img/svg/facebook.svg" alt="" />
-              <img src="~assets/img/svg/linkedin.svg" alt="" />
+               <a href="https://fr-fr.facebook.com/myterroir/" target="_blank"><img src="~assets/img/svg/facebook.svg" alt="" /></a>
+                <a href="https://www.instagram.com/myterroir/?hl=fr" target="_blank"><img src="~assets/img/svg/instagram.svg" alt="" /></a>
+                <a href="https://www.linkedin.com/company/myterroir/?originalSubdomain=fr" target="_blank"><img src="~assets/img/svg/linkedin.svg" alt="" /></a>
               <p>#leplaisirdugoût</p>
             </div>
           </div>

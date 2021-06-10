@@ -1476,6 +1476,11 @@ strong {
   text-align: justify;
   margin-bottom: 10px;
 }
+}
 
+@media screen and (min-width: 1440px) {
+  .conditions {
+    padding: 100px 200px;
+  }
 }
 </style>

@@ -7,7 +7,7 @@
                     <path id="Tracé_1781" data-name="Tracé 1781" d="M-15.034,32.87c.209-4.165,2.718-6.645,6.452-6.97V23.6c-3.734-.325-6.244-2.777-6.452-6.941l-2.779.591a7.99,7.99,0,0,0,1.584,4.046,6.322,6.322,0,0,0,3.166,2.3H-31.823v2.3h18.761a6.21,6.21,0,0,0-3.166,2.333,7.994,7.994,0,0,0-1.584,4.017Z" transform="translate(31.823 -16.655)" fill="#202020"/>
                 </svg>
         </div>
-        <div class="products_panier">
+        <div class="products_panier" >
             <p>Il y a <strong>0</strong> produits dans votre panier</p>
         </div>
         <div class="table_panier">
@@ -15,14 +15,15 @@
             <p>Quantité</p>
             <p>Prix</p>
         </div>
-        <div class="items_products_cart">
-        <div class="products_items" >
-            <p class="title_products"></p>
+        <div class="items_products_cart" >
+        <div class="products_items" v-for="cart in carts" :key="cart">
+            <p class="title_products">
+                {{cart.product}}
+            </p>
             <div class="number_products">
-                
             </div>
             <div class="price_products">
-                <p></p>
+                <p>{{cart.price / 100 * 100}}€</p>
                
             </div>
         </div>
@@ -37,7 +38,7 @@
                     <p>Disponibilité</p>
                     <p>3/4 jours ouvrés</p>
                 </div>
-                <div class="price_cart">
+                <div class="price_cart" v-text="product.qty">
                     <p></p>
                 </div>
             </div>
@@ -61,8 +62,25 @@ export default {
     data() {
         return {
             cart: true,
+            items: {
+                qty: 1
+            }
         }
+    },
+    computed: {
+        carts() {
+            return this.$store.state.cart.datas
+        },
+        total_items() {
+            return product.price * items.qty
+        },
+        total() {
+        return this.carts.datas.reduce((acc, p ) => {
+          acc += (cart.price * items.qty)
+          return acc;
+        }, 0);
     }
+    },
 //     computed: {
 //         carts() {
 //             return this.$store.state.cart.datas
@@ -171,7 +189,7 @@ strong {
     width: 120px;
 }
 
-.number_products {
+.number_products input{
     display: flex; 
     width: 50px;
     justify-content: space-between;

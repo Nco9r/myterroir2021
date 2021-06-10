@@ -143,7 +143,7 @@ hr {
 @media screen and (min-width: 1024px) {
 
    section {
-       padding-bottom: 70px;
+       padding-bottom: 100px;
    } 
 
   .commande_title {

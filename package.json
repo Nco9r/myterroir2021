@@ -2,7 +2,7 @@
   "name": "myterroir",
   "version": "1.0.0",
   "description": "Distributeur de produits authentiques pour les professionnels et particuliers.",
-  "author": "Nicolas ROUX",
+  "author": "Stéphane Eclache",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
@@ -14,6 +14,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "cookie-universal-nuxt": "^2.1.4",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
     "nuxt": "^2.0.0",

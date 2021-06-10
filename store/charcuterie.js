@@ -1,5 +1,5 @@
 export const state = () => ({
-  datas: [
+  products: [
     {
       product: 'Jambon de Bayonne 12 mois chiffonnade',
       weight: '100 GR',

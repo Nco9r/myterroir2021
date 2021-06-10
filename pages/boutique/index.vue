@@ -58,7 +58,7 @@
           </div>
           <hr>
           <div class="cta_product">
-              <p>Ajouter au panier</p>
+              <p @click="addOne(product)">Ajouter au panier</p>
           </div>
         </div>
       </div>
@@ -68,6 +68,8 @@
 
 <script>
 import HeroBoutique from '../../components/boutique/HeroBoutique'
+import { mapMutations } from 'vuex';
+
 
 export default {
   components: {
@@ -82,9 +84,12 @@ export default {
   },
   computed: {
     products() {
-      return this.$store.state.charcuterie.datas
+      return this.$store.state.charcuterie.products
     }
   },
+  methods: {
+    ...mapMutations('cart', ['addOne']),
+  }
 }
 </script>
 
@@ -302,5 +307,23 @@ hr {
     justify-content: flex-start;
     margin-top: 50px;
   }
+
+  .box_products {
+      margin: auto; 
+      justify-content: space-around;
+  }
+
+  .title_product {
+      height: 80px;
+  }
+
+  .product {
+  width: 290px;
+  border: 1px solid rgb(245, 245, 245);
+  padding: 20px;
+  margin-right: 20px;
+  box-shadow: 0 0 5px rgb(230, 230, 230);
+  margin-bottom: 20px;
+}
 }
 </style>
