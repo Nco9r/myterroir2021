@@ -710,6 +710,7 @@ a {
   width: 100%;
   position: fixed;
   inset: 0;
+  overflow-x: hidden;
   z-index: 90;
   overflow-y: scroll;
 }
@@ -739,7 +740,7 @@ a {
   justify-content: space-between;
   align-items: center;
   color: var(--orange);
-  font-weight: bold;
+  font-family: bodyBold, sans-serif;
   font-size: 14px;
 }
 
