@@ -76,7 +76,14 @@ strong {
   font-size: 16px;
   font-family: bodyBold;
   border: none;
+  cursor: pointer;
+  transition: all .3s; 
   box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
+}
+
+.about_content button:hover {
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+   background-color: var(--black);
 }
 
 .about_img {

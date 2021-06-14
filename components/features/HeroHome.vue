@@ -15,9 +15,11 @@
             qualités. Tous nos produits sont choisis
             <strong>minutieusement</strong> auprès d’artisans.
           </p>
+          <nuxt-link to='/boutique'>
           <button>
             Boutique
           </button>
+          </nuxt-link>
           <div class="sociaux">
             <div class="img_sociaux">
               <a href="https://fr-fr.facebook.com/myterroir/" target="_blank"><img src="~assets/img/svg/facebook.svg" alt="" /></a>
@@ -139,6 +141,7 @@ strong {
   padding: 10px 28px;
   color: var(--white);
   font-size: 16px;
+  cursor: pointer;
   font-family: bodyBold;
   border: none;
   box-shadow: 5px 5px rgba(5, 5, 5, 0.274);
@@ -224,25 +227,25 @@ strong {
     margin-left: -200px;
   }
 
-  .arrowPrev {
-  position: absolute; 
-  top: 93%;
-  z-index: 1;
-  left: 700px;
-}
+ .arrowPrev {
+    position: absolute;
+    top: 93%;
+    z-index: 1;
+    left: 79%;
+  }
 
-.arrowPrev img {
-  width: 40px!important;
-  height: 40px!important;
-  transform: rotate(180deg);
-}
+  .arrowPrev img {
+    width: 40px !important;
+    height: 40px !important;
+    transform: rotate(180deg);
+  }
 
-.arrowNext {
-  position: absolute; 
-  top: 93%;
-  z-index: 1;
-  right: 200px;
-}
+  .arrowNext {
+    position: absolute;
+    top: 93%;
+    z-index: 1;
+    right: 10%;
+  }
 
 .arrowNext img {
   width: 40px!important;
@@ -296,7 +299,18 @@ strong {
 }
 
 @media screen and (min-width: 1440px) {
-  .hero_wrapper {
+   .wrapper_content h1 {
+    font-size: 58px;
+    line-height: 74px;
+  }
+
+  .wrapper_content p {
+    font-size: 18px;
+    width: 600px;
+    line-height: 36px;
+  }
+
+   .hero_wrapper {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
     width: 100%;
   }
@@ -307,18 +321,7 @@ strong {
     position: relative;
     left: 0;
     display: block;
-    margin-left: -200px;
-  }
-  
-  .wrapper_content h1 {
-    font-size: 48px;
-    line-height: 64px;
-  }
-
-  .wrapper_content p {
-    font-size: 18px;
-    width: 600px;
-    line-height: 36px;
+    margin-left: -280px;
   }
 
 }

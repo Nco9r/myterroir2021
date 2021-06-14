@@ -16,4 +16,9 @@ export default {
 
 <style scoped>
 
+.nuxt-link-exact-active {
+    color: var(--white) !important;
+    z-index: 3!important;
+  }
+
 </style>

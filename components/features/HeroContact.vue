@@ -4,21 +4,13 @@
       <div class="hero_wrapper">
         <div class="wrapper_content">
           <h1>Obtenir un <span class="black">devis</span></h1>
-          <hr />
+          <hr>
           <p>
             Vous souhaitez obtenir un devis pour l'organiser d'un événement ?
             Veuillez remplir le formulaire ci-dessous en détaillant de manière
             précise vos envies. Nous reviendrons vers vous dans les plus brefs
             délai.
           </p>
-          <div class="sociaux">
-            <div class="img_sociaux">
-              <img src="~assets/img/svg/instagram.svg" alt="" />
-              <img src="~assets/img/svg/facebook.svg" alt="" />
-              <img src="~assets/img/svg/linkedin.svg" alt="" />
-              <p>#leplaisirdugoût</p>
-            </div>
-          </div>
         </div>
         <div class="form_devis">
           <div class="title_form">
@@ -51,7 +43,7 @@
             <div class="label">
               <p>Type de prestations</p>
               <select v-model="type">
-                <option disabled value=""
+                <option disabled value="Choisir dans la liste"
                   >Choisir dans la liste
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,10 +59,10 @@
                       fill="#fff"
                     /></svg
                 ></option>
-                <option>Buffets et Cocktails</option>
-                <option>Repas et grillades</option>
-                <option>Braséro</option>
-                <option>Mariages</option>
+                <option value="Buffets et Cocktails">Buffets et Cocktails</option>
+                <option value="Repas et grillades">Repas et grillades</option>
+                <option value="Braséro">Braséro</option>
+                <option value="Mariages">Mariages</option>
               </select>
             </div>
             <div class="label">
@@ -119,12 +111,18 @@
     </VueSlickCarousel>
       </div> -->
     </section>
+    <Newsletter/>
   </div>
 </template>
 
 <script>
+
+import Newsletter from '../default/Newsletter'
 export default {
   name: 'HeroHome',
+  components: {
+    Newsletter,
+  },
   data() {
     return {
       slickOptions: {
@@ -167,10 +165,7 @@ strong {
 }
 
 .hero_wrapper {
-  background-color: var(--orange);
-  background-image: url('~assets/img/png/texture_mt.png');
-  background-repeat: repeat;
-  background-size: 30%;
+  background-color: var(--white);
   width: 100%;
   z-index: 1;
 }
@@ -180,7 +175,7 @@ strong {
 }
 
 .wrapper_content h1 {
-  color: var(--white);
+  color: var(--black);
   font-size: 28px;
   line-height: 40px;
 }
@@ -188,7 +183,7 @@ strong {
 .wrapper_content hr {
   border: none;
   width: 50px;
-  background-color: var(--white);
+  background-color: var(--orange);
   height: 4px;
   border-radius: 5px;
   margin: 10px 0 20px 0;
@@ -200,7 +195,7 @@ strong {
 }
 
 .wrapper_content p {
-  color: var(--white);
+  color: var(--black);
   font-size: 16px;
   margin-top: 30px;
   line-height: 30px;
@@ -230,7 +225,6 @@ strong {
 
 .form_devis {
   padding: 15px;
-  margin: 15px;
 }
 
 .title_form h4 {
@@ -349,15 +343,18 @@ input[type='checkbox' i]:checked::after {
   color: white;
   font-size: 14px;
   cursor: pointer;
+  transition: all .3s;
   outline: none;
 }
 
 .form_devis {
   background-color: var(--gray);
+  width: 100%;
 }
 
 .btn_hero button:hover {
-  transform: translate(3px, 3px);
+   box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+   background-color: var(--black);
 }
 
 .btn_hero button svg {
@@ -368,18 +365,23 @@ input[type='checkbox' i]:checked::after {
   .hero {
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column;
     position: relative;
+  }
+
+  hr {
+    display: none;
   }
 
   .hero_wrapper {
     width: 100%;
     display: flex;
+    flex-flow: column;
     align-items: flex-start; 
   }
 
   .wrapper_content {
-    padding:10% 100px;
+    padding:10% 100px 20px 100Px;
   }
 
   .hero_img {
@@ -424,7 +426,8 @@ input[type='checkbox' i]:checked::after {
     display: block;
   }
     .wrapper_content {
-        width: 50%;
+        width: 100%;
+        text-align: center;
     }
   .wrapper_content h1 {
     font-size: 48px;
@@ -433,7 +436,6 @@ input[type='checkbox' i]:checked::after {
 
   .wrapper_content p {
     font-size: 14px;
-    width: 400px;
     line-height: 28px;
   }
 
@@ -463,17 +465,16 @@ input[type='checkbox' i]:checked::after {
   }
 
   .form_devis {
-    width: 45%;
-      margin-top: 140px;
-      padding: 20px;
-      box-shadow: 10px 10px rgba(61, 61, 61, 0.548);
-      margin-bottom: 100Px;
+    width: 55%;
+      text-align: center;
+      margin: 0Px auto 100Px auto;
 
   }
 
   form {
       display: flex; 
       flex-flow: row wrap;
+      
       justify-content: center;
    
   }
@@ -481,19 +482,31 @@ input[type='checkbox' i]:checked::after {
   .label {
       width: 40%;
       margin-right: 30px;
+      text-align: left;
+  }
+
+  .check {
+    text-align: left;
+    margin-left: 50px;
   }
 }
 
 @media screen and (min-width: 1440px) {
+
+  .wraper_content {
+    display: flex;
+    margin: 30px auto; 
+  }
   .wrapper_content h1 {
-    font-size: 48px;
+    font-size: 38px;
     line-height: 64px;
   }
 
   .wrapper_content p {
-    font-size: 18px;
-    width: 450px;
-    line-height: 36px;
+    font-size: 14px;
+    width: 700px;
+    margin: 10px auto;
+    line-height: 26px;
   }
 }
 </style>

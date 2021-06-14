@@ -268,7 +268,7 @@ hr {
   .box_search {
     display: flex;
     flex-flow: column;
-    padding: 100px 90px 1000px 90px;
+    padding: 100px 150px 1000px 150px;
     background-color: var(--orange);
     position: sticky;
     top: 60px;
@@ -310,7 +310,7 @@ hr {
 
   .box_products {
       margin: auto; 
-      justify-content: space-around;
+      justify-content: flex-start;
   }
 
   .title_product {
@@ -324,6 +324,11 @@ hr {
   margin-right: 20px;
   box-shadow: 0 0 5px rgb(230, 230, 230);
   margin-bottom: 20px;
+}
+
+.cards_products {
+  padding: 30px 90px 30px 90px;
+  margin: auto;
 }
 }
 </style>

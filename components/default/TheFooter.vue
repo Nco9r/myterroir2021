@@ -207,7 +207,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .footer {
-    padding: 50px 100px 0px 100px;
+    padding: 50px 50px 0px 50px;
   }
 
   .picto_bancaire {
@@ -259,7 +259,7 @@ a {
 
 @media screen and (min-width: 1440px) {
     .block_footer {
-    max-width: 1440px;
+    max-width: 1640px;
     margin: auto;
   }
 }

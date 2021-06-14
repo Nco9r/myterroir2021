@@ -46,12 +46,12 @@
               </div>
               <hr />
               <div class="cta_card" @click="cocktails = !cocktails">
-                <p>En détails</p>
+                <p>Plus d'infos</p>
               </div>
             </div>
             <div class="card">
               <div class="img">
-                <img src="~assets/img/png/brasero.jpg" alt="" />
+                <img src="~assets/img/png/brasero_4.jpg" alt="" />
                 <div class="price">
                   <p>
                     à partir de <br />
@@ -71,8 +71,9 @@
                 </p>
               </div>
               <hr />
-              <div class="cta_card" @click="cocktails = !cocktails">
-                <p>En détails</p>
+              <div class="cta_card" @click="brasero = !brasero">
+                                <p>Plus d'infos</p>
+
               </div>
             </div>
             <div class="card">
@@ -96,8 +97,9 @@
                 </p>
               </div>
               <hr />
-              <div class="cta_card" @click="cocktails = !cocktails">
-                <p>En détails</p>
+              <div class="cta_card" @click="grillade = !grillade">
+                                <p>Plus d'infos</p>
+
               </div>
             </div>
             <div class="card">
@@ -121,8 +123,9 @@
                 </p>
               </div>
               <hr />
-             <div class="cta_card" @click="cocktails = !cocktails">
-                <p>En détails</p>
+              <div class="cta_card" @click="cocktails = !cocktails">
+                               <p>Plus d'infos</p>
+
               </div>
             </div>
           </div>
@@ -172,6 +175,7 @@
             par la qualité des produits utilisés et l’ambiance chaleureuse qui
             en ressort.
           </p>
+          <p class="nb">Prestation sans service. Nécessaire de service inclus. Livraison sur site incluse dans la limite de 20km.</p>
         </div>
         <hr />
         <div class="details_group">
@@ -347,6 +351,289 @@
         </div>
       </div>
     </transition>
+    <div class="overlay" v-if="brasero" @click="brasero = !brasero"></div>
+    <transition name="open" appear>
+      <!-- <div class="img_card">
+          <img src="~assets/img/png/brasero.jpg" alt="" />
+        </div> -->
+      <div class="details" v-if="brasero">
+        <div class="card_name">
+          <div class="title_name_card">
+            <span></span>
+            <h3>Braséro OFYR</h3>
+          </div>
+          <p @click="brasero = !brasero">Retour</p>
+        </div>
+        <div class="img_card">
+          <div class="arrow">
+            <div class="arrowPrev" @click="Prev">
+              <img src="~assets/img/svg/arrowmt.svg" alt="" />
+            </div>
+            <div class="arrowNext" @click="Next">
+              <img src="~assets/img/svg/arrowmt.svg" alt="" />
+            </div>
+          </div>
+          <VueSlickCarousel
+            v-bind="slickOptions"
+            ref="carousel"
+            class="carousel"
+          >
+            <img src="~assets/img/png/brasero.jpg" alt="" />
+            <img src="~assets/img/png/img_traiteur.jpg" alt="" />
+            <img src="~assets/img/png/brasero_4.jpg" alt="" />
+          </VueSlickCarousel>
+        </div>
+        <div class="content_card_intro">
+          <p>
+            Nouveau, My Terroir s’associe au célèbre brasero-plancha OFYR La
+            plancha au bois Ofyr permet d’être beaucoup plus créatif dans les
+            préparations que sur un barbecue classique. La cuisson de légumes,
+            poissons, cuisinés en cocotte, bro- chettes brésiliennes, tout est
+            possible !
+          </p>
+          <p>
+            Le barbecue gastronomique étant un art à part entière, et les tarifs
+            pouvant varier de <strong>25€ à 100€ par personne</strong>, nous
+            préférons souvent nous rencontrer afin de discuter de vos dé-
+            sidératas avant de vous préparer un devis.
+          </p>
+           <p class="nb">Prestation avec service et ramassage des déchets.</p>
+        </div>
+        <hr />
+        <div class="details_group">
+          <h3>Les possibilités sont infinies :</h3>
+        </div>
+        <div class="group">
+          <div class="title_group" @click="apero = !apero">
+            <p>Les poissons</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: apero }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="apero">
+            <p>
+              filet de dorade, saumon sur peau, dos de cabillaud, crevettes,
+              gambas, langoustines, homard, moules, noix de saint-jacques,
+              brochette de lotte ...
+            </p>
+          </div>
+          <div class="title_group" @click="bBasque = !bBasque">
+            <p>Les légumes</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: bBasque }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="bBasque">
+            <p>
+              tomates, asperges, pommes grenailles, champignons, pleurotes,
+              cèpes, aubergines, ...
+            </p>
+          </div>
+          <div class="title_group" @click="bFrance = !bFrance">
+            <p>Les viandes raffinées</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: bFrance }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="bFrance">
+            <p>
+              mignons de porc aux girolles, sot l’y laisse de dinde, côtelettes
+              d’agneau, magret de canard, suprême de pintade, saucisses basques
+              (txistorra), pluma de pata negra, lobe de foie gras cru snacké,
+              longe de veau ...
+            </p>
+          </div>
+        </div>
+        <div class="group">
+          <div class="title_group" @click="cBasque = !cBasque">
+            <p>La grosse barbaque</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: cBasque }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="cBasque">
+            <p>
+              travers de porc au miel, os à moelle, palette de porc, jambon
+              brai- sé, côte à l’os de porc fermier, le carré d’agneau entier
+              ...
+            </p>
+          </div>
+          <div class="title_group" @click="cFrance = !cFrance">
+            <p>Les pièces du boucher</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: cFrance }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="cFrance">
+            <p>
+              araignée, onglet à l’échalote, bavette, araignée de porc, joues de
+              porc, coeur de canard (c’est extra !)
+            </p>
+          </div>
+          <div class="title_group" @click="cburger = !cburger">
+            <p>Les burgers en tout genre</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: cburger }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="cburger">
+            <p>
+              boeuf, agneau, volaille, piment d’espelette, ...
+            </p>
+          </div>
+          <div class="title_group" @click="cmature = !cmature">
+            <p>Viandes maturées</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: cmature }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="cmature">
+            <p>
+              T-bone, Tomahawk, Côte à l’os, Picanha, Wagyu ...
+            </p>
+          </div>
+          <div class="title_group" @click="cbroche = !cbroche">
+            <p>Les brochettes brésiliennes</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: cbroche }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="cbroche">
+            <p>
+              brochettes XXL à partager, cuites à la verticale
+            </p>
+          </div>
+          <hr />
+        </div>
+        <div class="cta_card_c">
+          <nuxt-link to="/contact">Obtenir mon devis</nuxt-link>
+        </div>
+      </div>
+    </transition>
+
+    <div class="overlay" v-if="grillade" @click="grillade = !grillade"></div>
+    <transition name="open" appear>
+      <!-- <div class="img_card">
+          <img src="~assets/img/png/brasero.jpg" alt="" />
+        </div> -->
+      <div class="details" v-if="grillade">
+        <div class="card_name">
+          <div class="title_name_card">
+            <span></span>
+            <h3>Repas et grillades</h3>
+          </div>
+          <p @click="grillade = !grillade">Retour</p>
+        </div>
+        <div class="img_card">
+          <div class="arrow">
+            <div class="arrowPrev" @click="Prev">
+              <img src="~assets/img/svg/arrowmt.svg" alt="" />
+            </div>
+            <div class="arrowNext" @click="Next">
+              <img src="~assets/img/svg/arrowmt.svg" alt="" />
+            </div>
+          </div>
+          <VueSlickCarousel
+            v-bind="slickOptions"
+            ref="carousel"
+            class="carousel"
+          >
+            <img src="~assets/img/png/brasero.jpg" alt="" />
+            <img src="~assets/img/png/img_traiteur.jpg" alt="" />
+            <img src="~assets/img/png/brasero_4.jpg" alt="" />
+          </VueSlickCarousel>
+        </div>
+        <div class="content_card_intro">
+          <p>
+            Une prestation haut de gamme que vous n’êtes pas prêt d’oublier :
+            nous venons avec plus de personnel pour le service, nous présentons
+            les viandes fraîches à table avant cuisson, les épices et
+            accompagnements choisis, nous faisons du show-co- oking sur place,
+            découpes des viandes en salle, plusieurs repasses en service. Nous
+            avons déjà réalisé ces formules pour des mariages chic dans des
+            demeures d’exception, demandez-nous toutes les folies nous savons
+            vous les réaliser. Toujours sur devis personnalisé
+          </p>
+          <p class="nb">Prestation avec service et ramassage des déchets.</p>
+        </div>
+        <hr />
+        <div class="details_group">
+          <h3>La prestations en détails</h3>
+        </div>
+        <div class="group">
+          <div class="title_group" @click="apero = !apero">
+            <p>En amuses-bouches</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: apero }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="apero">
+            <p>
+              côtelettes d’agneau, encornets, os à moelle, chèvre chaud lardé,
+              coeurs de canard, saint-jacques fraîches à la plancha, foie gras
+              snacké
+            </p>
+          </div>
+          <div class="title_group" @click="bBasque = !bBasque">
+            <p>La grosse barbaque pour les rongeurs d’os</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: bBasque }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="bBasque">
+            <p>
+              travers de porc au miel, os à moelle grillé, palette de porc,
+              Tomahawk
+            </p>
+          </div>
+          <div class="title_group" @click="bFrance = !bFrance">
+            <p>Belles pièces de boeuf</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: bFrance }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="bFrance">
+            <p>
+              Araignée, onglet, hampe, bavette, T-bone, Toma- hawk, Picanha ...
+            </p>
+          </div>
+        </div>
+        <div class="group">
+          <div class="title_group" @click="cBasque = !cBasque">
+            <p>Viandes d’exception</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: cBasque }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="cBasque">
+            <p>
+              Boeuf de Galice, pluma de pata negra, noix d’entre- côte black
+              angus, filet de Wagyu, agneau des Pyrénées, double côte de co-
+              chon fermier, etc. ...
+            </p>
+          </div>
+          <div class="title_group" @click="cFrance = !cFrance">
+            <p>L’atelier « à la découverte de la Viande »</p>
+            <div class="price_content">
+              <p class="plus" :class="{ plus_open: cFrance }">+</p>
+            </div>
+          </div>
+          <div class="content_group" v-if="cFrance">
+            <p>
+              La célèbre soirée atelier-dégus- tation de viandes maturées :
+              différentes races et affinages avec les explica- tions du chef sur
+              les origines des viandes, les modes d’élevage, les mé- thodes de
+              maturation, démonstration de découpe, etc. Un moment d’exception,
+              convivial, interactif et instructif
+            </p>
+          </div>
+          <hr />
+        </div>
+        <div class="cta_card_c">
+          <nuxt-link to="/contact">Obtenir mon devis</nuxt-link>
+        </div>
+      </div>
+    </transition>
 
     <Newsletter />
   </div>
@@ -375,6 +662,11 @@ export default {
       cBasque: false,
       cFrance: false,
       cocktails: false,
+      cbroche: false,
+      cmature: false,
+      cburger: false,
+      brasero: false,
+      grillade: false,
       slickOptions: {
         dots: false,
         arrows: false,
@@ -414,12 +706,16 @@ export default {
 
 <style scoped>
 
+.nb {
+  font-size: 12px!important; 
+  color: gray!important;
+  line-height: 20px!important;
+}
 .cta_card_c {
   margin-top: 50px;
-  display: flex; 
-  justify-content: flex-end;
+  display: flex;
 }
-.cta_card_c a{
+.cta_card_c a {
   background-color: var(--orange);
   padding: 16px 48px;
   text-align: center;
@@ -429,7 +725,6 @@ export default {
   border: none;
   cursor: pointer;
   box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
-
 }
 .content_card_intro p {
   font-size: 14px;
@@ -438,6 +733,8 @@ export default {
   line-height: 26px;
   color: var(--black);
 }
+
+
 .card_name {
   display: flex;
   justify-content: space-between;
@@ -448,12 +745,14 @@ export default {
   color: var(--orange);
   font-family: bodyBold, sans-serif;
   font-size: 14px;
+  cursor: pointer;
 }
 .arrowPrev {
   position: absolute;
   top: 40%;
   z-index: 1;
   left: 10px;
+  cursor: pointer;
 }
 
 .arrowPrev img {
@@ -465,6 +764,7 @@ export default {
 .arrowNext {
   position: absolute;
   top: 40%;
+  cursor: pointer;
   z-index: 1;
   right: 10px;
 }
@@ -480,6 +780,8 @@ export default {
 
 .img_card img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
   z-index: 2;
 }
 .open-enter-active {
@@ -655,7 +957,9 @@ hr {
   opacity: 0.1;
   margin: 20px 20px;
 }
-
+.cta_card {
+  cursor: pointer;
+}
 .cta_card p {
   text-decoration: none;
   color: var(--orange);
@@ -764,7 +1068,7 @@ strong {
 
 @media screen and (min-width: 1024px) {
   .block_traiteur {
-    width: 1250px;
+    max-width: 1160px;
     margin: auto;
   }
 
@@ -910,12 +1214,12 @@ strong {
 
   .card {
     width: 550px;
-    margin-right: 20px;
+    margin-right: 40px;
   }
   .bloc_cards {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 100px;
   }
 

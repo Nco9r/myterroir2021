@@ -11,9 +11,11 @@
         humilité notre <strong>expertise</strong> en la matière. Pourquoi chercher compliqué
         quand nous pouvons vous <strong>régaler en toute simplicité!</strong>
       </p>
+      <nuxt-link to='/boutique'>
       <button>
         Boutique
       </button>
+      </nuxt-link>
     </div>
     <div class="about_img">
       <img src="~assets/img/svg/feuille.svg" alt="verdure" />
@@ -69,8 +71,15 @@ strong {
   color: var(--white);
   font-size: 16px;
   font-family: bodyBold;
+  cursor: pointer;
   border: none;
   box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
+  transition: all .3s; 
+}
+
+.about_content button:hover {
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+   background-color: var(--black);
 }
 
 .about_img {

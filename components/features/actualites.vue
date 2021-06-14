@@ -60,7 +60,11 @@
       </div>
     </div>
     <div class="cta_actualites">
-      <button>Nos actualités</button>
+       <nuxt-link to='/blog'>
+      <button>
+        Nos actualités
+      </button>
+      </nuxt-link>
     </div>
   </section>
 </template>
@@ -168,10 +172,17 @@ export default {}
   display: flex;
   margin: 40px auto;
   color: var(--white);
+  cursor: pointer; 
   font-size: 16px;
   font-family: bodyBold;
   border: none;
+  transition: all .3s; 
   box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
+}
+
+.cta_actualites button:hover {
+     box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+   background-color: var(--black);
 }
 
 @media screen and (min-width: 1024px) {

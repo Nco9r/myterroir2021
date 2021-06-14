@@ -1,4 +1,6 @@
 <template>
+<div>
+    <div class="overlay" v-if="cart"></div>
     <transition name="cartOpen" appear>
     <section class="panier" v-if="cart">
         <div class="title_panier">
@@ -38,7 +40,7 @@
                     <p>Disponibilité</p>
                     <p>3/4 jours ouvrés</p>
                 </div>
-                <div class="price_cart" v-text="product.qty">
+                <div class="price_cart">
                     <p></p>
                 </div>
             </div>
@@ -51,6 +53,7 @@
         </div>
     </section>
     </transition>
+    </div>
 </template>
 
 <script>
@@ -70,16 +73,8 @@ export default {
     computed: {
         carts() {
             return this.$store.state.cart.datas
-        },
-        total_items() {
-            return product.price * items.qty
-        },
-        total() {
-        return this.carts.datas.reduce((acc, p ) => {
-          acc += (cart.price * items.qty)
-          return acc;
-        }, 0);
-    }
+        }
+        
     },
 //     computed: {
 //         carts() {
@@ -131,12 +126,22 @@ export default {
     width: 100%; 
     position: fixed; 
     top: 0; 
-    right: 0;
     bottom: 0;
-    left: 0;
+
     background-color: white;
-    z-index: 2;
+    z-index: 10;
     padding: 0 15px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  -webkit-z-index: 3;
+  -moz-z-index: 3;
+  -ms-z-index: 3;
+  -o-z-index: 3;
+  z-index: 3;
+  background-color: rgba(15, 15, 15, 0.658);
 }
 
 .products_panier p {
@@ -342,10 +347,36 @@ hr {
 @media screen and (min-width: 1024px) {
     .panier {
             width: 30%; 
-            float: right;
             position: fixed; 
             right: 0;
+            z-index: 10;
     }
+
+    .cartOpen-enter-active {
+    animation: open .3s ease-in-out;
+}
+
+.cartOpen-leave-active {
+    animation: close .3s ease-in-out;
+}
+
+@keyframes open {
+    from {
+        transform: translateX(100%)
+    }
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes close {
+    from {
+        transform: translateX(0)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
     
 }
 

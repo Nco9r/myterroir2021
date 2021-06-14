@@ -6,7 +6,7 @@
           <div class="logo">
             <img src="~assets/img/svg/logo_mt.svg" alt="" />
           </div>
-          <div class="items_menu_desktop">
+          <div class="items_menu_desktop" >
             <nuxt-link
               :class="{ items_menu_scroll: scrollPosition > 100 }"
               to="/"
@@ -43,6 +43,10 @@
             <p @click="openMenu = !openMenu">Menu</p>
           </div>
           <div class="cta_header">
+            <div class="cart" @click="cart =!cart">
+              <img src="~assets/img/svg/cart.svg" alt="">
+            </div>
+            <span></span>
             <nuxt-link to="/contact"><button>Obtenir mon devis</button></nuxt-link>
           </div>
         </div>
@@ -206,6 +210,10 @@ header {
   font-size: 14px;
   font-family: bodyBold, sans-serif;
   margin-bottom: 20px;
+}
+
+.cart {
+  cursor: pointer;
 }
 
 
@@ -435,8 +443,29 @@ hr {
     /* background-color: var(--gray); */
   }
 
+.cart {
+  cursor: pointer;
+}
   .menu_mobile {
     display: none;
+  }
+
+  .cta_header {
+    display: flex; 
+    width: 300px;
+    justify-content: space-between;
+    align-items: center; 
+  }
+
+  .cta_header span {
+    width: 2px;
+  height: 26px;
+  border: none;
+  background-color: var(--black);
+  }
+
+  .cta_header .cart img {
+    width: 30px;
   }
 
   .nuxt-link-exact-active {
@@ -445,6 +474,7 @@ hr {
     box-shadow: 5px 5px rgba(5, 5, 5, 0.274);
     transform: rotate(-3deg) !important;
     color: var(--white) !important;
+    z-index: 3!important;
   }
 
   .block_header {
@@ -501,11 +531,14 @@ hr {
   }
 
   .items_menu_desktop a:hover {
-    background-color: var(--black);
-    padding: 5px 10px;
-    box-shadow: 5px 5px rgba(5, 5, 5, 0.274);
-    transform: rotate(-3deg) !important;
-    color: var(--white) !important;
+    color: var(--orange) !important;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  header {
+    padding-left: 100px; 
+    padding-right: 100px;
   }
 }
 </style>

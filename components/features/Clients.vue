@@ -1,7 +1,7 @@
 <template>
   <section class="clients">
     <div class="title_section">
-      <h2>Ils nous ont fait confiance</h2>
+      <h2>Ils nous font confiance</h2>
       <p>et nous les remercions</p>
       <hr />
     </div>
@@ -69,7 +69,7 @@ hr {
 
     .clients {
         padding: 100px 100px;
-        width: 1250px;
+        max-width: 1250px;
         margin: auto;
     }
 
@@ -100,6 +100,14 @@ hr {
 
     .follow {
         width: 70px!important;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .clients {
+        padding: 100px 100px;
+        max-width: 1440px;
+        margin: auto;
     }
 }
 

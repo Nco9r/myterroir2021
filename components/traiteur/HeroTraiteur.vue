@@ -222,24 +222,24 @@ strong {
   }
 
   .arrowPrev {
-  position: absolute; 
-  top: 93%;
-  z-index: 1;
-  left: 700px;
-}
+    position: absolute;
+    top: 93%;
+    z-index: 1;
+    left: 79%;
+  }
 
-.arrowPrev img {
-  width: 40px!important;
-  height: 40px!important;
-  transform: rotate(180deg);
-}
+  .arrowPrev img {
+    width: 40px !important;
+    height: 40px !important;
+    transform: rotate(180deg);
+  }
 
-.arrowNext {
-  position: absolute; 
-  top: 93%;
-  z-index: 1;
-  right: 200px;
-}
+  .arrowNext {
+    position: absolute;
+    top: 93%;
+    z-index: 1;
+    right: 10%;
+  }
 
 .arrowNext img {
   width: 40px!important;

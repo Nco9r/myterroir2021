@@ -6,10 +6,7 @@
           <h1>retrouvez toutes nos <span class="black">actualités. </span></h1>
           <hr />
           <p>
-            Nous travaillons <strong>uniquement</strong> avec les meilleurs agriculteurs ! Nous
-            cherchons à nous associer à des <strong>éleveurs</strong> qui travaillent avec la
-            <strong>nature</strong>, dans le respect du <strong>bien être</strong> de <strong>l’animal</strong> et de
-            <strong>l'environnement</strong>.
+            Suivez l'actualités de nos producteurs, des salons et des événements que nous faisons. 
           </p>
           <button>
             Boutique
@@ -35,18 +32,23 @@
           </div>
         </div>
     <VueSlickCarousel v-bind="slickOptions" ref="carousel" class="carousel">
-        <img src="~assets/img/png/photorosco.jpg" alt="" />
-        <img src="~assets/img/png/photoproducteurs_1.jpg" alt="" />
-        <img src="~assets/img/png/photoproducteurs_2.jpg" alt="" />
+        <img src="~assets/img/png/blog.jpg" alt="" />
+        <img src="~assets/img/png/blog.jpg" alt="" />
+        <img src="~assets/img/png/blog.jpg" alt="" />
     </VueSlickCarousel>
       </div>
     </section>
+    <Newsletter/>
   </div>
 </template>
 
 <script>
+import Newsletter from '../default/Newsletter'
 export default {
   name: 'HeroBlog', 
+  components: {
+    Newsletter,
+  },
   data() {
     return {
       slickOptions: {
