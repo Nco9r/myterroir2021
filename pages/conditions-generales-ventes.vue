@@ -1435,7 +1435,7 @@ strong {
   font-size: 14px;
   line-height: 26px;
   color: var(--black);
-  text-align: justify;
+
   margin-bottom: 10px;
 }
 
@@ -1443,7 +1443,7 @@ strong {
   font-size: 14px;
   line-height: 26px;
   color: var(--black);
-  text-align: justify;
+ 
   margin-bottom: 10px;
 }
 
@@ -1473,7 +1473,7 @@ strong {
   font-size: 14px;
   line-height: 30px;
   color: var(--black);
-  text-align: justify;
+
   margin-bottom: 10px;
 }
 }
