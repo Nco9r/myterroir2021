@@ -6,10 +6,10 @@
           <h1>Obtenir un <span class="black">devis</span></h1>
           <hr>
           <p>
-            Vous souhaitez obtenir un devis pour l'organiser d'un événement ?
+            Vous souhaitez obtenir un devis pour l'organisation d'un événement ?
             Veuillez remplir le formulaire ci-dessous en détaillant de manière
             précise vos envies. Nous reviendrons vers vous dans les plus brefs
-            délai.
+            délais.
           </p>
         </div>
         <div class="form_devis">
@@ -77,6 +77,7 @@
               <p>Date et heure</p>
               <input type="text" />
             </div>
+            
             <div class="check">
               <input type="checkbox" required />
               <p>
