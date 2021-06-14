@@ -164,10 +164,11 @@ header {
 .menu_mobile {
   position: fixed;
   top: 0;
+  width: 100%;
   padding: 30px 15px;
   bottom: 0;
-  right: 0;
   left: 0;
+  right: 0;
   background-color: var(--black);
   background-image: url('~assets/img/png/texture_mt.png');
   height: 100%;
@@ -261,7 +262,7 @@ hr {
 .button_contact button {
   margin-top: 30px;
   background-color: var(--orange);
-  padding: 10px 68px;
+  padding: 18px 48px;
   margin-left: 20px;
   text-align: center;
   color: var(--white);
@@ -395,7 +396,40 @@ hr {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px) { 
+  .menu_mobile {
+    width: 50%;
+    right: 0;
+  }
+
+  .open-enter-active {
+  animation: slide 0.3s;
+}
+
+.open-leave-active {
+  animation: slideClose 0.3s;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideClose {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+}
+
+@media screen and (min-width: 1081px) {
   header {
     width: 100%;
     /* background-color: var(--gray); */
@@ -414,10 +448,10 @@ hr {
   }
 
   .block_header {
-    width: 1440px;
+    max-width: 1440px;
     display: flex;
     margin: auto;
-    padding: 10px 100px;
+    padding: 10px 20px;
     justify-content: space-between;
   }
 
@@ -457,7 +491,7 @@ hr {
 
   .cta_header button {
     background-color: var(--orange);
-    padding: 10px 48px;
+    padding: 14px 32px;
     color: var(--white);
     font-size: 14px;
     font-family: bodyBold;

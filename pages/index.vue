@@ -29,12 +29,15 @@ export default {
     Clients,
     actualites,
     Newsletter,
-
-  }
+  },
+  
 }
 </script>
 
 <style>
+
+.home-enter-active, .home-leave-active { transition: opacity .5s; }
+.home-enter, .home-leave-active { opacity: 0; }
 
 /* @media screen and (min-width: 1024px) {
     .container {

@@ -225,7 +225,7 @@ a {
   }
 
   .block_footer {
-    width: 1200px;
+        width: 90%;
     margin: auto;
   }
   .content_footer {
@@ -242,6 +242,10 @@ a {
     width: 300px;
   }
 
+  .icons_sociaux_mobile {
+    display: none; 
+  }
+
   .item {
     width: 300px;
   }
@@ -250,6 +254,13 @@ a {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+    .block_footer {
+    max-width: 1440px;
+    margin: auto;
   }
 }
 </style>

@@ -295,14 +295,28 @@ strong {
 @media screen and (min-width: 1440px) {
   
   .wrapper_content h1 {
-    font-size: 48px;
-    line-height: 64px;
+    font-size: 58px;
+    line-height: 74px;
   }
 
   .wrapper_content p {
     font-size: 18px;
     width: 600px;
     line-height: 36px;
+  }
+
+   .hero_wrapper {
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    width: 100%;
+  }
+
+  .hero_img {
+    display: flex;
+    width: 60%;
+    position: relative;
+    left: 0;
+    display: block;
+    margin-left: -280px;
   }
 
 }

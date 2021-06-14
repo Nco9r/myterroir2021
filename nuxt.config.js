@@ -22,7 +22,8 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['vue-slick-carousel/dist/vue-slick-carousel.css'
+  css: ['vue-slick-carousel/dist/vue-slick-carousel.css',
+  '~/assets/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
