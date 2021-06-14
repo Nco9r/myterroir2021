@@ -15,9 +15,11 @@
             <strong>bien être</strong> de <strong>l’animal</strong> et de
             <strong>l'environnement</strong>.
           </p>
+          <nuxt-link to='/boutique'> 
           <button>
             Boutique
           </button>
+          </nuxt-link>
           <div class="sociaux">
             <div class="img_sociaux">
               <a href="https://fr-fr.facebook.com/myterroir/" target="_blank"
@@ -148,6 +150,7 @@ strong {
   padding: 10px 28px;
   color: var(--white);
   font-size: 16px;
+  cursor: pointer;
   font-family: bodyBold;
   border: none;
   box-shadow: 5px 5px rgba(5, 5, 5, 0.274);

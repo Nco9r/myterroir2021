@@ -13,9 +13,11 @@
             des <strong>producteurs</strong> artisanaux en France, Espagne et en
             Italie.
           </p>
+          <nuxt-link to="/contact">
           <button>
             Obtenir mon devis
           </button>
+          </nuxt-link>
           <div class="sociaux">
             <div class="img_sociaux">
               <a href="https://fr-fr.facebook.com/myterroir/" target="_blank"><img src="~assets/img/svg/facebook.svg" alt="" /></a>
