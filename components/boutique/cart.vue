@@ -129,7 +129,7 @@ export default {
     bottom: 0;
 
     background-color: white;
-    z-index: 10;
+    z-index: 99;
     padding: 0 15px;
 }
 

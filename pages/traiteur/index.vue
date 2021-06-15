@@ -714,9 +714,14 @@ export default {
   padding: 14px 10px;
   border-radius: 5px;
 }
-.cta_card_c {
-  margin-top: 50px;
+.cta_card_c a{
   display: flex;
+  position: fixed; 
+  width: 100%;
+  bottom: 0;
+  left: 0; 
+  right: 0;
+  text-align: center; 
 }
 .cta_card_c a {
   background-color: var(--orange);
@@ -727,7 +732,6 @@ export default {
   font-family: bodyBold;
   border: none;
   cursor: pointer;
-  box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
 }
 .content_card_intro p {
   font-size: 14px;
@@ -869,6 +873,8 @@ export default {
   flex-flow: column;
   margin-top: 30px;
 }
+
+
 
 .card {
   background-color: #fff;
@@ -1075,6 +1081,12 @@ strong {
   .block_traiteur {
     max-width: 1160px;
     margin: auto;
+  }
+
+  .cta_card_c a{
+    width: 50%;
+    display: flex; 
+    margin: auto; 
   }
 
   .open-enter-active {
