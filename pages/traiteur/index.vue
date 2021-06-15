@@ -173,6 +173,7 @@
             en ressort.
           </p>
           <p class="nb">
+            <img src="~assets/img/svg/care.svg" alt="" />
             Prestation sans service. Nécessaire de service inclus. Livraison sur
             site incluse dans la limite de 20km.
           </p>
@@ -346,9 +347,7 @@
           </div>
           <hr />
         </div>
-        <div class="cta_card_c">
-          <nuxt-link to="/contact">Obtenir mon devis</nuxt-link>
-        </div>
+        <devisCocktailsBuffets/>
       </div>
     </transition>
     <div class="overlay" v-if="brasero" @click="brasero = !brasero"></div>
@@ -397,7 +396,12 @@
             préférons souvent nous rencontrer afin de discuter de vos
             désidératas avant de vous préparer un devis.
           </p>
-          <p class="nb">Prestation avec service et ramassage des déchets.</p>
+
+          <p class="nb">
+            <img src="~assets/img/svg/care.svg" alt="" />
+
+            Prestation avec service et ramassage des déchets.
+          </p>
         </div>
         <hr />
         <div class="details_group">
@@ -506,7 +510,7 @@
           <hr />
         </div>
         <div class="cta_card_c">
-          <nuxt-link to="/contact">Obtenir mon devis</nuxt-link>
+          <nuxt-link to="/contact">Obtenir mon devis en deux clics</nuxt-link>
         </div>
       </div>
     </transition>
@@ -554,7 +558,10 @@
             demeures d’exception, demandez-nous toutes les folies nous savons
             vous les réaliser. Toujours sur devis personnalisé
           </p>
-          <p class="nb">Prestation avec service et ramassage des déchets.</p>
+          <p class="nb">
+            <img src="~assets/img/svg/care.svg" alt="" />
+            Prestation avec service et ramassage des déchets.
+          </p>
         </div>
         <hr />
         <div class="details_group">
@@ -630,7 +637,7 @@
           <hr />
         </div>
         <div class="cta_card_c">
-          <nuxt-link to="/contact">Obtenir mon devis</nuxt-link>
+          <nuxt-link to="/contact">Obtenir mon devis en deux clics</nuxt-link>
         </div>
       </div>
     </transition>
@@ -643,11 +650,14 @@
 import HeroTraiteur from '../../components/traiteur/HeroTraiteur'
 import cocktailsBuffets from '../../components/traiteur/cocktailsBuffets'
 import Newsletter from '../../components/default/Newsletter'
+import devisCocktailsBuffets from '../../components/traiteur/devisCocktailsBuffets'
+
 export default {
   components: {
     HeroTraiteur,
     Newsletter,
-    cocktailsBuffets
+    cocktailsBuffets,
+    devisCocktailsBuffets
   },
   data() {
     return {
@@ -713,15 +723,21 @@ export default {
   font-family: bodyBold, sans-serif;
   padding: 14px 10px;
   border-radius: 5px;
-}
-.cta_card_c a{
   display: flex;
-  position: fixed; 
+}
+
+.nb img {
+  width: 20px;
+  margin-right: 10px;
+}
+.cta_card_c a {
+  display: flex;
+  position: fixed;
   width: 100%;
   bottom: 0;
-  left: 0; 
+  left: 0;
   right: 0;
-  text-align: center; 
+  text-align: center;
 }
 .cta_card_c a {
   background-color: var(--orange);
@@ -873,8 +889,6 @@ export default {
   flex-flow: column;
   margin-top: 30px;
 }
-
-
 
 .card {
   background-color: #fff;
@@ -1083,10 +1097,22 @@ strong {
     margin: auto;
   }
 
-  .cta_card_c a{
+  .details {
+    background-color: var(--white);
+    padding: 100px 50px;
+    margin-top: 10px;
     width: 50%;
-    display: flex; 
-    margin: auto; 
+    margin: auto;
+    bottom: 0;
+    position: fixed;
+    z-index: 90;
+    overflow-y: scroll;
+  }
+
+  .cta_card_c a {
+    width: 50%;
+    display: flex;
+    margin: auto;
   }
 
   .open-enter-active {
@@ -1138,7 +1164,7 @@ strong {
   }
 
   .card {
-    width: 500px;
+    width: 350px;
     margin-right: 30px;
   }
   .bloc_cards {

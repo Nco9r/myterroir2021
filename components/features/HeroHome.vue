@@ -181,6 +181,15 @@ strong {
   transform: rotate(180deg);
 }
 
+@keyframes zoomIn {
+  from {
+    transform: scale(1)
+  }
+  to{
+    transform: scale(1.05)
+  }
+}
+
 .arrowNext {
   position: absolute; 
   top: 40%;
@@ -198,6 +207,7 @@ strong {
   height: 300px;
   object-fit: cover;
   margin-top: 00px;
+  animation: zoomIn 10s linear 0s 1 forwards;
 }
 
 @media screen and (min-width: 1024px) {

@@ -43,7 +43,9 @@
                   482 rue du Courdonney <br />
                   33140 Cadaujac
                 </p></a
+                
               >
+              <p>du Lundi au Vendredi <br> de 9h à 18h</p>
             </div>
           </div>
           <div class="item">
