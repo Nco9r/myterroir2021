@@ -44,13 +44,7 @@
           <div class="label">
             <p>Type de prestations</p>
             <select v-model="form.prestation">
-              <option disabled selected value="">Choisir dans la liste</option>
-              <option   value="">L'apéro</option>
-              <option   value="">Buffet Basque</option>
-              <option   value="">Buffet Français</option>
-              <option   value="">Cocktails Basque</option>
-              <option   value="">Cocktails Français</option>
-              <option   value=""></option>
+              <option disabled selected value="">Brasero</option>
             </select>
           </div>
           <div class="label">

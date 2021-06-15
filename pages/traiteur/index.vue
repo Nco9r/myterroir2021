@@ -172,15 +172,15 @@
             par la qualité des produits utilisés et l’ambiance chaleureuse qui
             en ressort.
           </p>
-          <p class="nb">
-            <img src="~assets/img/svg/care.svg" alt="" />
-            Prestation sans service. Nécessaire de service inclus. Livraison sur
-            site incluse dans la limite de 20km.
-          </p>
+         
         </div>
         <hr />
         <div class="details_group">
           <h3>Buffets déposés</h3>
+           <p class="nb">
+            Prestation sans service. <br> Nécessaire de service inclus. <br> Livraison sur
+            site incluse dans la limite de 20km.
+          </p>
         </div>
         <div class="group">
           <div class="title_group" @click="apero = !apero">
@@ -263,6 +263,9 @@
         <hr />
         <div class="details_group">
           <h3>Cocktails avec service</h3>
+           <p class="nb">
+            Prestation avec service et ramassage des déchets.
+          </p>
         </div>
         <div class="group">
           <div class="title_group" @click="cBasque = !cBasque">
@@ -509,9 +512,7 @@
           </div>
           <hr />
         </div>
-        <div class="cta_card_c">
-          <nuxt-link to="/contact">Obtenir mon devis en deux clics</nuxt-link>
-        </div>
+        <devisBrasero/>
       </div>
     </transition>
 
@@ -636,9 +637,7 @@
           </div>
           <hr />
         </div>
-        <div class="cta_card_c">
-          <nuxt-link to="/contact">Obtenir mon devis en deux clics</nuxt-link>
-        </div>
+        <devisRepas/>
       </div>
     </transition>
 
@@ -651,13 +650,17 @@ import HeroTraiteur from '../../components/traiteur/HeroTraiteur'
 import cocktailsBuffets from '../../components/traiteur/cocktailsBuffets'
 import Newsletter from '../../components/default/Newsletter'
 import devisCocktailsBuffets from '../../components/traiteur/devisCocktailsBuffets'
+import devisBrasero from '../../components/traiteur/devisBrasero'
+import devisRepas from '../../components/traiteur/devisRepas'
 
 export default {
   components: {
     HeroTraiteur,
     Newsletter,
     cocktailsBuffets,
-    devisCocktailsBuffets
+    devisCocktailsBuffets,
+    devisBrasero,
+    devisRepas,
   },
   data() {
     return {
@@ -1034,7 +1037,7 @@ a {
 /* CONTENT */
 .details {
   background-color: var(--white);
-  padding: 100px 10px;
+  padding: 100px 10px 60px 10px;
   margin-top: 10px;
   width: 100%;
   position: fixed;
@@ -1050,11 +1053,12 @@ a {
 
 .details_group {
   display: flex;
+  flex-flow: column;
   margin-top: 10px;
   font-size: 18px;
   color: var(--black);
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .details_group h3 {
