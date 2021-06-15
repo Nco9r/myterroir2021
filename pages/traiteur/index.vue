@@ -61,19 +61,18 @@
               </div>
               <div class="title_name">
                 <span></span>
-                <h3>Brasero OFYR</h3>
+                <h3>Brasero</h3>
               </div>
               <div class="content_card">
                 <p>
-                  My Terroir s’associe au célèbre brasero-plancha OFYR. La
-                  cuisson de légumes, poissons, cuisinés en cocotte, brochettes,
-                  tout est possible !
+                  My Terroir vous propose une prestation avec un
+                  brasero-plancha. La cuisson de légumes, poissons, cuisinés en
+                  cocotte, brochettes, tout est possible !
                 </p>
               </div>
               <hr />
               <div class="cta_card" @click="brasero = !brasero">
-                                <p>Plus d'infos</p>
-
+                <p>Plus d'infos</p>
               </div>
             </div>
             <div class="card">
@@ -98,8 +97,7 @@
               </div>
               <hr />
               <div class="cta_card" @click="grillade = !grillade">
-                                <p>Plus d'infos</p>
-
+                <p>Plus d'infos</p>
               </div>
             </div>
             <div class="card">
@@ -113,7 +111,7 @@
               </div>
               <div class="title_name">
                 <span></span>
-                <h3>Mariage</h3>
+                <h3>Mariages</h3>
               </div>
               <div class="content_card">
                 <p>
@@ -124,8 +122,7 @@
               </div>
               <hr />
               <div class="cta_card" @click="cocktails = !cocktails">
-                               <p>Plus d'infos</p>
-
+                <p>Plus d'infos</p>
               </div>
             </div>
           </div>
@@ -175,7 +172,10 @@
             par la qualité des produits utilisés et l’ambiance chaleureuse qui
             en ressort.
           </p>
-          <p class="nb">Prestation sans service. Nécessaire de service inclus. Livraison sur site incluse dans la limite de 20km.</p>
+          <p class="nb">
+            Prestation sans service. Nécessaire de service inclus. Livraison sur
+            site incluse dans la limite de 20km.
+          </p>
         </div>
         <hr />
         <div class="details_group">
@@ -385,19 +385,19 @@
         </div>
         <div class="content_card_intro">
           <p>
-            Nouveau, My Terroir s’associe au célèbre brasero-plancha OFYR La
-            plancha au bois Ofyr permet d’être beaucoup plus créatif dans les
-            préparations que sur un barbecue classique. La cuisson de légumes,
-            poissons, cuisinés en cocotte, bro- chettes brésiliennes, tout est
-            possible !
+            Nouveau, My Terroir vous propose une prestation avec un
+            brasero-plancha. La plancha au bois permet d’être beaucoup plus
+            créatif dans les préparations que sur un barbecue classique. La
+            cuisson de légumes, poissons, cuisinés en cocotte, brochettes
+            brésiliennes, tout est possible !
           </p>
           <p>
             Le barbecue gastronomique étant un art à part entière, et les tarifs
             pouvant varier de <strong>25€ à 100€ par personne</strong>, nous
-            préférons souvent nous rencontrer afin de discuter de vos dé-
-            sidératas avant de vous préparer un devis.
+            préférons souvent nous rencontrer afin de discuter de vos
+            désidératas avant de vous préparer un devis.
           </p>
-           <p class="nb">Prestation avec service et ramassage des déchets.</p>
+          <p class="nb">Prestation avec service et ramassage des déchets.</p>
         </div>
         <hr />
         <div class="details_group">
@@ -705,11 +705,14 @@ export default {
 </script>
 
 <style scoped>
-
 .nb {
-  font-size: 12px!important; 
-  color: gray!important;
-  line-height: 20px!important;
+  font-size: 12px !important;
+  color: gray !important;
+  line-height: 20px !important;
+  background-color: var(--gray);
+  font-family: bodyBold, sans-serif;
+  padding: 14px 10px;
+  border-radius: 5px;
 }
 .cta_card_c {
   margin-top: 50px;
@@ -733,7 +736,6 @@ export default {
   line-height: 26px;
   color: var(--black);
 }
-
 
 .card_name {
   display: flex;
@@ -994,6 +996,8 @@ a {
   color: var(--orange);
   margin-top: 2px;
   cursor: pointer;
+  font-family: body !important;
+
   margin-left: 5px;
   transition: all 0.4s ease-in-out;
 }
@@ -1004,6 +1008,7 @@ a {
   transform: rotate(45deg) !important;
   margin-top: 2px;
   margin-left: 5px;
+  font-family: body !important;
 }
 
 /* CONTENT */
