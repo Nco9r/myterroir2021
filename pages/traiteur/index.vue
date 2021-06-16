@@ -79,8 +79,9 @@
               <div class="img">
                 <img src="~assets/img/png/brasero.jpg" alt="" />
                 <div class="price">
-                  <p>
-                    Sur devis
+                 <p>
+                    à partir de <br />
+                    25€/pers
                   </p>
                 </div>
               </div>
@@ -900,7 +901,6 @@ export default {
   width: 100%;
   margin-top: 30px;
   padding-bottom: 20px;
-  box-shadow: 0 0 10px rgba(194, 194, 194, 0.2);
 }
 
 .card .img {

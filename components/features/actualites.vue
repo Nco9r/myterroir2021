@@ -211,7 +211,7 @@ a {
   background-color: var(--orange);
   padding: 10px 48px;
   display: flex;
-  margin: 40px auto;
+  margin: 40px auto 10px auto;
   color: var(--white);
   cursor: pointer;
   font-size: 16px;

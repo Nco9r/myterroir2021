@@ -8,8 +8,7 @@
           <p>
             Vous souhaitez obtenir un devis pour l'organisation d'un événement ?
             Veuillez remplir le formulaire ci-dessous en détaillant de manière
-            précise vos envies. Nous reviendrons vers vous dans les plus brefs
-            délais.
+            précise vos envies. Nous reviendrons vers vous dans les 24h jours ouvrés.
           </p>
         </div>
         <div class="form_devis">

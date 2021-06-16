@@ -38,16 +38,16 @@
     </VueSlickCarousel>
       </div>
     </section>
-    <Newsletter/>
+
   </div>
 </template>
 
 <script>
-import Newsletter from '../default/Newsletter'
 export default {
   name: 'HeroBlog', 
   components: {
-    Newsletter,
+
+
   },
   data() {
     return {

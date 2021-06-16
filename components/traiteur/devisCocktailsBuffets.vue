@@ -25,6 +25,12 @@
       </div>
       <div class="formulaire" v-if="active_devis">
         <form @submit="submitP">
+          <p class="intro_form">
+            Vous souhaitez obtenir un <strong>devis</strong> pour l'organisation d'un événement ?
+            Veuillez <strong>remplir le formulaire</strong> ci-dessous en détaillant de manière
+            précise vos envies. Nous reviendrons vers vous dans les <strong>24h jours
+            ouvrés.</strong>
+          </p>
           <div class="label">
             <p>Nom et prénom</p>
             <input type="text" v-model="form.mail" />
@@ -45,12 +51,12 @@
             <p>Type de prestations</p>
             <select v-model="form.prestation">
               <option disabled selected value="">Choisir dans la liste</option>
-              <option   value="">L'apéro</option>
-              <option   value="">Buffet Basque</option>
-              <option   value="">Buffet Français</option>
-              <option   value="">Cocktails Basque</option>
-              <option   value="">Cocktails Français</option>
-              <option   value=""></option>
+              <option value="">L'apéro</option>
+              <option value="">Buffet Basque</option>
+              <option value="">Buffet Français</option>
+              <option value="">Cocktails Basque</option>
+              <option value="">Cocktails Français</option>
+              <option value=""></option>
             </select>
           </div>
           <div class="label">
@@ -59,15 +65,28 @@
           </div>
           <div class="label">
             <p>Lieu</p>
-            <input type="text" v-model="form.lieu"  placeholder="482, rue du Courdonney, 33140, Cadaujac"/>
+            <input
+              type="text"
+              v-model="form.lieu"
+              placeholder="482, rue du Courdonney, 33140, Cadaujac"
+            />
           </div>
           <div class="label">
             <p>Date et heure</p>
-            <input type="text" v-model="form.date" placeholder="JJ/MM/YYYY, 00h00" />
+            <input
+              type="text"
+              v-model="form.date"
+              placeholder="JJ/MM/YYYY, 00h00"
+            />
           </div>
-           <div class="label">
+          <div class="label">
             <p>Vos préférences</p>
-            <textarea type="text" v-model="form.details" rows="10" placeholder="Si vous avez des préférences, veuillez nous les communiquer..."></textarea>
+            <textarea
+              type="text"
+              v-model="form.details"
+              rows="10"
+              placeholder="Si vous avez des préférences, veuillez nous les communiquer..."
+            ></textarea>
           </div>
           <div class="check">
             <input type="checkbox" required />
@@ -162,6 +181,11 @@ export default {
     transform: translateY(0);
   }
 }
+.intro_form {
+    font-size: 13px; line-height: 26px; 
+    color: var(--black);
+    margin-bottom: 20px;
+}
 
 .intro p {
   font-size: 14px;
@@ -222,19 +246,17 @@ form {
 }
 
 .label input::placeholder {
-  font-family: body, sans-serif; 
+  font-family: body, sans-serif;
   color: var(--black);
   font-size: 11px;
-  opacity: .4;
-
+  opacity: 0.4;
 }
 
 .label textarea::placeholder {
-  font-family: body, sans-serif; 
+  font-family: body, sans-serif;
   color: var(--black);
   font-size: 11px;
-  opacity: .4;
-
+  opacity: 0.4;
 }
 
 .title_form_two h4 {
@@ -273,7 +295,7 @@ select {
 .check p {
   margin-top: -2px;
   font-size: 12px;
-  color: var(--black)
+  color: var(--black);
 }
 
 input[type='checkbox' i] {
@@ -308,7 +330,7 @@ input[type='checkbox' i]:checked::after {
   margin: 20px auto;
   padding: 12px 16px;
   width: 100%;
-font-family: bodyBold, sans-serif; 
+  font-family: bodyBold, sans-serif;
   background-color: var(--orange);
   border: none;
   box-shadow: 4px 4px rgba(218, 71, 9, 0.486);
@@ -317,13 +339,13 @@ font-family: bodyBold, sans-serif;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   outline: none;
 }
 
 .btn_form button:hover {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
-   background-color: var(--black);
+  background-color: var(--black);
 }
 
 .btn_form button svg {
@@ -344,6 +366,5 @@ font-family: bodyBold, sans-serif;
   .intro {
     padding: 15px 50px;
   }
-
 }
 </style>

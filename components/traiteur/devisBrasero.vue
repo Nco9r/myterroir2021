@@ -25,6 +25,12 @@
       </div>
       <div class="formulaire" v-if="active_devis">
         <form @submit="submitP">
+             <p class="intro_form">
+            Vous souhaitez obtenir un <strong>devis</strong> pour l'organisation d'un événement ?
+            Veuillez <strong>remplir le formulaire</strong> ci-dessous en détaillant de manière
+            précise vos envies. Nous reviendrons vers vous dans les <strong>24h jours
+            ouvrés.</strong>
+          </p>
           <div class="label">
             <p>Nom et prénom</p>
             <input type="text" v-model="form.mail" />
@@ -156,6 +162,13 @@ export default {
     transform: translateY(0);
   }
 }
+
+.intro_form {
+    font-size: 13px; line-height: 26px; 
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
 
 .intro p {
   font-size: 14px;
