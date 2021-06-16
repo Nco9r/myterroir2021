@@ -46,6 +46,8 @@ body {
   margin: 0;
 }
 
+
+
 @font-face {
   font-family: title;
   font-display: swap;
@@ -76,7 +78,7 @@ body {
   --orange: #E5521A; 
   --beige: #C99C78;
   --white: #FFF; 
-  --gray: rgb(245, 245, 245); 
+  --gray: #f6f4f3; 
 }
 
 h1, h2, h3, h4, h5 {

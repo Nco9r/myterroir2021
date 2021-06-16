@@ -172,14 +172,14 @@
             par la qualité des produits utilisés et l’ambiance chaleureuse qui
             en ressort.
           </p>
-         
         </div>
         <hr />
         <div class="details_group">
           <h3>Buffets déposés</h3>
-           <p class="nb">
-            Prestation sans service. <br> Nécessaire de service inclus. <br> Livraison sur
-            site incluse dans la limite de 20km.
+          <p class="nb">
+            Prestation sans service. 
+            Nécessaire de service inclus.
+            Livraison sur site incluse dans la limite de 20km.
           </p>
         </div>
         <div class="group">
@@ -263,7 +263,7 @@
         <hr />
         <div class="details_group">
           <h3>Cocktails avec service</h3>
-           <p class="nb">
+          <p class="nb">
             Prestation avec service et ramassage des déchets.
           </p>
         </div>
@@ -350,7 +350,7 @@
           </div>
           <hr />
         </div>
-        <devisCocktailsBuffets/>
+        <devisCocktailsBuffets />
       </div>
     </transition>
     <div class="overlay" v-if="brasero" @click="brasero = !brasero"></div>
@@ -512,7 +512,7 @@
           </div>
           <hr />
         </div>
-        <devisBrasero/>
+        <devisBrasero />
       </div>
     </transition>
 
@@ -637,7 +637,7 @@
           </div>
           <hr />
         </div>
-        <devisRepas/>
+        <devisRepas />
       </div>
     </transition>
 
@@ -660,7 +660,7 @@ export default {
     cocktailsBuffets,
     devisCocktailsBuffets,
     devisBrasero,
-    devisRepas,
+    devisRepas
   },
   data() {
     return {
@@ -726,7 +726,9 @@ export default {
   font-family: bodyBold, sans-serif;
   padding: 14px 10px;
   border-radius: 5px;
+  margin-bottom: 10px;
   display: flex;
+  width: 100%;
 }
 
 .nb img {

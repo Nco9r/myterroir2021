@@ -55,6 +55,7 @@ section {
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .commande_title p {

@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div class="overlay" v-if="cart"></div>
+    <div class="overlay" v-if="cart" @click="cart = !cart"></div>
     <transition name="cartOpen" appear>
     <section class="panier" v-if="cart">
         <div class="title_panier">
@@ -23,9 +23,12 @@
                 {{cart.product}}
             </p>
             <div class="number_products">
+                <p @click="addQuantity(product)">-</p>
+                <p>{{cart.quantity}}</p>
+                <p @click="addQuantity()">+</p>
             </div>
             <div class="price_products">
-                <p>{{cart.price / 100 * 100}}€</p>
+                <p>{{cart.price * cart.quantity}}€</p>
                
             </div>
         </div>
@@ -58,8 +61,8 @@
 
 <script>
 
-// import {mapMutations} from 'vuex';
-// import {mapGetters} from 'vuex'
+import {mapMutations} from 'vuex';
+import {mapGetters} from 'vuex'
 
 export default {
     data() {
@@ -76,6 +79,9 @@ export default {
         }
         
     },
+    methods: {
+    ...mapMutations('cart', ['addQuantity']),
+    }
 //     computed: {
 //         carts() {
 //             return this.$store.state.cart.datas

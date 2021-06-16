@@ -1,69 +1,72 @@
 <template>
   <section class="actualites">
     <div class="title_section">
+      <hr class="section_tiret" />
       <h2>Nos dernières actualités</h2>
     </div>
     <div class="box_cards">
       <div class="cards">
         <div class="card">
-          <img src="~assets/img/png/authentiques.jpg" alt="" />
+          <img src="~assets/img/png/maison_laborie.jpg" alt="" />
           <div class="infos_card">
-            <p>Le 31 mai 2021</p>
+            <p>Actus</p>
             <p>Par Stéphane E.</p>
           </div>
           <div class="title_card">
             <hr />
-            <p>Le plaisir de se retrouver</p>
+            <p>My Terroir et La Maison Laborie</p>
           </div>
           <div class="content_card">
             <p>
-              Retour sur les prestations du weekend. Quel plaisir de pouvoir
-              vous retrouver et de vous accompagner pour tous vos événements
+              Installé dans un petit village du Cantal, une entreprise familiale
+              spécialisée dans la fabrication de salaisons de qualité fait
+              parler d'elle.
             </p>
           </div>
         </div>
         <div class="card">
-          <img src="~assets/img/png/authentiques.jpg" alt="" />
+          <img src="~assets/img/png/card_cocktails_5.jpg" alt="" />
           <div class="infos_card">
-            <p>Le 31 mai 2021</p>
-            <p>Par Stéphane E.</p>
+            <p>Événements</p>
+            <p>Par Lucie J.</p>
           </div>
           <div class="title_card">
             <hr />
-            <p>Le plaisir de se retrouver</p>
+            <p>Comment organiser vos réceptions?</p>
           </div>
           <div class="content_card">
             <p>
-              Retour sur les prestations du weekend. Quel plaisir de pouvoir
-              vous retrouver et de vous accompagner pour tous vos événements
+              Dans cet article nous avons voulu vous aiguiller un petit peu sur
+              l'organisation de vos événements afin qu'ils soient le plus réussi
+              possible et en vous donnant les clés pour vous simplifier la vie.
             </p>
           </div>
         </div>
         <div class="card">
-          <img src="~assets/img/png/authentiques.jpg" alt="" />
+          <img src="~assets/img/png/duroux.jpg" alt="" />
           <div class="infos_card">
-            <p>Le 31 mai 2021</p>
+            <p>Actus</p>
             <p>Par Stéphane E.</p>
           </div>
           <div class="title_card">
             <hr />
-            <p>Le plaisir de se retrouver</p>
+            <p>My Terroir & La Maison Duroux</p>
           </div>
           <div class="content_card">
             <p>
-              Retour sur les prestations du weekend. Quel plaisir de pouvoir
-              vous retrouver et de vous accompagner pour tous vos événements
+              La Maison Duroux est installé en Corrèze depuis 1936. Cette maison
+              à su au fil des années affiner ses connaissances de ses produits
+              et ses fromages par la même occasion.
             </p>
           </div>
         </div>
-        
       </div>
     </div>
     <div class="cta_actualites">
-       <nuxt-link to='/blog'>
-      <button>
-        Nos actualités
-      </button>
+      <nuxt-link to="/blog">
+        <button>
+          Nos actualités
+        </button>
       </nuxt-link>
     </div>
   </section>
@@ -79,29 +82,57 @@ export default {}
   padding-bottom: 30px;
 }
 
+a {
+  text-decoration: none;
+}
+
+.section_tiret {
+  width: 70%;
+  height: 1px;
+  color: var(--black);
+  background-color: rgb(194, 194, 194);
+  display: block;
+
+  border: none;
+  margin: 15px 15px;
+  padding: 0 15px;
+}
+
+.section_tiret::after {
+  width: 4.5rem;
+  left: 15px;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+  content: '';
+  height: 0.4rem;
+  background: var(--orange);
+}
+
+.title_section {
+  padding-top: 30px;
+}
+
 .title_section h2 {
-  background-image: url('~assets/img/svg/tache.svg');
-  background-size: 100%;
-  height: 50px;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(-3deg);
-  color: var(--white);
-  background-repeat: no-repeat;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  font-size: 24px;
+  line-height: 38px;
+  color: var(--black);
 }
 
 .box_cards {
   display: flex;
   flex-flow: row nowrap;
   overflow-x: scroll;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .cards {
   display: flex;
-  margin: auto; 
+  margin: auto;
   justify-content: space-between;
 }
 
@@ -109,24 +140,29 @@ export default {}
   width: 300px;
   padding-bottom: 10px;
   margin-right: 20px;
+
   margin-left: 15px;
   background-color: var(--white);
-  box-shadow: 10px 10px rgba(184, 184, 184, 0.082);
 }
 
 .card img {
   width: 100%;
   object-fit: cover;
+  height: 200px;
 }
 
 .infos_card {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  padding: 10px 20px;
 }
 
 .infos_card p:nth-child(1) {
-  color: #8b8b8b;
+  color: var(--white);
+  padding: 5px 25px;
+  font-family: bodyBold, sans-serif;
+  background-color: var(--orange);
 }
 
 .infos_card p:nth-child(2) {
@@ -141,7 +177,7 @@ export default {}
 .title_card {
   display: flex;
   flex-flow: column-reverse;
-  padding: 3px 10px 10px 10px;
+  padding: 3px 20px 10px 20px;
 }
 
 .title_card hr {
@@ -149,6 +185,7 @@ export default {}
   width: 20px;
   background-color: var(--orange);
   height: 2px;
+  margin-top: 10px;
   border-radius: 4px;
   margin-right: 5px;
 }
@@ -159,9 +196,13 @@ export default {}
   color: var(--black);
 }
 
-.content_card {
-  padding: 10px 15px 10px 10px;
+.content_card p {
+  padding: 2px 20px 10px 20px;
   font-size: 13px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
   line-height: 24px;
   color: var(--black);
 }
@@ -172,32 +213,32 @@ export default {}
   display: flex;
   margin: 40px auto;
   color: var(--white);
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 16px;
   font-family: bodyBold;
   border: none;
-  transition: all .3s; 
+  transition: all 0.3s;
   box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
 }
 
 .cta_actualites button:hover {
-     box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
-   background-color: var(--black);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+  background-color: var(--black);
 }
 
 @media screen and (min-width: 1024px) {
-    .title_section h2 {
-  font-size: 28px;
-      background-size: 100%;
-      width: 600px;
-      height: 100px;
-      margin-left: 50px;
-      margin-bottom: 90px;
-}
+  .title_section h2 {
+    font-size: 28px;
+    background-size: 100%;
+    width: 600px;
+    height: 100px;
+    margin-left: 50px;
+    margin-bottom: 90px;
+  }
 
-.card {
+  .card {
     margin-right: 30px;
     width: 400px;
-}
+  }
 }
 </style>

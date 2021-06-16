@@ -20,7 +20,6 @@
       
     </div>
     <div class="about_img">
-      <img src="~assets/img/svg/feuille.svg" alt="verdure" />
       <img src="~assets/img/png/traiteur.jpg" alt="image de produits" />
     </div>
   </section>

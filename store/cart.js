@@ -14,14 +14,18 @@ export const getters = {
 
 export const mutations = {
     addOne(state, charcuterie) {
-        const indexCharcuterie = state.datas.findIndex( d => d.id === charcuterie.id);
-
-        if ( indexCharcuterie !== -1 ) {
-            state.datas[indexCharcuterie].qty++;
-        }
-
-        charcuterie.qty = 1
         state.datas.push(charcuterie);
+    },
+    addQuantity(state, id) {
+        const index = state.datas.findIndex( d => d.id === id);
+        state.datas[index].quantity++;
+    },
+    removeQuantity(state, id) {
+        const index = state.datas.findIndex( d => d.id === id);
+        if (index.quantity === 0) {
+            state.datas[index].splice(index, 1);
+        }
+        state.datas[index].quantity--;
     },
     deleteOne(state, id) {
         const index = state.datas.findIndex( d => d.id === id);

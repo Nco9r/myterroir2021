@@ -32,7 +32,8 @@
     </div>
     <div class="cards_products">
       <div class="box_products">
-        <div class="product" v-for="product in products" :key="product">
+        <div class="product" v-for="product in products" :key="product.id">
+         <prev>{{product.id}}</prev>
           <div class="infos_product">
             <div class="map">
               <img src="~assets/img/svg/mapboutique.svg" alt="" />
@@ -49,8 +50,8 @@
           <div class="infos_price">
             <div class="quantite">
               <p>-</p>
-              <p>1</p>
-              <p>+</p>
+              <p>{{product.quantity}}</p>
+              <p @click="addQuantity(product)">+</p>
             </div>
             <div class="price">
                 <p>{{product.price}}€</p>
@@ -79,7 +80,8 @@ export default {
     return {
       viande: true,
       charcuterie: false,
-      fromages: false
+      fromages: false,
+      // products: [],
     }
   },
   computed: {
@@ -89,6 +91,10 @@ export default {
   },
   methods: {
     ...mapMutations('cart', ['addOne']),
+    ...mapMutations('charcuterie', ['addProductQuantity']),
+    addQuantity() {
+      return this.$store.state.charcuterie.products.product.quantity = this.$store.state.charcuterie.products.product.quantity + 1;
+    }
   }
 }
 </script>
