@@ -3,9 +3,10 @@
     <header class="top_bar_color">
       <div class="block_header">
         <div class="header_left">
-          <div class="logo">
+          <a href="/"><div class="logo">
             <img src="~assets/img/svg/logo_mt.svg" alt="" />
           </div>
+          </a>
           <div class="items_menu_desktop" >
             <nuxt-link
               :class="{ items_menu_scroll: scrollPosition > 100 }"

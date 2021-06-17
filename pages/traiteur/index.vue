@@ -5,7 +5,6 @@
       <div class="block_traiteur">
         <div class="title">
           <div class="title_traiteur">
-            <img src="~assets/img/svg/feuille.svg" alt="" />
             <h2>Nos prestations</h2>
           </div>
           <div class="content_title">

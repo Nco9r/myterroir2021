@@ -23,6 +23,11 @@
               parler d'elle.
             </p>
           </div>
+          <div class="cta_card">
+              <nuxt-link to="/blog/my-terroir-et-la-maison-laborie"
+                >Lire la suite</nuxt-link
+              >
+            </div>
         </div>
         <div class="card">
           <img src="~assets/img/png/card_cocktails_5.jpg" alt="" />
@@ -41,6 +46,11 @@
               possible et en vous donnant les clés pour vous simplifier la vie.
             </p>
           </div>
+          <div class="cta_card">
+              <nuxt-link to="/blog/comment-organiser-vos-reception"
+                >Lire la suite</nuxt-link
+              >
+            </div>
         </div>
         <div class="card">
           <img src="~assets/img/png/duroux.jpg" alt="" />
@@ -59,6 +69,11 @@
               et ses fromages par la même occasion.
             </p>
           </div>
+          <div class="cta_card">
+              <nuxt-link to="/blog/my-terroir-et-la-maison-duroux"
+                >Lire la suite</nuxt-link
+              >
+            </div>
         </div>
       </div>
     </div>
@@ -109,6 +124,19 @@ a {
   content: '';
   height: 0.4rem;
   background: var(--orange);
+}
+
+.cta_card {
+  display: flex;
+  padding: 0 20px 10px 20px;
+  justify-content: flex-start;
+}
+
+.cta_card a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--orange);
+  font-family: bodyBold, sans-serif;
 }
 
 .title_section {
@@ -232,13 +260,25 @@ a {
     background-size: 100%;
     width: 600px;
     height: 100px;
-    margin-left: 50px;
-    margin-bottom: 90px;
+  }
+
+  .section_tiret::after {
+    margin-left: 150px;
+  }
+
+  .title_section {
+    max-width: 1140px;
+    margin: auto; 
   }
 
   .card {
     margin-right: 30px;
     width: 400px;
+  }
+
+  .box_cards {
+     max-width: 1140px;
+    margin: auto; 
   }
 }
 </style>

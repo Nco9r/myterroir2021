@@ -18,7 +18,6 @@
       </nuxt-link>
     </div>
     <div class="about_img">
-      <img src="~assets/img/svg/feuille.svg" alt="verdure" />
       <img src="~assets/img/png/authentiques.jpg" alt="image de produits" />
     </div>
   </section>
@@ -61,7 +60,7 @@ strong {
   color: var(--black);
   font-size: 14px;
   margin-top: 20px;
-  line-height: 26px;
+  line-height: 28px;
 }
 
 .about_content button {
@@ -69,12 +68,14 @@ strong {
   background-color: var(--orange);
   padding: 10px 48px;
   color: var(--white);
-  font-size: 16px;
+  font-size: 14px;
   font-family: bodyBold;
   cursor: pointer;
   border: none;
   box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
   transition: all .3s; 
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .about_content button:hover {
@@ -127,6 +128,10 @@ strong {
 
   .about_img {
       width: 50%;
+  }
+
+  .about_content button {
+    width: 200Px;
   }
 }
 </style>

@@ -206,7 +206,7 @@ export default {
 form {
   overflow: scroll;
   padding: 15px 20px;
-  height: 72vh;
+  height: 65vh;
   background-color: var(--gray);
   z-index: 20;
 }

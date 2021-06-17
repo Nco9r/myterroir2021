@@ -241,7 +241,7 @@ a {
   }
 
   .logo_footer {
-    width: 300px;
+    width: 250px;
   }
 
   .icons_sociaux_mobile {
@@ -249,7 +249,7 @@ a {
   }
 
   .item {
-    width: 300px;
+    width: 190px;
   }
 
   .infos_copyright {
@@ -263,6 +263,10 @@ a {
     .block_footer {
     max-width: 1640px;
     margin: auto;
+  }
+
+  .item {
+    width: 300px;
   }
 }
 </style>

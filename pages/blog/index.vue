@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="box_cards">
-        <div class="cards" >
+        <div class="cards">
           <div class="card" v-if="viande">
             <img src="~assets/img/png/maison_laborie.jpg" alt="" />
             <div class="infos_card">
@@ -56,11 +56,11 @@
                 qualité fait parler d'elle.
               </p>
             </div>
-             <div class="cta_card">
-            <nuxt-link to="/producteurs/ferme-ekiola"
-              >Lire la suite</nuxt-link
-            >
-          </div>
+            <div class="cta_card">
+              <nuxt-link to="/blog/my-terroir-et-la-maison-laborie"
+                >Lire la suite</nuxt-link
+              >
+            </div>
           </div>
           <div class="card" v-if="charcuterie">
             <img src="~assets/img/png/card_cocktails_5.jpg" alt="" />
@@ -80,11 +80,11 @@
                 la vie.
               </p>
             </div>
-             <div class="cta_card">
-            <nuxt-link to="/producteurs/ferme-ekiola"
-              >Lire la suite</nuxt-link
-            >
-          </div>
+            <div class="cta_card">
+              <nuxt-link to="/blog/comment-organiser-vos-reception"
+                >Lire la suite</nuxt-link
+              >
+            </div>
           </div>
           <div class="card" v-if="fromages">
             <img src="~assets/img/png/duroux.jpg" alt="" />
@@ -104,14 +104,13 @@
               </p>
             </div>
             <div class="cta_card">
-            <nuxt-link to="/producteurs/ferme-ekiola"
-              >Lire la suite</nuxt-link
-            >
-          </div>
+              <nuxt-link to="/blog/my-terroir-et-la-maison-duroux"
+                >Lire la suite</nuxt-link
+              >
+            </div>
           </div>
         </div>
       </div>
-     
     </section>
     <Newsletter />
   </main>
@@ -127,11 +126,11 @@ export default {
     Newsletter
   },
   data() {
-      return {
-           viande: true,
+    return {
+      viande: true,
       fromages: false,
       charcuterie: false
-      }
+    }
   }
 }
 </script>
@@ -224,13 +223,13 @@ a {
   display: flex;
   flex-flow: row wrap;
   margin-top: 20px;
+  justify-content: flex-start;
 }
 
 .cards {
   display: flex;
-  flex-flow: row wrap; 
-  margin: auto;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 .card {
@@ -336,11 +335,10 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-
-    .title_section {
-        max-width: 1140px;
-        margin: auto; 
-    }
+  .title_section {
+    max-width: 1140px;
+    margin: auto;
+  }
   .title_section h2 {
     font-size: 28px;
     background-size: 100%;
@@ -349,7 +347,10 @@ a {
     margin-left: 50px;
     margin-bottom: 90px;
   }
-
+.box_cards {
+  max-width: 1110px;
+  margin: 50px auto;
+}
   .card {
     margin-right: 30px;
     width: 400px;

@@ -91,7 +91,7 @@ hr {
   background-image: url('~assets/img/png/texture_mt.png');
   background-repeat: repeat;
   background-size: 80%;
-  border-radius: 4px;
+  border-radius: 1px;
   padding-bottom: 40px;
   margin-bottom: 40px;
 }
