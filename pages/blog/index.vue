@@ -198,14 +198,13 @@ a {
 
 .section_tiret::after {
   width: 4.5rem;
-  left: 15px;
   position: absolute;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   display: block;
   content: '';
-  height: 0.4rem;
+  height: 0.5rem;
   background: var(--orange);
 }
 

@@ -26,14 +26,15 @@
       <div class="formulaire" v-if="active_devis">
         <form @submit="submitP">
           <p class="intro_form">
-            Vous souhaitez obtenir un <strong>devis</strong> pour l'organisation d'un événement ?
-            Veuillez <strong>remplir le formulaire</strong> ci-dessous en détaillant de manière
-            précise vos envies. Nous reviendrons vers vous dans les <strong>24h jours
-            ouvrés.</strong>
+            Vous souhaitez obtenir un <strong>devis</strong> pour l'organisation
+            d'un événement ? Veuillez
+            <strong>remplir le formulaire</strong> ci-dessous en détaillant de
+            manière précise vos envies. Nous reviendrons vers vous dans les
+            <strong>24h jours ouvrés.</strong>
           </p>
           <div class="label">
             <p>Nom et prénom</p>
-            <input type="text" v-model="form.mail" />
+            <input type="text" v-model="form.name" />
           </div>
           <div class="label">
             <p>E-mail</p>
@@ -51,12 +52,11 @@
             <p>Type de prestations</p>
             <select v-model="form.prestation">
               <option disabled selected value="">Choisir dans la liste</option>
-              <option value="">L'apéro</option>
-              <option value="">Buffet Basque</option>
-              <option value="">Buffet Français</option>
-              <option value="">Cocktails Basque</option>
-              <option value="">Cocktails Français</option>
-              <option value=""></option>
+              <option value="L'apéro">L'apéro</option>
+              <option value="Buffet Basque">Buffet Basque</option>
+              <option value="Buffet Français">Buffet Français</option>
+              <option value="Cocktails Basque">Cocktails Basque</option>
+              <option value="Cocktails Français">Cocktails Français</option>
             </select>
           </div>
           <div class="label">
@@ -72,11 +72,19 @@
             />
           </div>
           <div class="label">
-            <p>Date et heure</p>
+            <p>Date</p>
+            <input
+              type="date"
+              v-model="form.date"
+              placeholder=""
+            />
+          </div>
+          <div class="label">
+            <p>heure</p>
             <input
               type="text"
-              v-model="form.date"
-              placeholder="JJ/MM/YYYY, 00h00"
+              v-model="form.heure"
+              placeholder="12h00"
             />
           </div>
           <div class="label">
@@ -85,7 +93,7 @@
               type="text"
               v-model="form.details"
               rows="10"
-              placeholder="Si vous avez des préférences, veuillez nous les communiquer..."
+              placeholder="Descriptif (alimentaire, location matériel, location vaisselle, budget…)"
             ></textarea>
           </div>
           <div class="check">
@@ -119,7 +127,8 @@ export default {
         prestation: '',
         lieu: '',
         date: '',
-        convives: ''
+        convives: '',
+        heure: '',
       }
     }
   },
@@ -128,9 +137,10 @@ export default {
       e.preventDefault()
       console.log({ ...this.form })
       this.$axios
-        .post('https://nco9r.herokuapp.com/api/devis-mt', { ...this.form })
+        .post('http://localhost:4330/send', { ...this.form })
         .then((res) => (this.form = ''))
         .catch(e)
+      this.error = true
     }
   }
 }
@@ -182,9 +192,10 @@ export default {
   }
 }
 .intro_form {
-    font-size: 13px; line-height: 26px; 
-    color: var(--black);
-    margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 26px;
+  color: var(--black);
+  margin-bottom: 20px;
 }
 
 .intro p {

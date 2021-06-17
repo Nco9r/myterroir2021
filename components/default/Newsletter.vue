@@ -4,10 +4,16 @@
       <h3>Inscrivez vous à la Newsletter</h3>
       <p>Et recevez toutes nos actus et nos nouvelles offres.</p>
     </div>
+    <form @submit="subscribe">
     <div class="cta_newsletter">
-      <input type="text" placeholder="contact@my-terroir.fr" />
+      <input
+        type="text"
+        placeholder="contact@my-terroir.fr"
+        v-model="form.email"
+      />
       <button>Soumettre</button>
     </div>
+    </form>
     <div class="illus">
       <img src="~assets/img/png/illus.png" alt="" />
     </div>
@@ -15,7 +21,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      form: { email: '' }
+    }
+  },
+  methods: {
+    subscribe(e) {
+      e.preventDefault()
+      console.log({ ...this.form })
+      this.$axios
+        .post('http://localhost:4330/subscribe', { ...this.form })
+        .then((res) => (this.form = ''))
+        .catch(e)
+      this.error = true
+    }
+  }
+}
 </script>
 
 <style>

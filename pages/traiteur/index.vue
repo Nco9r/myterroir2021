@@ -721,12 +721,12 @@ export default {
 <style scoped>
 .nb {
   font-size: 12px !important;
-  color: gray !important;
+  color: rgb(133, 130, 127) !important;
   line-height: 20px !important;
   background-color: var(--gray);
   font-family: bodyBold, sans-serif;
   padding: 14px 10px;
-  border-radius: 5px;
+  border-radius: 1px;
   margin-bottom: 10px;
   display: flex;
   width: 100%;
