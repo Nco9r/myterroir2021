@@ -32,7 +32,7 @@ export default {
       e.preventDefault()
       console.log({ ...this.form })
       this.$axios
-        .post('http://apimyterroir.rouxnicolas.fr/subscribe', { ...this.form })
+        .post('https://apimyterroir.rouxnicolas.fr/subscribe', { ...this.form })
         .then((res) => (this.form = ''))
         .catch(e)
       this.error = true

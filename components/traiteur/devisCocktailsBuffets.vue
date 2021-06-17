@@ -137,7 +137,7 @@ export default {
       e.preventDefault()
       console.log({ ...this.form })
       this.$axios
-        .post('http://apimyterroir.rouxnicolas.fr/send', { ...this.form })
+        .post('https://apimyterroir.rouxnicolas.fr/send', { ...this.form })
         .then((res) => (this.form = ''))
         .catch(e)
       this.error = true
