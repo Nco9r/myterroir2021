@@ -25,11 +25,12 @@
       </div>
       <div class="formulaire" v-if="active_devis">
         <form @submit="submitP">
-             <p class="intro_form">
-            Vous souhaitez obtenir un <strong>devis</strong> pour l'organisation d'un événement ?
-            Veuillez <strong>remplir le formulaire</strong> ci-dessous en détaillant de manière
-            précise vos envies. Nous reviendrons vers vous dans les <strong>24h jours
-            ouvrés.</strong>
+          <p class="intro_form">
+            Vous souhaitez obtenir un <strong>devis</strong> pour l'organisation
+            d'un événement ? Veuillez
+            <strong>remplir le formulaire</strong> ci-dessous en détaillant de
+            manière précise vos envies. Nous reviendrons vers vous dans les
+            <strong>24h jours ouvrés.</strong>
           </p>
           <div class="label">
             <p>Nom et prénom</p>
@@ -51,8 +52,8 @@
             <p>Type de prestations</p>
             <select v-model="form.prestation">
               <option selected value="">Choisir dans la liste</option>
-              <option value="">Repas</option>
-              <option value="">Grillades</option>
+              <option value="Repas">Repas</option>
+              <option value="Grillades">Grillades</option>
             </select>
           </div>
           <div class="label">
@@ -68,12 +69,12 @@
             />
           </div>
           <div class="label">
-            <p>Date et heure</p>
-            <input
-              type="text"
-              v-model="form.date"
-              placeholder="JJ/MM/YYYY, 00h00"
-            />
+            <p>Date</p>
+            <input type="date" v-model="form.date" placeholder="" />
+          </div>
+          <div class="label">
+            <p>heure</p>
+            <input type="text" v-model="form.heure" placeholder="12h00" />
           </div>
           <div class="label">
             <p>Vos préférences</p>
@@ -115,6 +116,7 @@ export default {
         prestation: '',
         lieu: '',
         date: '',
+        heure: '',
         convives: ''
       }
     }
@@ -124,9 +126,10 @@ export default {
       e.preventDefault()
       console.log({ ...this.form })
       this.$axios
-        .post('https://nco9r.herokuapp.com/api/devis-mt', { ...this.form })
+        .post('http://localhost:4330/send', { ...this.form })
         .then((res) => (this.form = ''))
         .catch(e)
+      this.error = true
     }
   }
 }
@@ -226,11 +229,11 @@ form {
 }
 
 .intro_form {
-    font-size: 13px; line-height: 26px; 
-    color: var(--black);
-    margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 26px;
+  color: var(--black);
+  margin-bottom: 20px;
 }
-
 
 .label textarea {
   width: 100%;
