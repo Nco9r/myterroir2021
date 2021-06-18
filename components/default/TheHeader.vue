@@ -3,11 +3,12 @@
     <header class="top_bar_color">
       <div class="block_header">
         <div class="header_left">
-          <a href="/"><div class="logo">
-            <img src="~assets/img/svg/logo_mt.svg" alt="" />
-          </div>
+          <a href="/"
+            ><div class="logo">
+              <img src="~assets/img/svg/logo_mt.svg" alt="" />
+            </div>
           </a>
-          <div class="items_menu_desktop" >
+          <div class="items_menu_desktop">
             <nuxt-link
               :class="{ items_menu_scroll: scrollPosition > 100 }"
               to="/"
@@ -37,18 +38,22 @@
         </div>
         <div class="header_right">
           <div class="items_menu_mobile">
-            <div class="cart" @click="cart =!cart">
+            <div class="cart" @click="cart = !cart">
               <img src="~assets/img/svg/cart.svg" alt="" />
+              <p v-if="carts.length > 0">{{carts.length}}</p>
             </div>
             <span></span>
             <p @click="openMenu = !openMenu">Menu</p>
           </div>
           <div class="cta_header">
-            <div class="cart" @click="cart =!cart">
-              <img src="~assets/img/svg/cart.svg" alt="">
+            <div class="cart" @click="cart = !cart">
+              <img src="~assets/img/svg/cart.svg" alt="" />
+              <p v-if="carts.length > 0">{{carts.length}}</p>
             </div>
             <span></span>
-            <nuxt-link to="/contact"><button>Obtenir mon devis</button></nuxt-link>
+            <nuxt-link to="/contact"
+              ><button>Obtenir mon devis</button></nuxt-link
+            >
           </div>
         </div>
         <transition name="open" appear>
@@ -95,19 +100,17 @@
         </transition>
       </div>
     </header>
-    <Cart v-if="cart"/>
+    <Cart v-if="cart" />
   </div>
 </template>
 
-
-
 <script>
-
+import { mapGetters } from 'vuex'
 import Cart from '../boutique/cart'
 export default {
   name: 'TheHeader',
   components: {
-    Cart,
+    Cart
   },
   data() {
     return {
@@ -115,6 +118,11 @@ export default {
       scrollPosition: null,
       cart: false
     }
+  },
+  computed: {
+    carts() {
+            return this.$store.state.cart.datas
+        },
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll)
@@ -215,8 +223,26 @@ header {
 
 .cart {
   cursor: pointer;
+  position: relative;
 }
 
+.cart p {
+  position: absolute;
+  background-color: var(--orange)!important;
+  height: 20px;
+  font-size: 10px!important;
+  width: 20px;
+  color: var(--white);
+  top: 0;
+  left: 15px;
+  border-radius: 50%;
+  box-shadow: none!important;
+  display: flex; 
+  font-family: bodyBold, sans-serif; 
+  justify-content: center; 
+  align-items: center; 
+  transform: rotate(3deg)!important; 
+}
 
 .items_menu_mobile_fixed a {
   font-size: 20px;
@@ -356,7 +382,6 @@ hr {
   height: 26px;
   border: none;
   background-color: var(--black);
-  
 }
 
 .items_menu_mobile p {
@@ -405,37 +430,37 @@ hr {
   }
 }
 
-@media screen and (min-width: 769px) { 
+@media screen and (min-width: 769px) {
   .menu_mobile {
     width: 50%;
     right: 0;
   }
 
   .open-enter-active {
-  animation: slide 0.3s;
-}
+    animation: slide 0.3s;
+  }
 
-.open-leave-active {
-  animation: slideClose 0.3s;
-}
+  .open-leave-active {
+    animation: slideClose 0.3s;
+  }
 
-@keyframes slide {
-  from {
-    transform: translateX(100%);
+  @keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
-  to {
-    transform: translateX(0);
-  }
-}
 
-@keyframes slideClose {
-  from {
-    transform: translateX(0);
+  @keyframes slideClose {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
   }
-  to {
-    transform: translateX(100%);
-  }
-}
 }
 
 @media screen and (min-width: 1081px) {
@@ -444,25 +469,25 @@ hr {
     /* background-color: var(--gray); */
   }
 
-.cart {
-  cursor: pointer;
-}
+  .cart {
+    cursor: pointer;
+  }
   .menu_mobile {
     display: none;
   }
 
   .cta_header {
-    display: flex; 
+    display: flex;
     width: 300px;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
   }
 
   .cta_header span {
     width: 2px;
-  height: 26px;
-  border: none;
-  background-color: var(--black);
+    height: 26px;
+    border: none;
+    background-color: var(--black);
   }
 
   .cta_header .cart img {
@@ -475,7 +500,7 @@ hr {
     box-shadow: 5px 5px rgba(5, 5, 5, 0.274);
     transform: rotate(-3deg) !important;
     color: var(--white) !important;
-    z-index: 3!important;
+    z-index: 3 !important;
   }
 
   .block_header {
@@ -538,7 +563,7 @@ hr {
 
 @media screen and (min-width: 1081px) {
   header {
-    padding-left: 100px; 
+    padding-left: 100px;
     padding-right: 100px;
   }
 }

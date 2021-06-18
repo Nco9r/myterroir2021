@@ -53,7 +53,7 @@
               <p @click="addProductQuantity(product.id)">+</p>
             </div>
             <div class="price">
-                <p>{{product.price }} €</p>
+                <p>{{product.price |  currency('')}} €</p>
             </div>
           </div>
           <hr>
@@ -69,6 +69,7 @@
 <script>
 import HeroBoutique from '../../components/boutique/HeroBoutique'
 import { mapMutations } from 'vuex';
+import Vue2Filters from 'vue2-filters'
 
 
 export default {
@@ -83,6 +84,7 @@ export default {
       // products: [],
     }
   },
+  mixins: [Vue2Filters.mixin],
   computed: {
     products() {
       return this.$store.state.charcuterie.datas
@@ -108,7 +110,7 @@ export default {
 }
 
 .opacity {
-    opacity: .3;
+    color: rgb(173, 173, 173);
     pointer-events: none; 
 
 }

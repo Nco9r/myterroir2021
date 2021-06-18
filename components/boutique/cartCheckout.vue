@@ -13,7 +13,7 @@
         </div> -->
         <div class="items_products_cart" >
         <div class="products_items" v-for="cart in carts" :key="cart.id">
-            <p class="name">{{cart.name}}</p>
+            <input type="text" class="name" v-model="cart.name" disabled>
             <p class="title_products">
                 {{cart.product}}
             </p>
@@ -88,7 +88,12 @@ export default {
 
 .panier {
    background-color: var(--gray);
-   margin-top: 30px;
+   margin-top: 10px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
 }
 
 .title_panier {
