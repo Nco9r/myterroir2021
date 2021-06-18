@@ -33,7 +33,6 @@
     <div class="cards_products">
       <div class="box_products">
         <div class="product" v-for="product in products" :key="product.id">
-         <prev>{{product.id}}</prev>
           <div class="infos_product">
             <div class="map">
               <img src="~assets/img/svg/mapboutique.svg" alt="" />
@@ -49,12 +48,12 @@
           <hr />
           <div class="infos_price">
             <div class="quantite">
-              <p>-</p>
+              <p @click="removeQuantity(product.id)" :class="{ opacity : product.quantity < 2 }">-</p>
               <p>{{product.quantity}}</p>
-              <p @click="addQuantity(product)">+</p>
+              <p @click="addProductQuantity(product.id)">+</p>
             </div>
             <div class="price">
-                <p>{{product.price}}€</p>
+                <p>{{product.price }} €</p>
             </div>
           </div>
           <hr>
@@ -86,15 +85,14 @@ export default {
   },
   computed: {
     products() {
-      return this.$store.state.charcuterie.products
+      return this.$store.state.charcuterie.datas
     }
   },
   methods: {
     ...mapMutations('cart', ['addOne']),
-    ...mapMutations('charcuterie', ['addProductQuantity']),
-    addQuantity() {
-      return this.$store.state.charcuterie.products.product.quantity = this.$store.state.charcuterie.products.product.quantity + 1;
-    }
+     ...mapMutations('charcuterie', ['addProductQuantity']),
+    ...mapMutations('charcuterie', ['removeQuantity']),
+ 
   }
 }
 </script>
@@ -107,6 +105,12 @@ export default {
   overflow: scroll;
   background-color: var(--white);
   padding: 5px 20px;
+}
+
+.opacity {
+    opacity: .3;
+    pointer-events: none; 
+
 }
 
 .categories p:nth-child(1) {
@@ -230,6 +234,7 @@ export default {
     display: flex; 
     width: 90px; 
     justify-content: space-between; 
+    cursor: pointer;
     font-family: bodyBold, sans-serif; 
 }
 
@@ -264,6 +269,7 @@ hr {
     padding: 10px;
     margin-top: 20px;
     text-align: center; 
+    cursor: pointer;
 }
 
 .cta_product p {

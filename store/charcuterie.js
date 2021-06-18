@@ -1,29 +1,30 @@
 export const state = () => ({
-  products: [
+  datas: [
     {
       product: 'Jambon de Bayonne 12 mois chiffonnade',
       weight: '100 GR',
-      price: 3.9,
+      price: 3.90,
       name: 'La ferme Elizaldia',
       quantity: 1,
+      id: 1,
 
     },
     {
       product: 'Jambon de Bayonne 12 mois tranché sous-vide',
       weight: '100 GR',
-      price: 3.9,
+      price: 3.90,
       name: 'La ferme Elizaldia',
       quantity: 1,
-
-
-
+      id: 2,
     },
     {
       product: 'Jambon Don Ibane 24 mois chiffonnade en barquette',
       weight: '100 GR',
       price: 5.9,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 3,
+
 
     },
     {
@@ -31,7 +32,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 5.9,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 4,
+
 
     },
     {
@@ -39,7 +42,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 5,
+
 
     },
     {
@@ -47,7 +52,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 6,
+      
 
     },
     {
@@ -55,7 +62,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 7,
+
 
     },
     {
@@ -63,7 +72,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 8,
+
 
     },
     {
@@ -71,7 +82,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 9,
+
 
     },
     {
@@ -79,7 +92,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 10,
+
 
     },
     {
@@ -87,7 +102,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 11,
+
 
     },
     {
@@ -95,7 +112,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 12,
+
 
     },
     {
@@ -103,7 +122,9 @@ export const state = () => ({
       weight: '100 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 13,
+
 
     },
     {
@@ -111,7 +132,9 @@ export const state = () => ({
       weight: '800 GR',
       price: 12.5,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 14,
+
 
     },
     {
@@ -119,7 +142,9 @@ export const state = () => ({
       weight: '125 GR',
       price: 4,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 15,
+
 
     },
     {
@@ -127,7 +152,9 @@ export const state = () => ({
       weight: '125 GR',
       price: 2.5,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 16,
+
 
     },
     {
@@ -135,7 +162,9 @@ export const state = () => ({
       weight: '125 GR',
       price: 2.5,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 17,
+
 
     },
     {
@@ -143,7 +172,9 @@ export const state = () => ({
       weight: '125 GR',
       price: 2.9,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 18,
+
 
     },
     {
@@ -151,7 +182,9 @@ export const state = () => ({
       weight: '190 GR',
       price: 3.5,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 19,
+
 
     },
     {
@@ -159,7 +192,9 @@ export const state = () => ({
       weight: '190 GR',
       price: 3.5,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 20,
+
 
     },
     {
@@ -167,23 +202,29 @@ export const state = () => ({
       weight: '380 GR',
       price: 8.9,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 21,
+
 
     },
     {
       product: 'Piperade',
       weight: '380 GR',
-      price: 4.5,
+      price: 4.50,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 22,
+
 
     },
     {
       product: 'Tajine de mouton 3-4 personnes',
       weight: '750 GR',
-      price: 15.9,
+      price: 15.90,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 23,
+
 
     },
     {
@@ -191,7 +232,9 @@ export const state = () => ({
       weight: '330 GR',
       price: 7,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 24,
+
 
     },
     {
@@ -199,7 +242,9 @@ export const state = () => ({
       weight: '750 GR',
       price: 15.9,
       name: 'La ferme Elizaldia',
-      quantity: 1
+      quantity: 1,
+      id: 25,
+
 
     }
   ]
@@ -208,8 +253,8 @@ export const state = () => ({
 export const mutations = {
  
   addProductQuantity(state, id) {
-      const index = state.datas.findIndex( d => d.id === id);
-      state.datas[index].quantity++;
+    const index = state.datas.findIndex( d => d.id === id);
+    state.datas[index].quantity++;
   },
   removeQuantity(state, id) {
       const index = state.datas.findIndex( d => d.id === id);

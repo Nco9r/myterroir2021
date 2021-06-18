@@ -26,7 +26,6 @@ html {
   font-family: body, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 62,5%;
-  word-spacing: -1Px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -78,7 +77,7 @@ body {
   --orange: #E5521A; 
   --beige: #C99C78;
   --white: #FFF; 
-  --gray: #f6f4f3; 
+  --gray: rgb(245, 245, 245); 
 }
 
 h1, h2, h3, h4, h5 {

@@ -6,7 +6,7 @@ export const state = () => ({
 export const getters = {
     total(state) {
         return state.datas.reduce((acc, p ) => {
-          acc += p.price
+          acc += p.price * p.quantity
           return acc;
         }, 0);
     }
@@ -22,7 +22,7 @@ export const mutations = {
     },
     removeQuantity(state, id) {
         const index = state.datas.findIndex( d => d.id === id);
-        if (index.quantity === 0) {
+        if (index.quantity < 0) {
             state.datas[index].splice(index, 1);
         }
         state.datas[index].quantity--;
@@ -34,5 +34,10 @@ export const mutations = {
 }
 
 export const actions = {
-    
+    sendCart({state}) {
+        console.log({ ...state.datas })
+        this.$axios
+          .post('http://localhost:4330/send', { items: state.datas} )
+        this.error = true
+      }
 }

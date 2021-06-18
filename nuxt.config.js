@@ -28,7 +28,9 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
- plugins: [{ src: './plugins/vue-slick-carousel.js' }],
+ plugins: [{ src: './plugins/vue-slick-carousel.js' },
+ { src: './plugins/vuefilter.js'}
+],
 
   /*
   ** Nuxt.js dev-modules

@@ -60,7 +60,7 @@
               </div>
               <div class="title_name">
                 <span></span>
-                <h3>Brasero</h3>
+                <h3>Brasero-Plancha</h3>
               </div>
               <div class="content_card">
                 <p>
@@ -362,7 +362,7 @@
         <div class="card_name">
           <div class="title_name_card">
             <span></span>
-            <h3>Braséro OFYR</h3>
+            <h3>Braséro-Plancha</h3>
           </div>
           <p @click="brasero = !brasero">Retour</p>
         </div>
