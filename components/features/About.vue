@@ -72,14 +72,12 @@ strong {
   font-family: bodyBold;
   cursor: pointer;
   border: none;
-  box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
   transition: all .3s; 
   width: 100%;
   margin-bottom: 30px;
 }
 
 .about_content button:hover {
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
    background-color: var(--black);
 }
 

@@ -78,7 +78,7 @@ body {
   --orange: #E5521A; 
   --beige: #C99C78;
   --white: #FFF; 
-  --gray: rgb(245, 245, 245); 
+  --gray: #f5f5f5; 
 }
 
 h1, h2, h3, h4, h5 {

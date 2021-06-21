@@ -131,20 +131,19 @@ hr {
 .commande_wrapper button {
   margin-top: 20px;
   background-color: var(--orange);
-  padding: 10px 48px;
+  padding: 10px 98px;
   display: flex;
   cursor: pointer;
   margin: 0 auto 20px auto;
   color: var(--white);
-  font-size: 16px;
+  font-size: 14px;
   font-family: bodyBold;
   border: none;
-  box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
   transition: all .3s; 
 }
 
 .commande_wrapper button:hover {
-   box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+
    background-color: var(--black);
 }
 

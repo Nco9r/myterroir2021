@@ -5,14 +5,21 @@
       <p>Et recevez toutes nos actus et nos nouvelles offres.</p>
     </div>
     <form @submit="subscribe">
-    <div class="cta_newsletter">
-      <input
-        type="text"
-        placeholder="contact@my-terroir.fr"
-        v-model="form.email"
-      />
-      <button>Soumettre</button>
-    </div>
+      <div class="cta_newsletter">
+        <input
+          type="text"
+          placeholder="contact@my-terroir.fr"
+          v-model="form.email"
+        />
+        <button v-if="state">Soumettre</button>
+        <button class="loading" v-if="loading">En cours</button>
+      </div>
+      <p class="goodNews" v-if="goodNews">
+        Vous avez été enregistré à notre newsletter !
+      </p>
+      <p class="error" v-if="error">
+        Oups, veuillez ressayer ultérieurement ou contacter le support !
+      </p>
     </form>
     <div class="illus">
       <img src="~assets/img/png/illus.png" alt="" />
@@ -24,18 +31,34 @@
 export default {
   data() {
     return {
-      form: { email: '' }
+      form: { email: '' },
+      loading: false,
+      state: true,
+      goodNews: false,
+      error: false
     }
   },
   methods: {
     subscribe(e) {
       e.preventDefault()
       console.log({ ...this.form })
+      ;(this.loading = true), (this.state = false)
       this.$axios
         .post('https://apimyterroir.rouxnicolas.fr/subscribe', { ...this.form })
-        .then((res) => (this.form = ''))
-        .catch(e)
-      this.error = true
+        .then(
+          (res) => (
+            (this.form = ''),
+            (this.loading = false),
+            (this.state = true),
+            (this.goodNews = true)
+          )
+        )
+        .catch((error) => {
+          ;(this.error = true),
+            (this.form = ''),
+            (this.loading = false),
+            (this.state = true)
+        })
     }
   }
 }
@@ -53,10 +76,30 @@ export default {
   padding: 50px 15px 20px 15px;
 }
 
+.loading {
+  pointer-events: none;
+  opacity: 0.5;
+}
 .content_newsletter h3 {
   color: var(--white);
   font-size: 28px;
   line-height: 40px;
+}
+
+.goodNews {
+  background-color: rgb(206, 255, 206);
+  color: green;
+  width: 300px;
+  padding: 10px 15px;
+  margin: 20px auto;
+}
+
+.error {
+  background-color: rgb(255, 206, 206);
+  color: rgb(128, 0, 0);
+  width: 300px;
+  padding: 10px 15px;
+  margin: 20px auto;
 }
 
 .content_newsletter p {
@@ -84,7 +127,7 @@ export default {
   border: none;
   background-color: var(--black);
   padding: 14px 18px;
-  box-shadow: 5px 5px rgba(5, 5, 5, 0.274);
+  cursor: pointer;
   color: var(--white);
   outline: none;
   border-radius: 0;

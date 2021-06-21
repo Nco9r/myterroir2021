@@ -105,7 +105,7 @@ a {
   width: 70%;
   height: 1px;
   color: var(--black);
-  background-color: rgb(194, 194, 194);
+  background-color: white;
   display: block;
 
   border: none;

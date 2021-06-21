@@ -17,6 +17,9 @@
       <nuxt-link to="/traiteur"><button>
         Nos prestations
       </button></nuxt-link>
+       <nuxt-link to="/traiteur"><button class="overbutton">
+        Obtenir un devis gratuit
+      </button></nuxt-link>
       
     </div>
     <div class="about_img">
@@ -40,20 +43,19 @@ strong {
 .about {
   display: flex;
   flex-flow: column;
-  padding: 30px 15px;
+  padding: 50px 15px;
 }
 
 .about_content h2 {
   color: var(--black);
   font-size: 24px;
-  line-height: 32px;
+  line-height: 34px;
 }
 
 .about_content hr {
   border: none;
   width: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0; 
   height: 2px;
   border-radius: 10px;
   background-color: var(--orange);
@@ -72,16 +74,30 @@ strong {
   background-color: var(--orange);
   padding: 10px 48px;
   color: var(--white);
-  font-size: 16px;
+  font-size: 14px;
+  width: 100%;
   font-family: bodyBold;
   border: none;
   cursor: pointer;
   transition: all .3s; 
-  box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
+}
+
+.overbutton {
+  margin-top: 10px!important;
+  background-color: transparent!important;
+  padding: 10px 48px;
+  color: var(--orange)!important;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid var(--orange)!important;
+  font-family: bodyBold;
+  border: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all .3s; 
 }
 
 .about_content button:hover {
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
    background-color: var(--black);
 }
 

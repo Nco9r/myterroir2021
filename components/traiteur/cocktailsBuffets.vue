@@ -347,6 +347,36 @@ strong {
     align-items: center;
 }
 
+@media screen and (min-width: 768px){
+     .details {
+    background-color: var(--gray);
+    padding: 100px 10px;
+    margin-top: 10px;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+     position: fixed; 
+    z-index: 2;
+    overflow-y: scroll;
+}
+}
+
+@media screen and (min-width: 1024px){
+  
+ .details {
+    background-color: var(--gray);
+    padding: 100px 10px;
+    margin-top: 10px;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+     position: fixed; 
+    z-index: 2;
+    overflow-y: scroll;
+}
+    
+}
+
 @media screen and (min-width: 1440px){
     .details {
     background-color: var(--gray);

@@ -334,7 +334,7 @@ input[type='checkbox' i]:checked::after {
   font-family: bodyBold, sans-serif;
   background-color: var(--orange);
   border: none;
-  box-shadow: 4px 4px rgba(218, 71, 9, 0.486);
+
   text-decoration: none;
   color: var(--white);
   font-size: 14px;
@@ -345,12 +345,27 @@ input[type='checkbox' i]:checked::after {
 }
 
 .btn_form button:hover {
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
+
   background-color: var(--black);
 }
 
 .btn_form button svg {
   margin-right: 10px;
+}
+
+@media screen and (min-width: 768px){
+    form {
+    padding: 15px 75px;
+}
+
+    
+}
+
+@media screen and (min-width: 1024px){
+    form {
+    padding: 15px 65px;
+}
+    
 }
 
 @media screen and (min-width: 1440px) {

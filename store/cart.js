@@ -16,6 +16,11 @@ export const mutations = {
     addOne(state, charcuterie) {
         state.datas.push(charcuterie);
     },
+
+    addOne(state, fromages) {
+        state.datas.push(fromages);
+    },
+
     addQuantity(state, id) {
         const index = state.datas.findIndex( d => d.id === id);
         state.datas[index].quantity++;
@@ -35,9 +40,6 @@ export const mutations = {
 
 export const actions = {
     sendCart({state}) {
-        console.log({ ...state.datas })
-        this.$axios
-          .post('http://localhost:4330/send', { items: state.datas} )
-        this.error = true
+        state.datas = []
       }
 }

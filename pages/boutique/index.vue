@@ -1,6 +1,7 @@
 <template>
   <main>
-    <!-- <HeroBoutique /> -->
+
+    <HeroBoutique />
     <div class="categories" id="categorie">
       <p>Nos produits par catégories</p>
       <div class="box_categories">
@@ -31,8 +32,10 @@
       </div>
     </div>
     <div class="cards_products">
-      <div class="box_products">
-        <div class="product" v-for="product in products" :key="product.id">
+
+
+      <div class="box_products" v-if="charcuterie">
+        <div class="product" v-for="product in products" :key="product.id" >
           <div class="infos_product">
             <div class="map">
               <img src="~assets/img/svg/mapboutique.svg" alt="" />
@@ -57,24 +60,93 @@
             </div>
           </div>
           <hr>
-          <div class="cta_product">
-              <p @click="addOne(product)">Ajouter au panier</p>
+          <div class="cta_product" @click="addOne(product)">
+            
+              <p>Ajouter au panier</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box_products" v-if="viande">
+        <div class="product" v-for="product in productsViande" :key="product.id" >
+          <div class="infos_product">
+            <div class="map">
+              <img src="~assets/img/svg/mapboutique.svg" alt="" />
+              <p>{{product.name}}</p>
+            </div>
+            <div class="weight">
+              <p>{{product.weight}}</p>
+            </div>
+          </div>
+          <div class="title_product">
+            <p>{{product.product}}</p>
+          </div>
+          <hr />
+          <div class="infos_price">
+            <div class="quantite">
+              <p @click="removeQuantityV(product.id)" :class="{ opacity : product.quantity < 2 }">-</p>
+              <p>{{product.quantity}}</p>
+              <p @click="addProductQuantityV(product.id)">+</p>
+            </div>
+            <div class="price">
+                <p>{{product.price |  currency('')}} €</p>
+            </div>
+          </div>
+          <hr>
+          <div class="cta_product" @click="addOne(product)">
+              <p>Ajouter au panier</p>
+          </div>
+        </div>
+      </div>
+
+
+       <div class="box_products" v-if="fromages">
+        <div class="product" v-for="product in productsFromages" :key="product.id" >
+          <div class="infos_product">
+            <div class="map">
+              <img src="~assets/img/svg/mapboutique.svg" alt="" />
+              <p>{{product.name}}</p>
+            </div>
+            <div class="weight">
+              <p>{{product.weight}}</p>
+            </div>
+          </div>
+          <div class="title_product">
+            <p>{{product.product}}</p>
+          </div>
+          <hr />
+          <div class="infos_price">
+            <div class="quantite">
+              <p @click="removeQuantityF(product.id)" :class="{ opacity : product.quantity < 2 }">-</p>
+              <p>{{product.quantity}}</p>
+              <p @click="addProductQuantityF(product.id)">+</p>
+            </div>
+            <div class="price">
+                <p>{{product.price |  currency('')}} €</p>
+            </div>
+          </div>
+          <hr>
+          <div class="cta_product" @click="addOne(product)">
+              <p>Ajouter au panier</p>
           </div>
         </div>
       </div>
     </div>
+    <Newsletter/>
   </main>
 </template>
 
 <script>
 import HeroBoutique from '../../components/boutique/HeroBoutique'
+import Newsletter from '../../components/default/Newsletter'
 import { mapMutations } from 'vuex';
 import Vue2Filters from 'vue2-filters'
 
 
 export default {
   components: {
-    HeroBoutique
+    HeroBoutique,
+    Newsletter
   },
   data() {
     return {
@@ -88,12 +160,24 @@ export default {
   computed: {
     products() {
       return this.$store.state.charcuterie.datas
-    }
+    },
+    productsFromages() {
+      return this.$store.state.fromages.datas
+    },
+    productsViande() {
+      return this.$store.state.viande.datas
+    },
+
   },
   methods: {
     ...mapMutations('cart', ['addOne']),
      ...mapMutations('charcuterie', ['addProductQuantity']),
+     ...mapMutations('fromages', ['addProductQuantityF']),
+     ...mapMutations('viande', ['addProductQuantityV']),
     ...mapMutations('charcuterie', ['removeQuantity']),
+    ...mapMutations('fromages', ['removeQuantityF']),
+    ...mapMutations('viande', ['removeQuantityV']),
+
  
   }
 }
@@ -101,12 +185,12 @@ export default {
 
 <style scoped>
 .categories {
-  position: fixed;
-  top: 60px;
+
+
   flex-flow: row nowrap;
   overflow: scroll;
   background-color: var(--white);
-  padding: 5px 20px;
+  padding: 10px 20px 10px 20px;
 }
 
 .opacity {
@@ -163,7 +247,7 @@ export default {
 }
 
 .cards_products {
-  padding: 240px 15px;
+  padding: 20px 15px 50px 15px;
 }
 
 .box_products {
@@ -202,27 +286,27 @@ export default {
 
 .map p {
   color: var(--orange);
-  font-size: 13px;
+  font-size: 11px;
   font-family: bodyBold, sans-serif;
 }
 
 .weight {
   background-color: rgb(253, 240, 234);
-  padding: 4px 20px;
+  padding: 4px 10px;
 }
 
 .weight p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--orange);
   font-family: bodyBold, sans-serif;
 }
 
 .title_product {
   margin-top: 15px;
-  font-family: body, sans-serif;
+  font-family: bodyBold, sans-serif;
   color: var(--black);
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 15px;
+  line-height: 24px;
 }
 
 .infos_price {
@@ -269,6 +353,7 @@ hr {
     background-color: var(--orange);
     width: 100%;
     padding: 10px;
+    font-size: 14px;
     margin-top: 20px;
     text-align: center; 
     cursor: pointer;

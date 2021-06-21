@@ -45,7 +45,7 @@
               <div class="number_products">
                 <p
                   @click="removeQuantity(cart.id)"
-                  :class="{ opacity: cart.quantity < 2 }"
+                  :class="{ opacity : cart.quantity < 2 }"
                 >
                   -
                 </p>
@@ -210,7 +210,7 @@ export default {
   -ms-z-index: 3;
   -o-z-index: 3;
   z-index: 3;
-  background-color: rgba(15, 15, 15, 0.658);
+  background-color: rgba(15, 15, 15, 0.863);
 }
 
 .products_panier p {
@@ -219,7 +219,7 @@ export default {
 }
 
 .opacity {
-  color: rgb(187, 187, 187);
+  color: rgb(223, 223, 223)!important;
   pointer-events: none;
 }
 
@@ -259,8 +259,7 @@ strong {
   justify-content: flex-start;
   margin-top: 10px;
   flex-flow: column;
-
-  padding: 0 5px;
+  padding: 0 15px;
 }
 
 .title_products {
@@ -276,7 +275,6 @@ strong {
 
 .number_products input {
   display: flex;
-
   justify-content: space-between;
 }
 
@@ -289,7 +287,6 @@ strong {
   justify-content: space-between;
   display: flex;
   align-items: center;
-
   font-weight: bold;
   font-size: 16px;
   margin-top: 20px;
@@ -403,10 +400,9 @@ hr {
 .cta_cart a {
   width: 48%;
   border: none;
-  padding: 15px 2px;
+  padding: 12px 2px;
   font-family: bodyBold, sans-serif;
   font-size: 14px;
-  text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
@@ -448,7 +444,7 @@ hr {
 
 .items_products_cart {
   overflow: scroll;
-  height: 42%;
+  height: 42%; 
 }
 
 @media screen and (min-width: 1024px) {

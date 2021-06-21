@@ -3,13 +3,10 @@
     <section class="hero">
       <div class="hero_wrapper">
         <div class="wrapper_content">
-          <h1>TOUS NOS PRODUITS à PORTER <span class="black">DE CLIC. </span></h1>
+          <h1>TOUS NOS PRODUITS de terroir à PORTER <span class="black">DE CLIC. </span></h1>
           <hr />
           <p>
-            Nous travaillons <strong>uniquement</strong> avec les meilleurs agriculteurs ! Nous
-            cherchons à nous associer à des <strong>éleveurs</strong> qui travaillent avec la
-            <strong>nature</strong>, dans le respect du <strong>bien être</strong> de <strong>l’animal</strong> et de
-            <strong>l'environnement</strong>.
+            Retrouvez la liste de nos produits de terroir que nous avons spécialement selectionné pour vous. Charcuteries, viandes, fromages il y en a pour tous les gôuts. 
           </p>
           <button>
             Boutique

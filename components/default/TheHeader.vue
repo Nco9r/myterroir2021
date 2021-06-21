@@ -150,7 +150,7 @@ header {
 
 .top_bar_color {
   background-color: var(--white);
-  box-shadow: 0 0 15px rgba(138, 138, 138, 0.2);
+  box-shadow: 0 0 15px rgb(0 0 0 / 10%);
 }
 
 .top_bar_flex {
@@ -305,7 +305,6 @@ hr {
   font-family: bodyBold;
   border: none;
   cursor: pointer;
-  box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
 }
 
 .sociaux {
@@ -518,7 +517,7 @@ hr {
   }
 
   .logo img {
-    width: 80px;
+    width: 70px;
   }
 
   .items_menu_desktop {
@@ -533,7 +532,7 @@ hr {
 
   .items_menu_desktop a {
     margin-right: 30px;
-    font-size: 14px;
+    font-size: 13px;
     font-family: bodyBold;
     text-decoration: none;
     color: var(--black);
@@ -547,13 +546,13 @@ hr {
 
   .cta_header button {
     background-color: var(--orange);
-    padding: 14px 32px;
+    padding: 12px 26px;
     color: var(--white);
-    font-size: 14px;
+    font-size: 13px;
     font-family: bodyBold;
     border: none;
     cursor: pointer;
-    box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
+
   }
 
   .items_menu_desktop a:hover {

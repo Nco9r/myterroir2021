@@ -73,19 +73,11 @@
           </div>
           <div class="label">
             <p>Date</p>
-            <input
-              type="date"
-              v-model="form.date"
-              placeholder=""
-            />
+            <input type="date" v-model="form.date" placeholder="" />
           </div>
           <div class="label">
             <p>heure</p>
-            <input
-              type="text"
-              v-model="form.heure"
-              placeholder="12h00"
-            />
+            <input type="text" v-model="form.heure" placeholder="12h00" />
           </div>
           <div class="label">
             <p>Vos préférences</p>
@@ -105,10 +97,20 @@
             </p>
           </div>
           <div class="btn_form">
-            <button>
+            <button v-if="state">
               Soumettre votre demande
             </button>
+            <button class="loading" v-if="loading">
+              Envoi en cours
+            </button>
           </div>
+          <p class="goodNews" v-if="goodNews">
+            Nous avons bien reçu votre demande de devis, nous reviendrons vers
+            vous dans les 24h jours ouvrés.
+          </p>
+          <p class="error" v-if="error">
+            Oups, veuillez ressayer ultérieurement ou contacter le support !
+          </p>
         </form>
       </div>
     </div>
@@ -128,25 +130,65 @@ export default {
         lieu: '',
         date: '',
         convives: '',
-        heure: '',
-      }
+        heure: ''
+      },
+      loading: false,
+      state: true,
+      goodNews: false,
+      error: false
     }
   },
   methods: {
     submitP(e) {
       e.preventDefault()
       console.log({ ...this.form })
-      this.$axios
-        .post('https://apimyterroir.rouxnicolas.fr/send', { ...this.form })
-        .then((res) => (this.form = ''))
-        .catch(e)
-      this.error = true
+      ;(this.loading = true), (this.state = false)
+        this.$axios
+          .post('https://apimyterroir.rouxnicolas.fr/send', { ...this.form })
+          .then(
+            (res) =>
+            (this.form = ''),
+            (this.loading = false),
+            (this.state = true),
+            (this.goodNews = true)
+          )
+          .catch((error) => {
+             ;(this.error = true),
+            (this.form = ''),
+            (this.loading = false),
+            (this.state = true)
+          })
     }
   }
 }
 </script>
 
 <style scoped>
+/* Gestion ERREUR */
+
+.goodNews {
+  background-color: rgb(242, 255, 242);
+  color: green;
+  padding: 20px 25px;
+  width: 100%;
+  font-size: 14px;
+  margin: 0px auto 20px auto;
+}
+
+.error {
+  background-color: rgb(255, 206, 206);
+  color: rgb(128, 0, 0);
+  padding: 10px 15px;
+  font-size: 14px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.loading {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
 /* TRANSITION */
 
 .overlay-enter-active {
@@ -344,7 +386,6 @@ input[type='checkbox' i]:checked::after {
   font-family: bodyBold, sans-serif;
   background-color: var(--orange);
   border: none;
-  box-shadow: 4px 4px rgba(218, 71, 9, 0.486);
   text-decoration: none;
   color: var(--white);
   font-size: 14px;
@@ -354,13 +395,20 @@ input[type='checkbox' i]:checked::after {
   outline: none;
 }
 
-.btn_form button:hover {
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
-  background-color: var(--black);
-}
-
 .btn_form button svg {
   margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    padding: 15px 75px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  form {
+    padding: 15px 65px;
+  }
 }
 
 @media screen and (min-width: 1440px) {

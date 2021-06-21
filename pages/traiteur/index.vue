@@ -720,7 +720,7 @@ export default {
 <style scoped>
 .nb {
   font-size: 12px !important;
-  color: rgb(133, 130, 127) !important;
+  color: rgb(168, 168, 168) !important;
   line-height: 20px !important;
   background-color: var(--gray);
   font-family: bodyBold, sans-serif;

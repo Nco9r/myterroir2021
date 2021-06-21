@@ -95,6 +95,7 @@
               </div>
             </div>
           </div>
+          
            <div class="title_panier">
             <h2>Récapitulatif du panier</h2>
         </div>
@@ -106,6 +107,8 @@
             <p class="title_products">
                 {{cart.product}}
             </p>
+
+            <input type="text" v-model="cart.prenom">
             <div class="price_products">
                 <p>{{cart.price | currency('')}} €</p>
                 <div class="number_products">
@@ -167,8 +170,8 @@
                 <h2>Merci pour votre commande</h2>
                 <p>Vous allez recevoir un mail de confirmation de commande! À bientôt chez my terroir ! </p>
             </div>
-            <div class="btn_valide" @click="commande = !commade">
-              <nuxt-link to="/boutique"><button>Boutique</button></nuxt-link>
+            <div class="btn_valide" @click="commande = !commande">
+              <a href="/boutique"><button>Boutique</button></a>
           </div>
         </div>
       </section>
@@ -197,17 +200,17 @@ export default {
           promo: '',
       },
       cart: {
-          name: '',
-      }
+        name: 'ok'
+      },
+     
     }
   },
   methods: {
     submit(e) {
       e.preventDefault()
-      console.log({ ...this.form, })
-      console.log({ ...this.cart, })
+      // return this.$store.dispatch('cart'['SendCart'])
       this.$axios
-        .post('http://localhost:4330/send', { ...this.form }, {...this.cart})
+        .post('http://localhost:4330/shop', [this.form, this.$store.state.cart.datas, this.total], )
         .then((res) => (this.form = ''),
         (this.valide = true))
         .catch(e)
@@ -400,10 +403,9 @@ font-size: 15px;
 .cta_cart a  {
     width: 48%;
     border: none; 
-    padding: 15px 2px;
+    padding: 12px 2px;
     font-family: bodyBold, sans-serif;
     font-size: 14px;
-    text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -412,10 +414,9 @@ font-size: 15px;
 .cta_cart button  {
     width: 48%;
     border: none; 
-    padding: 15px 2px;
+    padding: 12px 2px;
     font-family: bodyBold, sans-serif;
     font-size: 14px;
-    text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -668,10 +669,9 @@ hr {
 .cta_cart a  {
     width: 48%;
     border: none; 
-    padding: 15px 2px;
+    padding: 12px 2px;
     font-family: bodyBold, sans-serif;
     font-size: 14px;
-    text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -749,10 +749,20 @@ hr {
     margin-right: 10px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   main {
-    margin: 0 300px;
+    padding: 0 300px;
+    background-image: url('~assets/img/png/traiteur.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
   }
+
+  .recapitulatif {
+    padding: 100Px 50px;
+  }
+
+
 
   .bottom_of_cart {
     position: absolute;
