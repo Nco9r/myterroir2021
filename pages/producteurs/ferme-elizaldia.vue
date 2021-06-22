@@ -182,18 +182,25 @@ hr {
 }
 
 @media screen and (min-width: 1024px) {
-    .block {
-        display: flex;
-        flex-flow: row;
-        margin: auto;
-        align-items: flex-end;
-        justify-content: center;
-        width: 1300Px;
-        margin-bottom: 100Px;
-    }
+  .block {
+    display: flex;
+    flex-flow: row;
+    margin: auto;
+    align-items: flex-end;
+    justify-content: center;
+    max-width: 900px;
+    margin-bottom: 100px;
+  }
 
-    .block_right {
-        margin-left: 100Px;
-    }
+  .block_right {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .block {
+    max-width: 1100px;
+  }
+
 }
 </style>

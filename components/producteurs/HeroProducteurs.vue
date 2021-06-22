@@ -209,7 +209,7 @@ strong {
 
 @media screen and (min-width: 1024px) {
   .hero {
-    height: 100vh;
+    height: 750px;
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -218,16 +218,16 @@ strong {
 
   .hero_wrapper {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
-    width: 70%;
+    width: 65%;
   }
 
   .wrapper_content {
-    padding: 20% 100px;
+    padding: 130px 100px;
   }
 
   .hero_img {
     display: flex;
-    width: 70%;
+    width: 55%;
     position: relative;
     left: 0;
     display: block;
@@ -236,9 +236,9 @@ strong {
 
   .arrowPrev {
     position: absolute;
-    top: 93%;
+    top: 91%;
     z-index: 1;
-    left: 79%;
+    left: 63%;
   }
 
   .arrowPrev img {
@@ -249,22 +249,23 @@ strong {
 
   .arrowNext {
     position: absolute;
-    top: 93%;
+    top: 91%;
     z-index: 1;
-    right: 10%;
+    right: 18%;
   }
 
-  .arrowNext img {
-    width: 40px !important;
-    height: 40px !important;
-  }
+.arrowNext img {
+  width: 40px!important;
+  height: 40px!important;
+}
 
   .hero_img img {
-    height: 100vh;
+    height: 750px;
     width: 100%;
     margin-top: 0;
     object-fit: cover;
     display: block;
+
   }
 
   .wrapper_content h1 {
@@ -275,7 +276,7 @@ strong {
   .wrapper_content p {
     font-size: 14px;
     line-height: 28px;
-    width: 460px;
+    width: 400px;
   }
 
   .wrapper_content button {
@@ -283,29 +284,30 @@ strong {
   }
 
   .sociaux {
-    position: absolute;
+    position: absolute; 
     bottom: 20px;
     display: flex;
     flex-flow: row;
   }
 
   .img_sociaux {
-    display: flex;
+    display: flex; 
   }
 
   .img_sociaux p {
     font-size: 12px;
-    font-family: bodyBold, sans-serif;
+    font-family: bodyBold, sans-serif; 
   }
 
   .wrapper_content .sociaux .img_sociaux img {
-    width: 40px;
-    margin-right: 20px;
-  }
+  width: 40px;
+  margin-right: 20px;
+}
 }
 
 @media screen and (min-width: 1440px) {
-   .wrapper_content h1 {
+  
+  .wrapper_content h1 {
     font-size: 58px;
     line-height: 74px;
   }
@@ -318,7 +320,7 @@ strong {
 
    .hero_wrapper {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
-    width: 100%;
+    width: 65%;
   }
 
   .hero_img {
@@ -329,5 +331,6 @@ strong {
     display: block;
     margin-left: -280px;
   }
+
 }
 </style>

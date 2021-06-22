@@ -131,7 +131,7 @@ hr {
 .commande_wrapper button {
   margin-top: 20px;
   background-color: var(--orange);
-  padding: 10px 98px;
+  padding: 10px 78px;
   display: flex;
   cursor: pointer;
   margin: 0 auto 20px auto;
@@ -155,15 +155,16 @@ hr {
 
   .commande_title {
       display: flex; 
-        width: 1100px;
-        margin: auto; 
-      flex-flow: row; 
+        max-width: 1100px;
+        margin: 50px auto; 
+      flex-flow: column;
+      text-align: center;
       justify-content: flex-start; 
-      margin-top: 50px;
   }
 
   .commande_title h2{
     width: 600px;
+    margin: auto;
     font-size: 32px; 
     line-height: 46px; 
   }
@@ -172,16 +173,17 @@ hr {
       font-size: 28px;
       background-size: 100%;
       width: 400px;
+      margin: 20px auto; 
   }
 
   .commande_wrapper {
     background-color: var(--beige);
     width: 100%;
-    width: 1100px;
+    max-width: 1100px;
     display: flex;
     padding: 0 90px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 150px;
     background-image: url('~assets/img/png/texture.png');
     background-repeat: repeat;
     background-size: 40%;

@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="devisHeader" v-if="devis">
     <transition name="overlay" appear>
-      <div class="overlay" v-if="active_devis"></div>
+      <div class="overlay"></div>
     </transition>
     <div class="devis_mobile">
-      <div class="intro" @click="active_devis = !active_devis">
+      <div class="intro" @click="devis = !devis">
         <p>Obtenir un devis en deux clics</p>
         <p class="fleche_bottom" :class="{ fleche_top: active_devis }">
           <svg
@@ -23,7 +23,7 @@
           </svg>
         </p>
       </div>
-      <div class="formulaire" v-if="active_devis">
+      <div class="formulaire">
         <form @submit="submitP">
           <p class="intro_form">
             Vous souhaitez obtenir un <strong>devis</strong> pour l'organisation
@@ -34,15 +34,15 @@
           </p>
           <div class="label">
             <p>Nom et prénom</p>
-            <input required type="text" v-model="form.name" />
+            <input type="text" required v-model="form.name" />
           </div>
           <div class="label">
             <p>E-mail</p>
-            <input required type="mail" v-model="form.email" />
+            <input type="mail" required v-model="form.email" />
           </div>
           <div class="label">
             <p>Téléphone</p>
-            <input required type="phone" v-model="form.phone" />
+            <input type="phone" required v-model="form.phone" />
           </div>
           <div class="label">
             <p>Société (facultatif)</p>
@@ -61,11 +61,12 @@
           </div>
           <div class="label">
             <p>Nombre de convives</p>
-            <input required type="number" v-model="form.convives" />
+            <input type="number" required v-model="form.convives" />
           </div>
           <div class="label">
             <p>Lieu</p>
-            <input required
+            <input
+            required
               type="text"
               v-model="form.lieu"
               placeholder="482, rue du Courdonney, 33140, Cadaujac"
@@ -73,11 +74,11 @@
           </div>
           <div class="label">
             <p>Date</p>
-            <input required type="date" v-model="form.date" placeholder="" />
+            <input type="date" v-model="form.date" placeholder="" required />
           </div>
           <div class="label">
             <p>heure</p>
-            <input required type="text" v-model="form.heure" placeholder="12h00" />
+            <input type="text" v-model="form.heure" placeholder="12h00" required />
           </div>
           <div class="label">
             <p>Vos préférences</p>
@@ -135,7 +136,8 @@ export default {
       loading: false,
       state: true,
       goodNews: false,
-      error: false
+      error: false,
+      devis: true, 
     }
   },
   methods: {
@@ -184,12 +186,18 @@ export default {
   margin: 20px auto;
 }
 
+.devis_mobile {
+    margin-top: 100px;
+    height: 100vh;
+}
+
 .loading {
   pointer-events: none;
   opacity: 0.2;
 }
 
 /* TRANSITION */
+
 
 .overlay-enter-active {
   animation: openOverlay 0.3s ease-in-out;
@@ -240,6 +248,10 @@ export default {
   margin-bottom: 20px;
 }
 
+.intro {
+    padding: 10px 15px;
+}
+
 .intro p {
   font-size: 14px;
   font-family: bodyBold, sans-serif;
@@ -260,9 +272,9 @@ export default {
 form {
   overflow: scroll;
   padding: 15px 20px;
-  height: 65vh;
+  height: 100vh;  
   background-color: var(--gray);
-  z-index: 20;
+  z-index: 200;
 }
 
 .label {
@@ -341,6 +353,10 @@ select {
   margin-top: 20px;
 }
 
+.fleche_bottom {
+    transform: rotate(0deg)
+}
+
 .check input {
   margin-right: 10px;
 }
@@ -379,6 +395,10 @@ input[type='checkbox' i]:checked::after {
   margin: auto;
 }
 
+.devis_mobile {
+  z-index: 50;
+}
+
 .btn_form button {
   margin: 20px auto;
   padding: 12px 16px;
@@ -410,20 +430,24 @@ input[type='checkbox' i]:checked::after {
     padding: 15px 65px;
   }
 
-  .devis_mobile {
-    width: 70%;
-    margin: auto; 
+    .devis_mobile {
+    position: absolute;
+    bottom: 0;
+    margin: 100px auto 0 auto;
+    width: 80%;
+    position: fixed;
+    z-index: 100;
+    overflow: scroll;
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1300px) {
   .devis_mobile {
     position: absolute;
     bottom: 0;
-    margin: auto;
-
+    margin: 100px auto 0 auto;
+    width: 50%;
     position: fixed;
-    z-index: 20;
     overflow: scroll;
   }
 

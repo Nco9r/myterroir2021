@@ -7,6 +7,7 @@
     <form @submit="subscribe">
       <div class="cta_newsletter">
         <input
+        required
           type="text"
           placeholder="contact@my-terroir.fr"
           v-model="form.email"

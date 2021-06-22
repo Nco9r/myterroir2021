@@ -40,7 +40,7 @@
           <div class="items_menu_mobile">
             <div class="cart" @click="cart = !cart">
               <img src="~assets/img/svg/cart.svg" alt="" />
-              <p v-if="carts.length > 0">{{carts.length}}</p>
+              <p v-if="carts.length > 0">{{ carts.length }}</p>
             </div>
             <span></span>
             <p @click="openMenu = !openMenu">Menu</p>
@@ -48,12 +48,10 @@
           <div class="cta_header">
             <div class="cart" @click="cart = !cart">
               <img src="~assets/img/svg/cart.svg" alt="" />
-              <p v-if="carts.length > 0">{{carts.length}}</p>
+              <p v-if="carts.length > 0">{{ carts.length }}</p>
             </div>
             <span></span>
-            <nuxt-link to="/contact"
-              ><button>Obtenir mon devis</button></nuxt-link
-            >
+            <button @click="devis = !devis">Obtenir mon devis</button>
           </div>
         </div>
         <transition name="open" appear>
@@ -76,7 +74,7 @@
             </div>
             <hr />
             <div class="button_contact">
-              <button>Contact</button>
+              <button @click="devis = !devis, openMenu = !openMenu">Obtenir mon devis</button>
             </div>
             <div class="sociaux">
               <p>NOUS SUIVRE</p>
@@ -101,28 +99,32 @@
       </div>
     </header>
     <Cart v-if="cart" />
+    <devisHeader :devis=devis v-if="devis" />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import Cart from '../boutique/cart'
+import devisHeader from '../default/devisHeader'
 export default {
   name: 'TheHeader',
   components: {
-    Cart
+    Cart,
+    devisHeader
   },
   data() {
     return {
       openMenu: false,
       scrollPosition: null,
-      cart: false
+      cart: false,
+      devis: false
     }
   },
   computed: {
     carts() {
-            return this.$store.state.cart.datas
-        },
+      return this.$store.state.cart.datas
+    }
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll)
@@ -140,7 +142,7 @@ header {
   position: fixed;
   width: 100%;
   justify-content: space-between;
-  z-index: 100;
+  z-index: 30;
   transition: all 0.3s ease-in-out;
 }
 
@@ -186,6 +188,7 @@ header {
   background-image: url('~assets/img/png/texture_mt.png');
   height: 100%;
   overflow-y: scroll;
+  z-index: 2;
 }
 
 .top_bar_menu {
@@ -228,20 +231,20 @@ header {
 
 .cart p {
   position: absolute;
-  background-color: var(--orange)!important;
+  background-color: var(--orange) !important;
   height: 20px;
-  font-size: 10px!important;
+  font-size: 10px !important;
   width: 20px;
   color: var(--white);
   top: 0;
   left: 15px;
   border-radius: 50%;
-  box-shadow: none!important;
-  display: flex; 
-  font-family: bodyBold, sans-serif; 
-  justify-content: center; 
-  align-items: center; 
-  transform: rotate(3deg)!important; 
+  box-shadow: none !important;
+  display: flex;
+  font-family: bodyBold, sans-serif;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(3deg) !important;
 }
 
 .items_menu_mobile_fixed a {
@@ -259,10 +262,12 @@ header {
   from {
     opacity: 0;
     transform: translateY(20px);
+
   }
   to {
     opacity: 1;
     transform: translateY(0px);
+ 
   }
 }
 
@@ -297,7 +302,7 @@ hr {
 .button_contact button {
   margin-top: 30px;
   background-color: var(--orange);
-  padding: 18px 48px;
+  padding: 12px 48px;
   margin-left: 20px;
   text-align: center;
   color: var(--white);
@@ -429,7 +434,7 @@ hr {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .menu_mobile {
     width: 50%;
     right: 0;
@@ -445,7 +450,7 @@ hr {
 
   @keyframes slide {
     from {
-      transform: translateX(100%);
+      transform: translateX(-100%);
     }
     to {
       transform: translateX(0);
@@ -457,7 +462,7 @@ hr {
       transform: translateX(0);
     }
     to {
-      transform: translateX(100%);
+      transform: translateX(-100%);
     }
   }
 }
@@ -552,7 +557,6 @@ hr {
     font-family: bodyBold;
     border: none;
     cursor: pointer;
-
   }
 
   .items_menu_desktop a:hover {

@@ -34,15 +34,15 @@
           </p>
           <div class="label">
             <p>Nom et prénom</p>
-            <input type="text" v-model="form.mail" />
+            <input type="text" required v-model="form.mail" />
           </div>
           <div class="label">
             <p>E-mail</p>
-            <input type="mail" v-model="form.email" />
+            <input type="mail" required v-model="form.email" />
           </div>
           <div class="label">
             <p>Téléphone</p>
-            <input type="phone" v-model="form.phone" />
+            <input type="phone" required v-model="form.phone" />
           </div>
           <div class="label">
             <p>Société (facultatif)</p>
@@ -50,17 +50,18 @@
           </div>
           <div class="label">
             <p>Type de prestations</p>
-            <select v-model="form.prestation">
-              <option disabled selected value="Brasero">Brasero</option>
+            <select required v-model="form.prestation">
+             <option  selected value="">Choisir dans la liste</option>
+              <option value="Brasero-Plancha">Brasero-Plancha</option>
             </select>
           </div>
           <div class="label">
             <p>Nombre de convives</p>
-            <input type="number" v-model="form.convives" />
+            <input type="number" required v-model="form.convives" />
           </div>
           <div class="label">
             <p>Lieu</p>
-            <input
+            <input required
               type="text"
               v-model="form.lieu"
               placeholder="482, rue du Courdonney, 33140, Cadaujac"
@@ -68,11 +69,11 @@
           </div>
           <div class="label">
             <p>Date</p>
-            <input type="date" v-model="form.date" placeholder="" />
+            <input required type="date" v-model="form.date" placeholder="" />
           </div>
           <div class="label">
             <p>heure</p>
-            <input type="text" v-model="form.heure" placeholder="12h00" />
+            <input required type="text" v-model="form.heure" placeholder="12h00" />
           </div>
           <div class="label">
             <p>Vos préférences</p>
@@ -92,10 +93,20 @@
             </p>
           </div>
           <div class="btn_form">
-            <button>
+            <button v-if="state">
               Soumettre votre demande
             </button>
+            <button class="loading" v-if="loading">
+              Envoi en cours
+            </button>
           </div>
+          <p class="goodNews" v-if="goodNews">
+            Nous avons bien reçu votre demande de devis, nous reviendrons vers
+            vous dans les 24h jours ouvrés.
+          </p>
+          <p class="error" v-if="error">
+            Oups, veuillez ressayer ultérieurement ou contacter le support !
+          </p>
         </form>
       </div>
     </div>
@@ -116,24 +127,63 @@ export default {
         date: '',
         heure: '',
         convives: ''
-      }
+      },
+       loading: false,
+      state: true,
+      goodNews: false,
+      error: false
     }
   },
   methods: {
     submitP(e) {
       e.preventDefault()
       console.log({ ...this.form })
-      this.$axios
-        .post('https://apimyterroir.rouxnicolas.fr/send', { ...this.form })
-        .then((res) => (this.form = ''))
-        .catch(e)
-      this.error = true
+      ;(this.loading = true), (this.state = false)
+        this.$axios
+          .post('https://apimyterroir.rouxnicolas.fr/send', { ...this.form })
+          .then(
+            (res) =>
+            (this.form = ''),
+            (this.loading = false),
+            (this.state = true),
+            (this.goodNews = true)
+          )
+          .catch((error) => {
+             ;(this.error = true),
+            (this.form = ''),
+            (this.loading = false),
+            (this.state = true)
+          })
     }
   }
 }
 </script>
 
 <style scoped>
+
+
+.goodNews {
+  background-color: rgb(242, 255, 242);
+  color: green;
+  padding: 20px 25px;
+  width: 100%;
+  font-size: 14px;
+  margin: 0px auto 20px auto;
+}
+
+.error {
+  background-color: rgb(255, 206, 206);
+  color: rgb(128, 0, 0);
+  padding: 10px 15px;
+  font-size: 14px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.loading {
+  pointer-events: none;
+  opacity: 0.2;
+}
 /* TRANSITION */
 
 .overlay-enter-active {
@@ -361,6 +411,11 @@ input[type='checkbox' i]:checked::after {
     form {
     padding: 15px 65px;
 }
+
+ .devis_mobile {
+    width: 70%;
+    margin: auto; 
+  }
     
 }
 
@@ -369,7 +424,6 @@ input[type='checkbox' i]:checked::after {
     position: absolute;
     bottom: 0;
     margin: auto;
-    width: 50%;
     position: fixed;
     z-index: 20;
     overflow: scroll;

@@ -9,18 +9,18 @@
         autres qui vous propose une sélection de <strong>produits</strong> de
         <strong>qualité</strong> dénichée chez des
         <strong>producteurs</strong> artisanaux en France, Espagne et en Italie.
-        Vous <strong>organisez</strong> votre mariage, un anniversaire ou simplement des
-        retrouvailles entre copains. <strong>Choisissez</strong> avec nous les produits qui
-        s’accorderont au mieux avec votre <strong>événement</strong>. Nous pouvons nous occuper
-        des <strong>services</strong> complémentaires comme la vaisselle ou le mobilier.
+        Vous <strong>organisez</strong> votre mariage, un anniversaire ou
+        simplement des retrouvailles entre copains.
+        <strong>Choisissez</strong> avec nous les produits qui s’accorderont au
+        mieux avec votre <strong>événement</strong>. Nous pouvons nous occuper
+        des <strong>services</strong> complémentaires comme la vaisselle ou le
+        mobilier.
       </p>
-      <nuxt-link to="/traiteur"><button>
-        Nos prestations
-      </button></nuxt-link>
-       <nuxt-link to="/traiteur"><button class="overbutton">
-        Obtenir un devis gratuit
-      </button></nuxt-link>
-      
+      <nuxt-link to="/traiteur"
+        ><button>
+          Nos prestations
+        </button></nuxt-link
+      >
     </div>
     <div class="about_img">
       <img src="~assets/img/png/traiteur.jpg" alt="image de produits" />
@@ -35,9 +35,8 @@ export default {
 </script>
 
 <style scoped>
-
 strong {
-  font-family: bodyBold, sans-serif; 
+  font-family: bodyBold, sans-serif;
 }
 
 .about {
@@ -55,7 +54,7 @@ strong {
 .about_content hr {
   border: none;
   width: 30px;
-  margin: 10px 0; 
+  margin: 10px 0;
   height: 2px;
   border-radius: 10px;
   background-color: var(--orange);
@@ -76,29 +75,30 @@ strong {
   color: var(--white);
   font-size: 14px;
   width: 100%;
+  margin-bottom: 30px;
   font-family: bodyBold;
   border: none;
   cursor: pointer;
-  transition: all .3s; 
+  transition: all 0.3s;
 }
 
 .overbutton {
-  margin-top: 10px!important;
-  background-color: transparent!important;
+  margin-top: 10px !important;
+  background-color: transparent !important;
   padding: 10px 48px;
-  color: var(--orange)!important;
+  color: var(--orange) !important;
   font-size: 14px;
   width: 100%;
-  border: 1px solid var(--orange)!important;
+  border: 1px solid var(--orange) !important;
   font-family: bodyBold;
   border: none;
   margin-bottom: 30px;
   cursor: pointer;
-  transition: all .3s; 
+  transition: all 0.3s;
 }
 
 .about_content button:hover {
-   background-color: var(--black);
+  background-color: var(--black);
 }
 
 .about_img {
@@ -120,19 +120,23 @@ strong {
     display: flex;
     flex-flow: row-reverse;
     margin: auto;
-    padding: 30px 80px 100px 80px;
+    padding: 100px 80px 100px 80px;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
-    width: 1240px;
+    max-width: 1240px;
   }
 
+  .about_content button {
+  width: 250px;
+}
+  
   .about_content {
     width: 40%;
   }
 
   .about_content h2 {
-    width: 500px;
+    width: 350px;
     font-size: 32px;
     line-height: 52px;
   }
@@ -140,11 +144,21 @@ strong {
   .about_content p {
     font-size: 14px;
     line-height: 28px;
-    width: 450px;
+    width: 350px;
   }
 
   .about_img {
     width: 50%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .about_content p {
+    width: 450px;
+  }
+
+  .about_content h2 {
+    width: 500px;
   }
 }
 </style>

@@ -68,7 +68,7 @@ hr {
 @media screen and (min-width: 1024px) {
 
     .clients {
-        padding: 100px 100px;
+        padding: 10px 100px 80px 100px;
         max-width: 1250px;
         margin: auto;
     }
@@ -105,7 +105,7 @@ hr {
 
 @media screen and (min-width: 1440px) {
     .clients {
-        padding: 100px 100px;
+        padding: 0px 100px 70px 100px;
         max-width: 1440px;
         margin: auto;
     }

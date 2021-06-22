@@ -1,5 +1,6 @@
 <template>
   <section class="actualites">
+    <div class="box_actualites">
     <div class="title_section">
       <hr class="section_tiret" />
       <h2>Nos dernières actualités</h2>
@@ -84,6 +85,7 @@
         </button>
       </nuxt-link>
     </div>
+    </div>
   </section>
 </template>
 
@@ -105,7 +107,7 @@ a {
   width: 70%;
   height: 1px;
   color: var(--black);
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.171);
   display: block;
 
   border: none;
@@ -115,7 +117,6 @@ a {
 
 .section_tiret::after {
   width: 4.5rem;
-  left: 15px;
   position: absolute;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -262,6 +263,8 @@ a {
     height: 100px;
   }
 
+  
+
   .section_tiret::after {
     margin-left: 150px;
   }
@@ -276,8 +279,15 @@ a {
     width: 400px;
   }
 
-  .box_cards {
-     max-width: 1140px;
+  .box_actualites {
+     max-width: 1000px;
+    margin: auto; 
+  }
+}
+
+@media screen and (min-width: 1300px) {
+    .box_actualites {
+     max-width: 1200px;
     margin: auto; 
   }
 }

@@ -82,7 +82,7 @@
         <hr class="hr_copyright" />
         <div class="infos_copyright">
           <p>©2021 - My Terroir</p>
-          <p>Charte graphique Noémie PULIDO. Développement Nicolas ROUX.</p>
+          <p>Charte graphique <a href="https://noemiepulido-graphiste.com" target="_blank">Noémie PULIDO</a>. Développement <a href="https://rouxnicolas.fr" target="_blank"> Nicolas ROUX</a>.</p>
         </div>
       </div>
     </div>
@@ -205,6 +205,19 @@ a {
 .infos_copyright p {
   font-size: 14px;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+
+  .footer {
+    padding: 50px 50px 0px 50px;
+
+  }
+  .item {
+    width: 220px;
+  }
+
+  
 }
 
 @media screen and (min-width: 1024px) {

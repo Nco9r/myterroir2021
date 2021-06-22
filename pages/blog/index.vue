@@ -2,6 +2,7 @@
   <main>
     <HeroBlog />
     <section class="actualites">
+      <div class="box_blog">
       <div class="title_section">
         <hr class="section_tiret" />
         <p>Catégories</p>
@@ -110,6 +111,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <Newsletter />
@@ -223,6 +225,7 @@ a {
   display: flex;
   flex-flow: row wrap;
   margin-top: 20px;
+  margin-left: 15px;
   justify-content: flex-start;
 }
 
@@ -335,9 +338,10 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-  .title_section {
-    max-width: 1140px;
-    margin: auto;
+  
+  .box_blog {
+    max-width: 900px;
+    margin: auto; 
   }
   .title_section h2 {
     font-size: 28px;
@@ -347,13 +351,16 @@ a {
     margin-left: 50px;
     margin-bottom: 90px;
   }
-.box_cards {
-  max-width: 1110px;
-  margin: 50px auto;
-}
+
   .card {
     margin-right: 30px;
     width: 400px;
+  }
+}@media screen and (min-width: 1300px) {
+
+  .box_blog {
+    max-width: 1200px;
+    margin: auto; 
   }
 }
 </style>

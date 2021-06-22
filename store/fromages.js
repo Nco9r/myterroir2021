@@ -5,7 +5,7 @@ export const state = () => ({
       weight: '650 GR',
       price: 9.9,
       quantity: 1,
-      name: 'fromagerie des Aldudes',
+      name: 'Aldudes',
       id: 26
     },
     {
@@ -69,11 +69,11 @@ export const state = () => ({
       id: 33
     },
     {
-      product: 'Tome de vache basque fromagerie des Aldudes',
+      product: 'Tome de vache basque',
       weight: '250 GR',
       price: 4.9,
       quantity: 1,
-      name: 'fromagerie des Aldudes',
+      name:  'Aldudes',
       id: 34
     }
   ]

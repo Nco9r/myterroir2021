@@ -6,6 +6,7 @@
         <div class="title_panier">
           <h2>Mon panier</h2>
           <svg
+            @click="cartOpen = !cartOpen"
             xmlns="http://www.w3.org/2000/svg"
             width="23.242"
             height="16.215"
@@ -167,6 +168,10 @@ export default {
     transform: translateY(-100%);
   }
 }
+
+.title_panier svg {
+  cursor: pointer;
+}
 .bloc_port {
   display: flex;
   padding: 5px 20px;
@@ -198,7 +203,7 @@ export default {
   bottom: 0;
 
   background-color: white;
-  z-index: 99;
+  z-index: 20;
   padding: 0 15px;
 }
 

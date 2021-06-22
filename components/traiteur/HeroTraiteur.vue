@@ -198,7 +198,7 @@ strong {
 
 @media screen and (min-width: 1024px) {
   .hero {
-    height: 100vh;
+    height: 750px;
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -207,16 +207,16 @@ strong {
 
   .hero_wrapper {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
-    width: 70%;
+    width: 65%;
   }
 
   .wrapper_content {
-    padding: 20% 100px;
+    padding: 130px 100px;
   }
 
   .hero_img {
     display: flex;
-    width: 70%;
+    width: 55%;
     position: relative;
     left: 0;
     display: block;
@@ -225,9 +225,9 @@ strong {
 
   .arrowPrev {
     position: absolute;
-    top: 93%;
+    top: 91%;
     z-index: 1;
-    left: 79%;
+    left: 63%;
   }
 
   .arrowPrev img {
@@ -238,9 +238,9 @@ strong {
 
   .arrowNext {
     position: absolute;
-    top: 93%;
+    top: 91%;
     z-index: 1;
-    right: 10%;
+    right: 18%;
   }
 
 .arrowNext img {
@@ -249,7 +249,7 @@ strong {
 }
 
   .hero_img img {
-    height: 100vh;
+    height: 750px;
     width: 100%;
     margin-top: 0;
     object-fit: cover;
@@ -309,7 +309,7 @@ strong {
 
    .hero_wrapper {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
-    width: 100%;
+    width: 65%;
   }
 
   .hero_img {

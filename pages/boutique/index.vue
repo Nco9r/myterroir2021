@@ -305,7 +305,7 @@ export default {
   margin-top: 15px;
   font-family: bodyBold, sans-serif;
   color: var(--black);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 24px;
 }
 
@@ -321,15 +321,18 @@ export default {
     width: 90px; 
     justify-content: space-between; 
     cursor: pointer;
-    font-family: bodyBold, sans-serif; 
+    font-family: body, sans-serif; 
+    color: var(--black);
 }
 
 .quantite p {
     font-size: 18px;
+    font-family: bodyBold, sans-serif; 
+
 }
 
 .price p {
-    font-size: 34px; 
+    font-size: 26px; 
     font-family: title, sans-serif; 
     color: var(--black)
 }
@@ -363,6 +366,23 @@ hr {
     color: var(--white); 
     font-family: bodyBold, sans-serif; 
 }
+
+@media screen and (min-width: 767px) {
+  .product {
+    width: 300px;
+    margin: 10px 20px 10px 20px;
+  }
+
+  .title_product {
+    height: 100px;
+  }
+
+  .box_products {
+      margin: auto; 
+      max-width: 700px;
+      justify-content: flex-start;
+  }
+}
 @media screen and (min-width: 1024px) {
   .box_search {
     display: flex;
@@ -381,6 +401,13 @@ hr {
     padding: 30px 90px;
   }
 
+
+  .box_products {
+      margin: auto; 
+      max-width: 1440px;
+      justify-content: flex-start;
+  }
+
   .categories p:nth-child(1) {
     margin-bottom: 10px;
     font-family: bodyBold, sans-serif;
@@ -395,7 +422,7 @@ hr {
   }
 
   .card {
-    width: 400px;
+    width: 350px;
 
     margin: 0 40px 0 0;
   }
@@ -417,7 +444,7 @@ hr {
   }
 
   .product {
-  width: 290px;
+  width: 260px;
   border: 1px solid rgb(245, 245, 245);
   padding: 20px;
   margin-right: 20px;
@@ -426,8 +453,14 @@ hr {
 }
 
 .cards_products {
-  padding: 30px 90px 30px 90px;
+  padding: 30px 50px 30px 50px;
   margin: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .product {
+    width: 290px;
+  }
 }
 }
 </style>

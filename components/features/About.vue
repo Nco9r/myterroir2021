@@ -66,12 +66,12 @@ strong {
 .about_content button {
   margin-top: 30px;
   background-color: var(--orange);
-  padding: 10px 48px;
+  padding: 8px 48px;
   color: var(--white);
+  border: none; 
   font-size: 14px;
   font-family: bodyBold;
   cursor: pointer;
-  border: none;
   transition: all .3s; 
   width: 100%;
   margin-bottom: 30px;
@@ -85,14 +85,17 @@ strong {
   display: flex;
   flex-flow: column;
   margin-top: 20px;
+  position: relative;
 }
+
+
+
+
 
 .about_img img {
   width: 100%;
-}
-
-.about_img img:nth-child(2) {
-  box-shadow: 10px 10px rgba(5, 5, 5, 0.096);
+  box-shadow: 5px 5px rgba(20, 20, 20, 0.096);
+ 
 
 }
 
@@ -101,11 +104,11 @@ strong {
     display: flex;
     flex-flow: row;
     margin: auto;
-    padding: 30px 80px 100px 80px;
+    padding: 100px 80px 100px 80px;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
-    width: 1240px;
+    max-width: 1240px;
   }
 
   .about_content {
@@ -121,15 +124,28 @@ strong {
   .about_content p {
       font-size: 14px; 
       line-height: 26px;
-      width: 450px;
+      width: 350px;
   }
 
   .about_img {
       width: 50%;
   }
 
+  .about_img img {
+  box-shadow: 15px 15px rgba(20, 20, 20, 0.096);
+
+  }
+
   .about_content button {
     width: 200Px;
   }
 }
+
+@media screen and (min-width: 1300px) {
+  .about_content p {
+    width: 450px;
+  }
+}
+
+
 </style>

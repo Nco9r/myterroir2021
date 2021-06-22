@@ -187,12 +187,19 @@ hr {
     margin: auto;
     align-items: flex-end;
     justify-content: center;
-    width: 1300px;
+    max-width: 900px;
     margin-bottom: 100px;
   }
 
   .block_right {
     margin-left: 100px;
   }
+}
+
+@media screen and (min-width: 1300px) {
+  .block {
+    max-width: 1100px;
+  }
+
 }
 </style>

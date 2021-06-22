@@ -189,22 +189,19 @@ hr {
     margin: auto;
     align-items: flex-end;
     justify-content: center;
-    width: 1300px;
+    max-width: 900px;
     margin-bottom: 100px;
   }
 
   .block_right {
     margin-left: 100px;
   }
-
-  .img_producteurs img {
-  width: 200px;
-  border: 4px solid var(--white);
-  display: flex;
-  margin: auto;
-  object-fit: cover;
-  height: 200px;
-  border-radius: 50%;
 }
+
+@media screen and (min-width: 1300px) {
+  .block {
+    max-width: 1100px;
+  }
+
 }
 </style>

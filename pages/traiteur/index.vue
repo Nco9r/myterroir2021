@@ -1106,7 +1106,7 @@ strong {
     background-color: var(--white);
     padding: 100px 50px;
     margin-top: 10px;
-    width: 50%;
+    width: 70%;
     margin: auto;
     bottom: 0;
     position: fixed;
@@ -1154,7 +1154,7 @@ strong {
   }
   .title {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     margin-top: 50px;
     justify-content: space-between;
     padding: 0 50px;
@@ -1169,7 +1169,7 @@ strong {
   }
 
   .card {
-    width: 350px;
+    width: 420px;
     margin-right: 30px;
   }
   .bloc_cards {
@@ -1196,6 +1196,7 @@ strong {
   padding: 15px 20px;
   display: flex;
   flex-flow: row;
+  width: 70%;
   justify-content: space-between;
   align-items: center;
 }
@@ -1239,17 +1240,17 @@ strong {
   align-items: center;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1300px) {
   .block_traiteur {
     max-width: 1440px;
     margin: auto;
   }
   .title {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     margin-top: 50px;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 120px;
   }
 
   .title_traiteur {
@@ -1275,7 +1276,6 @@ strong {
     background-color: var(--white);
     padding: 100px 50px;
     margin-top: 10px;
-    width: 50%;
     margin: auto;
     bottom: 0;
     position: fixed;

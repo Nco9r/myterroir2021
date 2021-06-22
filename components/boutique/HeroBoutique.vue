@@ -192,7 +192,7 @@ strong {
 
 @media screen and (min-width: 1024px) {
   .hero {
-    height: 100vh;
+    height: 750px;
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -201,16 +201,16 @@ strong {
 
   .hero_wrapper {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
-    width: 70%;
+    width: 65%;
   }
 
   .wrapper_content {
-    padding: 20% 100px;
+    padding: 130px 100px;
   }
 
   .hero_img {
     display: flex;
-    width: 70%;
+    width: 55%;
     position: relative;
     left: 0;
     display: block;
@@ -218,24 +218,24 @@ strong {
   }
 
   .arrowPrev {
-  position: absolute; 
-  top: 93%;
-  z-index: 1;
-  left: 700px;
-}
+    position: absolute;
+    top: 91%;
+    z-index: 1;
+    left: 63%;
+  }
 
-.arrowPrev img {
-  width: 40px!important;
-  height: 40px!important;
-  transform: rotate(180deg);
-}
+  .arrowPrev img {
+    width: 40px !important;
+    height: 40px !important;
+    transform: rotate(180deg);
+  }
 
-.arrowNext {
-  position: absolute; 
-  top: 93%;
-  z-index: 1;
-  right: 200px;
-}
+  .arrowNext {
+    position: absolute;
+    top: 91%;
+    z-index: 1;
+    right: 18%;
+  }
 
 .arrowNext img {
   width: 40px!important;
@@ -243,7 +243,7 @@ strong {
 }
 
   .hero_img img {
-    height: 100vh;
+    height: 750px;
     width: 100%;
     margin-top: 0;
     object-fit: cover;
@@ -259,7 +259,7 @@ strong {
   .wrapper_content p {
     font-size: 14px;
     line-height: 28px;
-    width: 460px;
+    width: 400px;
   }
 
   .wrapper_content button {
@@ -291,14 +291,28 @@ strong {
 @media screen and (min-width: 1440px) {
   
   .wrapper_content h1 {
-    font-size: 48px;
-    line-height: 64px;
+    font-size: 58px;
+    line-height: 74px;
   }
 
   .wrapper_content p {
     font-size: 18px;
     width: 600px;
     line-height: 36px;
+  }
+
+   .hero_wrapper {
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+    width: 65%;
+  }
+
+  .hero_img {
+    display: flex;
+    width: 60%;
+    position: relative;
+    left: 0;
+    display: block;
+    margin-left: -280px;
   }
 
 }

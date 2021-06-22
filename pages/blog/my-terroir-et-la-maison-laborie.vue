@@ -126,7 +126,7 @@ export default {
 
 @media screen and (min-width: 1024px) {
   .article {
-    max-width: 640px;
+    max-width: 840px;
     margin: auto;
   }
 
