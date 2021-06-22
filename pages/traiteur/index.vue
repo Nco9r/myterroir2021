@@ -12,7 +12,7 @@
             <p>
               Vous organisez votre <strong>mariage</strong>, un
               <strong>anniversaire</strong> ou simplement des
-              <strong>retrouvailles</strong> entre copains. Choisissez avec nous
+              <strong>retrouvailles</strong> entre copains ? Choisissez avec nous
               les <strong>produits</strong> qui s’accorderont au mieux avec
               votre <strong>événement</strong>. Nous pouvons nous occuper des
               <strong>services</strong> complémentaires comme la vaisselle ou le
@@ -461,7 +461,7 @@
           <div class="content_group" v-if="cBasque">
             <p>
               travers de porc au miel, os à moelle, palette de porc, jambon
-              brai- sé, côte à l’os de porc fermier, le carré d’agneau entier
+              braisé, côte à l’os de porc fermier, le carré d’agneau entier
               ...
             </p>
           </div>

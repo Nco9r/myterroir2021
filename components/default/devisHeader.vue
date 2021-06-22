@@ -57,6 +57,9 @@
               <option value="Buffet Français">Buffet Français</option>
               <option value="Cocktails Basque">Cocktails Basque</option>
               <option value="Cocktails Français">Cocktails Français</option>
+              <option value="Brasero-Plancha">Brasero-Plancha</option>
+              <option value="Repas-Grillades">Repas-Grillades</option>
+              <option value="Mariages">Mariages</option>
             </select>
           </div>
           <div class="label">

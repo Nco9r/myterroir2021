@@ -6,7 +6,7 @@
           <h1>TOUS NOS PRODUITS de terroir à PORTER <span class="black">DE CLIC. </span></h1>
           <hr />
           <p>
-            Retrouvez la liste de nos produits de terroir que nous avons spécialement selectionné pour vous. Charcuteries, viandes, fromages il y en a pour tous les gôuts. 
+            Retrouvez la liste de nos produits de terroir que nous avons spécialement sélectionné pour vous. Charcuteries, viandes, fromages il y en a pour tous les gôuts. 
           </p>
           <button>
             Boutique

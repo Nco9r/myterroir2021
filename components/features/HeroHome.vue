@@ -10,7 +10,7 @@
           <p>
             Depuis 2016, <strong>My Terroir</strong> s’est spécialisé dans la
             <strong>sélection</strong> et la <strong>livraison</strong> à
-            domicile de <strong>produits de terroirs</strong> ,
+            domicile de <strong>produits de terroir</strong> ,
             <strong>fromages</strong> et <strong>charcuteries</strong> de
             qualités. Tous nos produits sont choisis
             <strong>minutieusement</strong> auprès d’artisans.
