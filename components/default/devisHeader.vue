@@ -192,7 +192,8 @@ export default {
 
 .devis_mobile {
     margin-top: 100px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .loading {
@@ -254,6 +255,9 @@ export default {
 
 .intro {
     padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto 50px 0;
 }
 
 .intro p {
@@ -275,8 +279,7 @@ export default {
 
 form {
   overflow: scroll;
-  padding: 15px 20px;
-  height: 100vh;  
+  padding: 55px 20px;  
   background-color: var(--gray);
   z-index: 200;
 }
@@ -427,18 +430,31 @@ input[type='checkbox' i]:checked::after {
   form {
     padding: 15px 75px;
   }
+
+   .intro_form {
+    padding-top: 50px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   form {
     padding: 15px 65px;
+    
   }
+
+  .intro {
+    padding: 10px 15px;
+    position: fixed;
+    width: 80%;
+    margin: 0 auto 50px auto;
+}
 
     .devis_mobile {
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
     margin: 100px auto 0 auto;
     width: 80%;
+    height: 600px;
     position: fixed;
     z-index: 100;
     overflow: scroll;
@@ -448,15 +464,23 @@ input[type='checkbox' i]:checked::after {
 @media screen and (min-width: 1300px) {
   .devis_mobile {
     position: absolute;
-    bottom: 0;
-    margin: 100px auto 0 auto;
+    margin: auto;
     width: 50%;
+    bottom: 50px;
+top: 100px;
+    height: 700px;
     position: fixed;
     overflow: scroll;
   }
 
   .intro {
     padding: 15px 50px;
+    width: 50%;
+
+  }
+
+  .intro_form {
+    padding-top: 70px;
   }
 }
 </style>
