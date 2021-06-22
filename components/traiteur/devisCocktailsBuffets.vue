@@ -130,7 +130,8 @@ export default {
         lieu: '',
         date: '',
         convives: '',
-        heure: ''
+        heure: '',
+        details: '',
       },
       loading: false,
       state: true,

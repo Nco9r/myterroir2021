@@ -126,7 +126,8 @@ export default {
         lieu: '',
         date: '',
         heure: '',
-        convives: ''
+        convives: '',
+        details: '',
       },
        loading: false,
       state: true,
