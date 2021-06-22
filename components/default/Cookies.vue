@@ -5,7 +5,7 @@
               <h3>Respect de votre vie privée</h3>
           </div>
           <div class="content">
-              <p>Avec votre accord, Nous utilisons des cookies ou technologies similaires pour stocker et accéder à des informations personnelles comme votre visite sur ce site. Vous pouvez retirer votre consentement ou vous opposer aux traitements basés sur l'intérêt légitime à tout moment en cliquant sur "En savoir plus" ou dans les mentions légales de ce site.</p>
+              <p>Avec votre accord, nous utilisons des cookies ou technologies similaires pour stocker et accéder à des informations personnelles comme votre visite sur ce site. Vous pouvez retirer votre consentement ou vous opposer aux traitements basés sur l'intérêt légitime à tout moment en cliquant sur "En savoir plus" ou dans les mentions légales de ce site.</p>
           </div>
           <div class="button">
               <nuxt-link to=/mentions-legales><button class="next" @click="cook = !cook">En savoir plus</button></nuxt-link>
@@ -100,7 +100,7 @@ export default {
   width: 100%;
   font-family: bodyBold, sans-serif;
   border: none;
-    box-shadow: 5px 5px rgba(160, 160, 160, 0.274);
+
     cursor: pointer;
 
 }
@@ -114,7 +114,6 @@ export default {
   width: 100%;
   font-family: bodyBold, sans-serif;
   border: none;
-    box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
     cursor: pointer;
 
 

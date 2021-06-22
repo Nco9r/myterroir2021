@@ -403,7 +403,7 @@ input[type='checkbox' i]:checked::after {
 }
 
 .devis_mobile {
-  z-index: 50;
+  z-index: 101;
 }
 
 .btn_form button {

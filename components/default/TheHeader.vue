@@ -142,7 +142,7 @@ header {
   position: fixed;
   width: 100%;
   justify-content: space-between;
-  z-index: 30;
+  z-index: 100;
   transition: all 0.3s ease-in-out;
 }
 

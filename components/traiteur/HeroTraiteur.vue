@@ -13,11 +13,9 @@
             des <strong>producteurs</strong> artisanaux en France, Espagne et en
             Italie.
           </p>
-          <nuxt-link to="/contact">
-          <button>
+          <button @click="devis = !devis">
             Obtenir mon devis
           </button>
-          </nuxt-link>
           <div class="sociaux">
             <div class="img_sociaux">
               <a href="https://fr-fr.facebook.com/myterroir/" target="_blank"><img src="~assets/img/svg/facebook.svg" alt="" /></a>
@@ -45,12 +43,18 @@
     </VueSlickCarousel>
       </div>
     </section>
+    <devisHeader v-if="devis"/>
   </div>
 </template>
 
 <script>
+import devisHeader from '../../components/default/devisHeader'
+
 export default {
   name: 'HeroHome', 
+  components: {
+    devisHeader,
+  },
   data() {
     return {
       slickOptions: {
@@ -65,6 +69,7 @@ export default {
         slidesToScroll: 1,
         cssEase: 'cubic-bezier(.945,0,0,1)',
       },
+      devis: false
     }
   },
   methods: {
@@ -140,6 +145,7 @@ strong {
   font-size: 16px;
   font-family: bodyBold;
   border: none;
+  cursor: pointer;
   box-shadow: 5px 5px rgba(5, 5, 5, 0.274);
 }
 
