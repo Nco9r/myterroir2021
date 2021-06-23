@@ -8,9 +8,6 @@
           <p>
             Retrouvez la liste de nos produits de terroir que nous avons spécialement sélectionné pour vous. Charcuteries, viandes, fromages il y en a pour tous les gôuts. 
           </p>
-          <button>
-            Boutique
-          </button>
           <div class="sociaux">
             <div class="img_sociaux">
                <a href="https://fr-fr.facebook.com/myterroir/" target="_blank"><img src="~assets/img/svg/facebook.svg" alt="" /></a>
