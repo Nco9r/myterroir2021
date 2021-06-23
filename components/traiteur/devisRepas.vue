@@ -34,7 +34,7 @@
           </p>
           <div class="label">
             <p>Nom et prénom</p>
-            <input type="text" required v-model="form.mail" />
+            <input type="text" required v-model="form.name" />
           </div>
           <div class="label">
             <p>E-mail</p>
