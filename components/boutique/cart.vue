@@ -91,7 +91,7 @@
             <nuxt-link to="/boutique">Continuer achats</nuxt-link>
             <nuxt-link
               to="/boutique/checkout"
-              :class="{ opacity: carts.length < 1 }"
+              :class="{ opacity_valide : carts.length < 1 }"
               >Valider</nuxt-link
             >
           </div>
@@ -226,6 +226,10 @@ export default {
 .opacity {
   color: rgb(223, 223, 223)!important;
   pointer-events: none;
+}
+
+.opacity_valide {
+  opacity: .3;
 }
 
 .title_panier {
