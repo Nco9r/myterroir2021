@@ -243,16 +243,15 @@ a {
   margin: 40px auto 10px auto;
   color: var(--white);
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-family: bodyBold;
   border: none;
   transition: all 0.3s;
-  box-shadow: 5px 5px rgba(177, 78, 12, 0.274);
 }
 
 .cta_actualites button:hover {
   box-shadow: 5px 5px rgba(0, 0, 0, 0.274);
-  background-color: var(--black);
+
 }
 
 @media screen and (min-width: 1024px) {

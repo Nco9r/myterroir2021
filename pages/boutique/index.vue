@@ -144,6 +144,18 @@ import Vue2Filters from 'vue2-filters'
 
 
 export default {
+head: {
+    title: "Produits de terroir Bordeaux | MyTerroir",
+    meta: [
+      {
+        hid: 'Produits de terroir Bordeaux | MyTerroir',
+        name: 'Produits de terroir Bordeaux | MyTerroir',
+        content: "Retrouvez la liste de nos produits de terroir que nous avons spécialement sélectionné pour vous. Charcuteries, viandes, fromages il y en a pour tous les gôuts.",
+        keywords: "Producteurs, Bordeaux, Producteurs-Bordeaux, Boutique, boutique, Produits de terroir, charcuterie, charcuteries, fromage, fromages, viandes, viande, brasero, plancha, mariages, cocktails, buffets, repas"
+      }
+    ],
+  },
+  
   components: {
     HeroBoutique,
     Newsletter

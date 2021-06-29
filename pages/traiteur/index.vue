@@ -654,6 +654,17 @@ import devisBrasero from '../../components/traiteur/devisBrasero'
 import devisRepas from '../../components/traiteur/devisRepas'
 
 export default {
+  head: {
+    title: "Traiteur Bordeaux | Produits de terroir",
+    meta: [
+      {
+        hid: 'Traiteur Bordeaux | Produits de terroir',
+        name: 'Traiteur Bordeaux | Produits de terroir',
+        content: "Choisissez un traiteur sur Bordeaux pas comme les autres qui vous propose une sélection de produits de qualité dénichée chez des producteurs artisanaux.",
+        keywords: "Traiteur, Bordeaux, Traiteur-Bordeaux, Produits de terroir, charcuterie, charcuteries, fromage, fromages, viandes, viande, brasero, plancha, mariages, cocktails, buffets, repas"
+      }
+    ],
+  },
   components: {
     HeroTraiteur,
     Newsletter,
@@ -1044,7 +1055,7 @@ a {
   position: fixed;
   inset: 0;
   overflow-x: hidden;
-  z-index: 90;
+  z-index: 9;
   overflow-y: scroll;
 }
 
@@ -1110,7 +1121,7 @@ strong {
     margin: auto;
     bottom: 0;
     position: fixed;
-    z-index: 90;
+    z-index: 9;
     overflow-y: scroll;
   }
 
@@ -1278,8 +1289,9 @@ strong {
     margin-top: 10px;
     margin: auto;
     bottom: 0;
+    width: 50%;
     position: fixed;
-    z-index: 90;
+    z-index: 9;
     overflow-y: scroll;
   }
 }

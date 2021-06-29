@@ -8,10 +8,7 @@
           <p>
             Cassez les <strong>codes</strong>, choisissez un
             <strong>traiteur</strong> sur <strong>Bordeaux</strong> pas comme
-            les autres qui vous propose une sélection de
-            <strong>produits</strong> de <strong>qualité</strong> dénichée chez
-            des <strong>producteurs</strong> artisanaux en France, Espagne et en
-            Italie.
+            les autres pour vos <strong>mariages</strong>, <strong>séminaires</strong>, <strong>cocktails et buffets</strong>. Étonné tous vos convives grâce aux équipes et <strong>produits MyTerroir</strong>.
           </p>
           <button @click="devis = !devis">
             Obtenir mon devis

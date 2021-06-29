@@ -210,11 +210,12 @@ export default {
 .overlay {
   position: fixed;
   inset: 0;
-  -webkit-z-index: 3;
-  -moz-z-index: 3;
-  -ms-z-index: 3;
-  -o-z-index: 3;
-  z-index: 3;
+  -webkit-z-index: 10;
+  -moz-z-index: 10;
+  -ms-z-index: 10;
+  -o-z-index: 10;
+  z-index: 10;
+  cursor: url('~assets/img/svg/arrow_mt.svg'); 
   background-color: rgba(15, 15, 15, 0.863);
 }
 
@@ -225,11 +226,11 @@ export default {
 
 .opacity {
   color: rgb(223, 223, 223)!important;
-  pointer-events: none;
 }
 
 .opacity_valide {
   opacity: .3;
+  pointer-events: none;
 }
 
 .title_panier {

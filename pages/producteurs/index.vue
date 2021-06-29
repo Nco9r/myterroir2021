@@ -218,6 +218,17 @@
 import HeroProducteurs from '../../components/producteurs/HeroProducteurs'
 import Newsletter from '../../components/default/Newsletter'
 export default {
+head: {
+    title: "Producteurs MyTerroir | Produits artisanaux",
+    meta: [
+      {
+        hid: 'Producteurs MyTerroir | Produits artisanaux',
+        name: 'Producteurs MyTerroir | Produits artisanaux',
+        content: "Nous travaillons uniquement avec les meilleurs agriculteurs ! Nous cherchons à nous associer à des éleveurs qui travaillent avec la nature, dans le respect du bien être de l’animal et de l'environnement.",
+        keywords: "Producteurs, Bordeaux, Producteurs-Bordeaux, Produits de terroir, charcuterie, charcuteries, fromage, fromages, viandes, viande, brasero, plancha, mariages, cocktails, buffets, repas"
+      }
+    ],
+  },
   components: {
     HeroProducteurs,
     Newsletter
